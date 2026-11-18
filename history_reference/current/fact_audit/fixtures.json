@@ -1,0 +1,2063 @@
+{
+  "schema": "CHARE_FACT_FIXTURES_V1",
+  "scope": "Independent finite-field source-coefficient diagnostics",
+  "native_replay_verified": false,
+  "histories": [
+    {
+      "history_id": "residue_zero_quotient_leak_key_protected",
+      "description": "The restored quotient distinguishes qualifications while all ordinary residues are zero.",
+      "key_integration_expectation": {
+        "target_source": "v1",
+        "status": "PROTECTED",
+        "verification_owner": "round3 joint integration, not this runner"
+      },
+      "stages": [
+        {
+          "stage_id": "bare_pad_hides_quotient",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "v1",
+                "kind": "core",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:v1",
+                "fact_map": [
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:v1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable v1"
+                }
+              },
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r1",
+                "generation": "pad-generation:r1"
+              }
+            ],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "masked_quotient",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {
+                  "r1": 1
+                },
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:masked_quotient",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        },
+        {
+          "stage_id": "joint_pad_cancellation",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "v1",
+                "kind": "core",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:v1",
+                "fact_map": [
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:v1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable v1"
+                }
+              },
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r1",
+                "generation": "pad-generation:r1"
+              }
+            ],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "masked_quotient",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {
+                  "r1": 1
+                },
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:masked_quotient",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              },
+              {
+                "observation_id": "negative_pad",
+                "ordinary": {},
+                "pads": {
+                  "r1": -1
+                },
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:negative_pad",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          },
+          "require_zero_residues": true,
+          "require_nonzero_quotient": true
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "v1": 17,
+          "w1": 29
+        },
+        "pad_values": {
+          "r1": 43
+        }
+      }
+    },
+    {
+      "history_id": "core_release_facts_compatible",
+      "description": "A core has a zero fact-map row, even when its release admits key recovery.",
+      "key_integration_expectation": {
+        "target_source": "v1",
+        "status": "FORMAL_WITNESS",
+        "verification_owner": "round3 joint integration, not this runner"
+      },
+      "stages": [
+        {
+          "stage_id": "before_release",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "v1",
+                "kind": "core",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:v1",
+                "fact_map": [
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:v1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable v1"
+                }
+              },
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        },
+        {
+          "stage_id": "core_released",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "v1",
+                "kind": "core",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:v1",
+                "fact_map": [
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:v1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable v1"
+                }
+              },
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "core_release",
+                "ordinary": {
+                  "v1": [
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:core_release",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "v1": 17,
+          "w1": 29
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "bare_pad_then_actual_opening",
+      "description": "The same retained point becomes incompatible after its original pad is opened.",
+      "stages": [
+        {
+          "stage_id": "pad_not_opened",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r1",
+                "generation": "pad-generation:r1"
+              }
+            ],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "masked_constant",
+                "ordinary": {
+                  "w1": [
+                    1
+                  ]
+                },
+                "pads": {
+                  "r1": 1
+                },
+                "offset": [
+                  6,
+                  2
+                ],
+                "offset_available": true,
+                "handle_id": "handle:masked_constant",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        },
+        {
+          "stage_id": "retained_point_after_opening",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r1",
+                "generation": "pad-generation:r1"
+              }
+            ],
+            "aliases": {},
+            "scalars": [
+              {
+                "observation_id": "pad_opened_with_offset",
+                "ordinary": {},
+                "pads": {
+                  "r1": 1
+                },
+                "offset": 5,
+                "offset_available": true,
+                "rhs": 48,
+                "rhs_available": true,
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+              }
+            ],
+            "points": [
+              {
+                "observation_id": "masked_constant",
+                "ordinary": {
+                  "w1": [
+                    1
+                  ]
+                },
+                "pads": {
+                  "r1": 1
+                },
+                "offset": [
+                  6,
+                  2
+                ],
+                "offset_available": true,
+                "handle_id": "handle:masked_constant",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          }
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 29
+        },
+        "pad_values": {
+          "r1": 43
+        }
+      }
+    },
+    {
+      "history_id": "same_fact_mask_difference",
+      "description": "Two fresh masks with the same fact displacement cancel under the prescribed shift.",
+      "stages": [
+        {
+          "stage_id": "difference_released",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "wA",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:wA",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:wA",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable wA"
+                }
+              },
+              {
+                "source_id": "wB",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:wB",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:wB",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable wB"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "same_fact_mask_difference",
+                "ordinary": {
+                  "wA": [
+                    1
+                  ],
+                  "wB": [
+                    -1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  8,
+                  2
+                ],
+                "offset_available": true,
+                "handle_id": "handle:same_fact_mask_difference",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "wA": 29,
+          "wB": 47
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "pending_canonical_point",
+      "description": "A formal incompatibility before E is published is not an executed distinguishing attack.",
+      "stages": [
+        {
+          "stage_id": "before_canonical_point",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w_pending",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_pending",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_pending",
+                  "available": false,
+                  "provenance": ""
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "pending_polynomial",
+                "ordinary": {
+                  "w_pending": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:pending_polynomial",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PENDING_CANONICAL_POINTS"
+          }
+        },
+        {
+          "stage_id": "after_canonical_point",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w_pending",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_pending",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_pending",
+                  "available": true,
+                  "provenance": "Canonical point published for the original generation"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "pending_polynomial",
+                "ordinary": {
+                  "w_pending": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:pending_polynomial",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          }
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w_pending": 29
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "aliases_keep_original_fact_binding",
+      "description": "A copied old generation still binds the old fact row after a fresh new generation exists.",
+      "stages": [
+        {
+          "stage_id": "old_fact_pair",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:old",
+              "qualification:new"
+            ],
+            "sources": [
+              {
+                "source_id": "w_old",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_old",
+                "fact_map": [
+                  1,
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_old",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w_old"
+                }
+              },
+              {
+                "source_id": "w_new",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_new",
+                "fact_map": [
+                  0,
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_new",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w_new"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r_old",
+                "generation": "pad-generation:r_old"
+              }
+            ],
+            "aliases": {
+              "retained_w": "w_old",
+              "copied_retained_w": "retained_w",
+              "retained_pad": "r_old"
+            },
+            "scalars": [
+              {
+                "observation_id": "old_pad_opening",
+                "ordinary": {},
+                "pads": {
+                  "retained_pad": 1
+                },
+                "offset": 0,
+                "offset_available": true,
+                "rhs": 43,
+                "rhs_available": true,
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+              }
+            ],
+            "points": [
+              {
+                "observation_id": "old_delivery",
+                "ordinary": {
+                  "copied_retained_w": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {
+                  "r_old": 1
+                },
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:old_delivery",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0,
+              0
+            ],
+            "y1": [
+              1,
+              0
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          }
+        },
+        {
+          "stage_id": "new_fact_pair",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:old",
+              "qualification:new"
+            ],
+            "sources": [
+              {
+                "source_id": "w_old",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_old",
+                "fact_map": [
+                  1,
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_old",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w_old"
+                }
+              },
+              {
+                "source_id": "w_new",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w_new",
+                "fact_map": [
+                  0,
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w_new",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w_new"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "r_old",
+                "generation": "pad-generation:r_old"
+              }
+            ],
+            "aliases": {
+              "retained_w": "w_old",
+              "copied_retained_w": "retained_w",
+              "retained_pad": "r_old"
+            },
+            "scalars": [
+              {
+                "observation_id": "old_pad_opening",
+                "ordinary": {},
+                "pads": {
+                  "retained_pad": 1
+                },
+                "offset": 0,
+                "offset_available": true,
+                "rhs": 43,
+                "rhs_available": true,
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+              }
+            ],
+            "points": [
+              {
+                "observation_id": "old_delivery",
+                "ordinary": {
+                  "copied_retained_w": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {
+                  "r_old": 1
+                },
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:old_delivery",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0,
+              0
+            ],
+            "y1": [
+              0,
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w_old": 29,
+          "w_new": 47
+        },
+        "pad_values": {
+          "r_old": 43
+        }
+      }
+    },
+    {
+      "history_id": "joint_affine_mixed_system",
+      "description": "Joint T=(Lr;B), nonzero ordinary scalar coefficients, actual RHS, and polynomial offsets all matter.",
+      "stages": [
+        {
+          "stage_id": "points_without_relation",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2,
+              3
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              },
+              {
+                "source_id": "w2",
+                "kind": "mask",
+                "slot": "slot:2",
+                "node": 2,
+                "generation": "generation:w2",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w2",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w2"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "rA",
+                "generation": "pad-generation:rA"
+              },
+              {
+                "source_id": "rB",
+                "generation": "pad-generation:rB"
+              }
+            ],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "mixed_C1",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ],
+                  "w2": [
+                    2
+                  ]
+                },
+                "pads": {
+                  "rA": 1,
+                  "rB": 2
+                },
+                "offset": [
+                  7,
+                  3,
+                  5
+                ],
+                "offset_available": true,
+                "handle_id": "handle:mixed_C1",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              },
+              {
+                "observation_id": "mixed_C2",
+                "ordinary": {
+                  "w1": [
+                    1
+                  ],
+                  "w2": [
+                    -2,
+                    1
+                  ]
+                },
+                "pads": {
+                  "rA": 3,
+                  "rB": -1
+                },
+                "offset": [
+                  11,
+                  4
+                ],
+                "offset_available": true,
+                "handle_id": "handle:mixed_C2",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "NO_DISTINGUISHING_WITNESS"
+          }
+        },
+        {
+          "stage_id": "joint_scalar_and_points",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2,
+              3
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              },
+              {
+                "source_id": "w2",
+                "kind": "mask",
+                "slot": "slot:2",
+                "node": 2,
+                "generation": "generation:w2",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w2",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w2"
+                }
+              }
+            ],
+            "pads": [
+              {
+                "source_id": "rA",
+                "generation": "pad-generation:rA"
+              },
+              {
+                "source_id": "rB",
+                "generation": "pad-generation:rB"
+              }
+            ],
+            "aliases": {},
+            "scalars": [
+              {
+                "observation_id": "mixed_affine_answer",
+                "ordinary": {
+                  "w1": 1
+                },
+                "pads": {
+                  "rA": 2,
+                  "rB": 1
+                },
+                "offset": 9,
+                "offset_available": true,
+                "rhs": 103,
+                "rhs_available": true,
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+              }
+            ],
+            "points": [
+              {
+                "observation_id": "mixed_C1",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ],
+                  "w2": [
+                    2
+                  ]
+                },
+                "pads": {
+                  "rA": 1,
+                  "rB": 2
+                },
+                "offset": [
+                  7,
+                  3,
+                  5
+                ],
+                "offset_available": true,
+                "handle_id": "handle:mixed_C1",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              },
+              {
+                "observation_id": "mixed_C2",
+                "ordinary": {
+                  "w1": [
+                    1
+                  ],
+                  "w2": [
+                    -2,
+                    1
+                  ]
+                },
+                "pads": {
+                  "rA": 3,
+                  "rB": -1
+                },
+                "offset": [
+                  11,
+                  4
+                ],
+                "offset_available": true,
+                "handle_id": "handle:mixed_C2",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          },
+          "require_mixed_witness": true
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 5,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 17,
+          "w2": 29
+        },
+        "pad_values": {
+          "rA": 23,
+          "rB": 31
+        }
+      }
+    },
+    {
+      "history_id": "family_span_and_conservative_superset",
+      "description": "An exact legal-family span passes; a larger span can fail without an incompatible actual pair.",
+      "stages": [
+        {
+          "stage_id": "exact_family",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "fact:a",
+              "fact:b",
+              "fact:c"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1,
+                  -1,
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "fact_difference_probe",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:fact_difference_probe",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "span",
+            "difference_vectors": [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "span_relation": "exact",
+            "actual_pairs": [
+              {
+                "pair_id": "pair_ab",
+                "kind": "pair",
+                "y0": [
+                  0,
+                  0,
+                  0
+                ],
+                "y1": [
+                  1,
+                  1,
+                  0
+                ],
+                "pair_contract": {
+                  "legal_pair": true,
+                  "same_public_metadata_and_outcomes": true,
+                  "fixed_before_fresh_sources": true,
+                  "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+                }
+              },
+              {
+                "pair_id": "pair_c",
+                "kind": "pair",
+                "y0": [
+                  0,
+                  0,
+                  0
+                ],
+                "y1": [
+                  0,
+                  0,
+                  1
+                ],
+                "pair_contract": {
+                  "legal_pair": true,
+                  "same_public_metadata_and_outcomes": true,
+                  "fixed_before_fresh_sources": true,
+                  "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+                }
+              }
+            ],
+            "family_assignments": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          "expected": {
+            "formal_status": "COMPATIBLE",
+            "execution_status": "SEE_EXPLICIT_PAIR_RESULTS_ONLY"
+          },
+          "expected_family_status": "COMPATIBLE_EXACT_SPAN"
+        },
+        {
+          "stage_id": "larger_conservative_span",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "fact:a",
+              "fact:b",
+              "fact:c"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1,
+                  -1,
+                  0
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "fact_difference_probe",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:fact_difference_probe",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "span",
+            "difference_vectors": [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "span_relation": "superset",
+            "actual_pairs": [
+              {
+                "pair_id": "pair_ab",
+                "kind": "pair",
+                "y0": [
+                  0,
+                  0,
+                  0
+                ],
+                "y1": [
+                  1,
+                  1,
+                  0
+                ],
+                "pair_contract": {
+                  "legal_pair": true,
+                  "same_public_metadata_and_outcomes": true,
+                  "fixed_before_fresh_sources": true,
+                  "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+                }
+              },
+              {
+                "pair_id": "pair_c",
+                "kind": "pair",
+                "y0": [
+                  0,
+                  0,
+                  0
+                ],
+                "y1": [
+                  0,
+                  0,
+                  1
+                ],
+                "pair_contract": {
+                  "legal_pair": true,
+                  "same_public_metadata_and_outcomes": true,
+                  "fixed_before_fresh_sources": true,
+                  "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+                }
+              }
+            ],
+            "family_assignments": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE_DIRECTION",
+            "execution_status": "SEE_EXPLICIT_PAIR_RESULTS_ONLY"
+          },
+          "expected_family_status": "UNCERTIFIED_SUPERSET"
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 29
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "formal_nonzero_fixed_tau_collision",
+      "description": "A nonzero formal rational witness can evaluate to zero at the legal tau=3.",
+      "stages": [
+        {
+          "stage_id": "collision_at_tau_three",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "vanishes_at_three",
+                "ordinary": {
+                  "w1": [
+                    -3,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:vanishes_at_three",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "PAIRING_TEST_RECIPE_READY"
+          },
+          "expected_fixed_tau_collision": true,
+          "alternate_tau": 4
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 3,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 29
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "private_offset_is_formal_only",
+      "description": "An unknown but stipulated world-invariant affine offset blocks the public correction recipe.",
+      "stages": [
+        {
+          "stage_id": "private_descriptor",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "opaque_fixed_offset",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": null,
+                "offset_available": false,
+                "handle_id": "handle:opaque_fixed_offset",
+                "observer_available": true,
+                "world_invariant": true,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected": {
+            "formal_status": "INCOMPATIBLE",
+            "execution_status": "REPRESENTATION_PREREQUISITES_MISSING"
+          },
+          "expected_history_contract_eligible": false
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 29
+        },
+        "pad_values": {}
+      }
+    },
+    {
+      "history_id": "world_dependent_offset_rejected",
+      "description": "The canonical F0=(tau-t)w-y*beta is not an extra world-invariant-offset release.",
+      "stages": [
+        {
+          "stage_id": "outside_declared_release_grammar",
+          "ledger": {
+            "schema": "CHARE_FACT_LEDGER_V1",
+            "p": 131,
+            "setup_id": "synthetic-fact-reference-setup",
+            "setup_nodes": [
+              1,
+              2
+            ],
+            "fact_ids": [
+              "qualification:q0"
+            ],
+            "sources": [
+              {
+                "source_id": "w1",
+                "kind": "mask",
+                "slot": "slot:1",
+                "node": 1,
+                "generation": "generation:w1",
+                "fact_map": [
+                  1
+                ],
+                "canonical_point": {
+                  "handle_id": "E:w1",
+                  "available": true,
+                  "provenance": "Canonical generator for immutable w1"
+                }
+              }
+            ],
+            "pads": [],
+            "aliases": {},
+            "scalars": [],
+            "points": [
+              {
+                "observation_id": "canonical_projection_not_extra_release",
+                "ordinary": {
+                  "w1": [
+                    -1,
+                    1
+                  ]
+                },
+                "pads": {},
+                "offset": [
+                  0
+                ],
+                "offset_available": true,
+                "handle_id": "handle:canonical_projection_not_extra_release",
+                "observer_available": true,
+                "world_invariant": false,
+                "provenance": "Fixed coefficients and offset on the same public prefix"
+              }
+            ],
+            "factual_openings": [],
+            "public_powers_available": true
+          },
+          "query": {
+            "kind": "pair",
+            "y0": [
+              0
+            ],
+            "y1": [
+              1
+            ],
+            "pair_contract": {
+              "legal_pair": true,
+              "same_public_metadata_and_outcomes": true,
+              "fixed_before_fresh_sources": true,
+              "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+            }
+          },
+          "expected_error": "UNSUPPORTED_MODEL"
+        }
+      ],
+      "fixture_private_diagnostics": {
+        "observer_visible": false,
+        "scope": "Synthetic exponent-model diagnostics only",
+        "tau": 4,
+        "beta": 7,
+        "ordinary_values": {
+          "w1": 29
+        },
+        "pad_values": {}
+      }
+    }
+  ]
+}

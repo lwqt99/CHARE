@@ -1,0 +1,151 @@
+{
+  "name": "numerical_core_linear_sum",
+  "observer_ledger": {
+    "aliases": [],
+    "equations": [
+      {
+        "equation_id": "visible-equation-0",
+        "evidence_id": "fixture-observed-numerical-answer-0",
+        "rhs": 30,
+        "terms": {
+          "v1": 1,
+          "v2": 2
+        },
+        "visibility": "observer"
+      }
+    ],
+    "points": [],
+    "schema": "CHARE-observer-affine-ledger-v1",
+    "source_ids": [
+      "v1",
+      "v2"
+    ]
+  },
+  "original_target": {
+    "C0": "0401bc006e",
+    "C1": "0400470024",
+    "F_columns": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "X": [
+      "040086001f",
+      "0401770103"
+    ],
+    "affine_descriptor_visibility": "observer",
+    "c": [
+      7,
+      12
+    ],
+    "context_hex": "7b224330223a2230343031626330303665222c224331223a2230343030343730303234222c2258223a5b2230343030383630303166222c2230343031373730313033225d2c22616666696e655f736f757263655f6d6f64656c223a7b22465f636f6c756d6e73223a5b5b312c305d2c5b302c315d5d2c22616666696e655f64657363726970746f725f7669736962696c697479223a226f62736572766572222c2263223a5b372c31325d2c22657461223a5b302c305d2c22726573696475616c5f7669736962696c697479223a226f62736572766572222c22736f757263655f696473223a5b227631222c227632225d7d2c22696e7374616e6365223a226e756d65726963616c5f636f72655f6c696e6561725f73756d222c226e6f646573223a5b312c325d2c2270726f6a656374696f6e73223a5b5b2230343031646330313237225d2c5b2230343030383330306462225d5d2c227265636f72645f696473223a5b226f726967696e616c2d7265636f72642d31222c226f726967696e616c2d7265636f72642d32225d2c2273657475705f6964223a2232376562666638666363633430303837653631353136656233303738343031666632343538346639666664666134383765316230363832323262613737396536222c22736e617073686f74223a226f726967696e616c2d6265666f72652d616666696e652d646973636c6f7375726573227d",
+    "context_object": {
+      "C0": "0401bc006e",
+      "C1": "0400470024",
+      "X": [
+        "040086001f",
+        "0401770103"
+      ],
+      "affine_source_model": {
+        "F_columns": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "affine_descriptor_visibility": "observer",
+        "c": [
+          7,
+          12
+        ],
+        "eta": [
+          0,
+          0
+        ],
+        "residual_visibility": "observer",
+        "source_ids": [
+          "v1",
+          "v2"
+        ]
+      },
+      "instance": "numerical_core_linear_sum",
+      "nodes": [
+        1,
+        2
+      ],
+      "projections": [
+        [
+          "0401dc0127"
+        ],
+        [
+          "04008300db"
+        ]
+      ],
+      "record_ids": [
+        "original-record-1",
+        "original-record-2"
+      ],
+      "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+      "snapshot": "original-before-affine-disclosures"
+    },
+    "eta": [
+      0,
+      0
+    ],
+    "nodes": [
+      1,
+      2
+    ],
+    "projections": [
+      [
+        "0401dc0127"
+      ],
+      [
+        "04008300db"
+      ]
+    ],
+    "residual_visibility": "observer",
+    "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+    "source_ids": [
+      "v1",
+      "v2"
+    ]
+  },
+  "public_setup": {
+    "A": [
+      "0400f000b2"
+    ],
+    "B": [
+      "04015901f2"
+    ],
+    "Gamma": "040135003c",
+    "N": 2,
+    "T": [
+      "04003101bf",
+      "0400bf0107"
+    ],
+    "W": {
+      "1": "0401080129",
+      "2": "04014f00d0"
+    },
+    "Y": [
+      "0400a600b2",
+      "0400750159"
+    ],
+    "Z": "00d20068",
+    "g": "04018d00a0",
+    "h": "04003101bf",
+    "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6"
+  },
+  "schema": "CHARE-affine-public-fixture-v1",
+  "scope": "Actual order-131 curve points and pairings; diagnostic only, not native PBC."
+}

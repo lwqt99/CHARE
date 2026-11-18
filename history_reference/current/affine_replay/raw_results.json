@@ -1,0 +1,2774 @@
+{
+  "api_review": {
+    "compile_signature": "(pp, original_target, observer_ledger)",
+    "expected_outputs_loaded_only_by_outer_comparator": true,
+    "forbidden_private_identifiers_absent_from_recover": true,
+    "note": "Static checks support the boundary; provenance labels do not authenticate false metadata.",
+    "original_target_and_public_fixture_unchanged_in_every_positive": true,
+    "recover_signature": "(pp, original_target, observer_ledger, compiled_recipe)",
+    "recovery_module_does_not_call_fixture_generator": true
+  },
+  "backend_checks": {
+    "base_field_q": 523,
+    "bilinearity_cases": 81,
+    "curve_point_count": 524,
+    "generator": "04018d00a0",
+    "nondegenerate": true,
+    "pairing_generator": "016a0152",
+    "scalar_order_r": 131,
+    "scope": "Small insecure diagnostic curve; actual coordinate and pairing arithmetic; not PBC/native-paper parameters.",
+    "source_encoding_roundtrips": 131,
+    "target_encoding_roundtrips": 131
+  },
+  "coordinate_invariance_checks": [
+    {
+      "name": "known_numerical_core",
+      "original_target_unchanged": true,
+      "q": [
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130
+      ]
+    },
+    {
+      "name": "numerical_core_linear_sum",
+      "original_target_unchanged": true,
+      "q": [
+        0,
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130,
+        129
+      ]
+    },
+    {
+      "name": "known_point_affine_offset",
+      "original_target_unchanged": true,
+      "q": [
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130
+      ]
+    },
+    {
+      "name": "mixed_masks_with_actual_rhs",
+      "original_target_unchanged": true,
+      "q": [
+        0,
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130,
+        129
+      ]
+    },
+    {
+      "name": "numerical_pad_point_cancellation",
+      "original_target_unchanged": true,
+      "q": [
+        0,
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130,
+        129
+      ]
+    },
+    {
+      "name": "aliased_source_affine_sums",
+      "original_target_unchanged": true,
+      "q": [
+        67,
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        66,
+        65
+      ]
+    },
+    {
+      "name": "three_slot_affine_residual",
+      "original_target_unchanged": true,
+      "q": [
+        91,
+        41,
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        0,
+        38,
+        108
+      ]
+    },
+    {
+      "name": "opened_offset_actual_rhs",
+      "original_target_unchanged": true,
+      "q": [
+        130
+      ],
+      "result": "same original GT and key",
+      "x": [
+        130
+      ]
+    }
+  ],
+  "coordinate_invariance_count": 8,
+  "field_order": 131,
+  "negative_case_count": 24,
+  "negative_cases": [
+    {
+      "base_fixture": "mixed_masks_with_actual_rhs",
+      "change": "Remove the needed observed mask or pad point; public h remains available.",
+      "classification": "NO_REPRESENTED_WITNESS_IN_SUPPLIED_SPAN",
+      "diagnostic": {
+        "constant_coordinate_retained": true,
+        "equation_ids": [
+          "visible-equation-0"
+        ],
+        "fiber": {
+          "basis_rows": [
+            [
+              129,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "free_columns": [
+            1,
+            2,
+            3
+          ],
+          "particular": [
+            30,
+            0,
+            0,
+            0
+          ],
+          "pivot_columns": [
+            0
+          ],
+          "rref_augmented": [
+            [
+              1,
+              2,
+              0,
+              0,
+              30
+            ]
+          ]
+        },
+        "joint_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            33,
+            11,
+            130
+          ],
+          [
+            129,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            130,
+            1,
+            0
+          ]
+        ],
+        "joint_rhs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          130
+        ],
+        "matrix": [
+          [
+            1,
+            2,
+            0,
+            0
+          ]
+        ],
+        "point_columns": [
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "point_handle_ids": [
+          "public-setup-h"
+        ],
+        "public_h_always_included": true,
+        "rhs": [
+          30
+        ],
+        "source_order": [
+          "v1",
+          "v2",
+          "mask1",
+          "mask2"
+        ],
+        "target_columns": [
+          [
+            33,
+            129,
+            3,
+            0
+          ],
+          [
+            11,
+            1,
+            0,
+            3
+          ]
+        ]
+      },
+      "name": "mixed_masks_with_actual_rhs_missing_point"
+    },
+    {
+      "base_fixture": "numerical_pad_point_cancellation",
+      "change": "Remove the needed observed mask or pad point; public h remains available.",
+      "classification": "NO_REPRESENTED_WITNESS_IN_SUPPLIED_SPAN",
+      "diagnostic": {
+        "constant_coordinate_retained": true,
+        "equation_ids": [
+          "visible-equation-0"
+        ],
+        "fiber": {
+          "basis_rows": [
+            [
+              129,
+              130
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "free_columns": [
+            1,
+            2
+          ],
+          "particular": [
+            53,
+            0,
+            0
+          ],
+          "pivot_columns": [
+            0
+          ],
+          "rref_augmented": [
+            [
+              1,
+              2,
+              1,
+              53
+            ]
+          ]
+        },
+        "joint_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            60,
+            12,
+            130
+          ],
+          [
+            129,
+            1,
+            0
+          ],
+          [
+            130,
+            0,
+            0
+          ],
+          [
+            130,
+            1,
+            0
+          ]
+        ],
+        "joint_rhs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          130
+        ],
+        "matrix": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "point_columns": [
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "point_handle_ids": [
+          "public-setup-h"
+        ],
+        "public_h_always_included": true,
+        "rhs": [
+          53
+        ],
+        "source_order": [
+          "v1",
+          "v2",
+          "pad"
+        ],
+        "target_columns": [
+          [
+            60,
+            129,
+            130
+          ],
+          [
+            12,
+            1,
+            0
+          ]
+        ]
+      },
+      "name": "numerical_pad_point_cancellation_missing_point"
+    },
+    {
+      "base_fixture": "private_offset_unopened",
+      "change": "No public equation opens the offset; its realized value is absent from the observer input.",
+      "classification": "NO_REPRESENTED_WITNESS_IN_SUPPLIED_SPAN",
+      "diagnostic": {
+        "constant_coordinate_retained": true,
+        "equation_ids": [],
+        "fiber": {
+          "basis_rows": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "free_columns": [
+            0,
+            1
+          ],
+          "particular": [
+            0,
+            0
+          ],
+          "pivot_columns": [],
+          "rref_augmented": []
+        },
+        "joint_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            130
+          ],
+          [
+            1,
+            130,
+            0
+          ],
+          [
+            0,
+            130,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "joint_rhs": [
+          0,
+          0,
+          0,
+          0,
+          130
+        ],
+        "matrix": [],
+        "point_columns": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "public_h_always_included": true,
+        "rhs": [],
+        "source_order": [
+          "v1",
+          "offset"
+        ],
+        "target_columns": [
+          [
+            5,
+            1,
+            0
+          ]
+        ]
+      },
+      "name": "private_offset_retained_as_free_source"
+    },
+    {
+      "base_fixture": "private_offset_unopened",
+      "change": "Inject offset=17 with auditor_only visibility; reject instead of using its RHS.",
+      "classification": "REJECTED",
+      "name": "private_rhs_cannot_be_used_for_elimination",
+      "reason": "An auditor-only value or descriptor is not an observer input"
+    },
+    {
+      "base_fixture": "private_offset_unopened",
+      "change": "Use the audit-only offset in an affine constant descriptor; reject its provenance.",
+      "classification": "REJECTED",
+      "name": "private_offset_cannot_be_relabelled_as_constant",
+      "reason": "An auditor-only value or descriptor is not an observer input"
+    },
+    {
+      "base_fixture": "known_point_affine_offset",
+      "change": "Omit the nonzero h coefficient from the otherwise valid recovery recipe.",
+      "classification": "REJECTED",
+      "name": "missing_required_affine_constant_correction",
+      "reason": "Affine source correction does not match, including its constant"
+    },
+    {
+      "base_fixture": "known_point_affine_offset",
+      "change": "Add one to the required h coefficient; full affine matching rejects.",
+      "classification": "REJECTED",
+      "name": "wrong_affine_constant_in_recipe",
+      "reason": "Affine source correction does not match, including its constant"
+    },
+    {
+      "GT_match": false,
+      "base_fixture": "known_point_affine_offset",
+      "candidate": {
+        "GT_hex": "00610017",
+        "L": "04002a01a8",
+        "Q_h": "040031004c",
+        "R_h": "04004701e7",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "6505eac8d1749e0c10a97248b938179e0a458a30c58d6fd42fe330b4f1fa4b0c",
+        "original_context_sha256": "b0a56c641589c94f9f175ea611621465ec28d5f88fda605fffdefba463a8cb7c",
+        "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+        "point_coefficients": [
+          130,
+          13
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "change": "Declare offset 18 for the actual observed point with offset 17; provenance truth is intentionally false.",
+      "classification": "CANDIDATE_GT_AND_KEY_MISMATCH",
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [],
+          "fiber": {
+            "basis_rows": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              0,
+              1
+            ],
+            "particular": [
+              0,
+              0
+            ],
+            "pivot_columns": [],
+            "rref_augmented": []
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              113,
+              130
+            ],
+            [
+              1,
+              130,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [],
+          "point_columns": [
+            [
+              18,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              5,
+              1,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "d0ae61f518886342a3d129e2f636dff7a9fc028518727766ebde8f442b263541",
+          "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+          "point_coefficients": [
+            130,
+            13
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "key_match": false,
+      "name": "incorrect_point_offset_metadata"
+    },
+    {
+      "GT_match": false,
+      "base_fixture": "known_point_affine_offset",
+      "candidate": {
+        "GT_hex": "016a0152",
+        "L": "04017d0061",
+        "Q_h": "040031004c",
+        "R_h": "040190002c",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "9f597c62bbcca4299e46bb8df657958617da3abd8e6b4880d1a4a162a55c384f",
+        "original_context_sha256": "b0a56c641589c94f9f175ea611621465ec28d5f88fda605fffdefba463a8cb7c",
+        "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+        "point_coefficients": [
+          130,
+          12
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "change": "Add h to the supplied point while preserving its affine descriptor.",
+      "classification": "CANDIDATE_GT_AND_KEY_MISMATCH",
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [],
+          "fiber": {
+            "basis_rows": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              0,
+              1
+            ],
+            "particular": [
+              0,
+              0
+            ],
+            "pivot_columns": [],
+            "rref_augmented": []
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              114,
+              130
+            ],
+            [
+              1,
+              130,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [],
+          "point_columns": [
+            [
+              17,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              5,
+              1,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "bc19203c11620ea805ab7c44f30095e75c9cf489be65142ea1dc2d0c46531c7e",
+          "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+          "point_coefficients": [
+            130,
+            12
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "key_match": false,
+      "name": "incorrect_point_handle_with_correct_descriptor"
+    },
+    {
+      "GT_match": false,
+      "base_fixture": "known_numerical_core",
+      "candidate": {
+        "GT_hex": "00640094",
+        "L": "0401c30019",
+        "Q_h": "040031004c",
+        "R_h": "04016400ed",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "42be6f58232c9d83575b428be25eb344b1d236f6868034731f8273691f753006",
+        "original_context_sha256": "be717d1a830624ebf4676e37fda538e19a2f598059669a25b46e07382e07f3ed",
+        "original_target_sha256": "7137deae9965dfbafcab8b8330d6143ee5964a5c1e9c8fb5f62e607759f40e62",
+        "point_coefficients": [
+          126
+        ],
+        "point_handle_ids": [
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "change": "Replace the visible answer v1=4 by v1=0; recompile but the original ciphertext remains fixed.",
+      "classification": "CANDIDATE_GT_AND_KEY_MISMATCH",
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "free_columns": [
+              1
+            ],
+            "particular": [
+              0,
+              0
+            ],
+            "pivot_columns": [
+              0
+            ],
+            "rref_augmented": [
+              [
+                1,
+                0,
+                0
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              5,
+              130
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              1,
+              0
+            ]
+          ],
+          "point_columns": [
+            [
+              1,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            0
+          ],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              5,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "4292c629c6c0d7ba56b80c716a61c8ad9523f32b7da6ab0a603e67fe72fe58b6",
+          "original_target_sha256": "7137deae9965dfbafcab8b8330d6143ee5964a5c1e9c8fb5f62e607759f40e62",
+          "point_coefficients": [
+            126
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "key_match": false,
+      "name": "discard_actual_nonzero_rhs"
+    },
+    {
+      "base_fixture": "aliased_source_affine_sums",
+      "change": "Treat shared-A and shared-B as distinct declared sources without alias evidence, even though the fixture used equal values.",
+      "classification": "NO_REPRESENTED_WITNESS_IN_SUPPLIED_SPAN",
+      "diagnostic": {
+        "constant_coordinate_retained": true,
+        "equation_ids": [],
+        "fiber": {
+          "basis_rows": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "free_columns": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "particular": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pivot_columns": [],
+          "rref_augmented": []
+        },
+        "joint_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            2,
+            114,
+            125,
+            130
+          ],
+          [
+            1,
+            0,
+            130,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            130,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            130,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            130,
+            0
+          ],
+          [
+            130,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "joint_rhs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          130
+        ],
+        "matrix": [],
+        "point_columns": [
+          [
+            17,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            6,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "visible-point-1",
+          "public-setup-h"
+        ],
+        "public_h_always_included": true,
+        "rhs": [],
+        "source_order": [
+          "v1",
+          "v2",
+          "shared",
+          "shared-A",
+          "shared-B"
+        ],
+        "target_columns": [
+          [
+            9,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "name": "no_inferred_alias_from_point_values_or_names"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Negate a valid x and all L coefficients: affine matching still holds, but gamma*x becomes +1.",
+      "classification": "REJECTED",
+      "name": "gamma_plus_one_wrong_sign",
+      "reason": "Residual or gamma*x=-1 condition failed"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Mark the residual data as auditor-only instead of giving observer-available residuals.",
+      "classification": "REJECTED",
+      "name": "private_residuals_are_not_observer_coefficients",
+      "reason": "An auditor-only value or descriptor is not an observer input"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Change C1 without changing the bound original context.",
+      "classification": "REJECTED",
+      "name": "changed_original_ciphertext",
+      "reason": "Original target binding changed: C1"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Change c[0] without changing the bound original affine model.",
+      "classification": "REJECTED",
+      "name": "changed_original_target_constant",
+      "reason": "Original affine target model binding changed"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Alter the highest-index projection in a negative-test copy and rebind its context so validation reaches the pairing check.",
+      "classification": "REJECTED",
+      "name": "last_projection_is_checked",
+      "reason": "Projection check failed"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Change a public setup point while retaining the original setup digest.",
+      "classification": "REJECTED",
+      "name": "changed_setup_old_digest",
+      "reason": "Public setup digest mismatch"
+    },
+    {
+      "base_fixture": "three_slot_affine_residual",
+      "change": "Append a byte to the original KDF context.",
+      "classification": "REJECTED",
+      "name": "changed_original_context_bytes",
+      "reason": "Original context bytes changed"
+    },
+    {
+      "base_fixture": "opened_offset_actual_rhs",
+      "change": "Add offset=18 alongside the already visible offset=17.",
+      "classification": "REJECTED",
+      "name": "inconsistent_visible_affine_fiber",
+      "reason": "Inconsistent visible affine equations"
+    },
+    {
+      "base_fixture": "opened_offset_actual_rhs",
+      "change": "Attach a separate audit payload to an API which accepts only the exact observer-ledger schema.",
+      "classification": "REJECTED",
+      "name": "extra_private_audit_payload_not_accepted",
+      "reason": "Observer ledger must not include extra audit payloads"
+    },
+    {
+      "base_fixture": "opened_offset_actual_rhs",
+      "change": "Mark a needed point handle as auditor-only.",
+      "classification": "REJECTED",
+      "name": "private_point_handle_not_available",
+      "reason": "An auditor-only value or descriptor is not an observer input"
+    },
+    {
+      "base_fixture": "opened_offset_actual_rhs",
+      "change": "Reuse a compiled recipe after the observer ledger RHS has changed.",
+      "classification": "REJECTED",
+      "name": "stale_recipe_after_rhs_change",
+      "reason": "Compiled recovery binding changed: observer_ledger_sha256"
+    },
+    {
+      "GT_match": true,
+      "base_fixture": "known_numerical_core",
+      "classification": "KEY_MISMATCH_WITH_SAME_GT",
+      "key_match": false,
+      "name": "same_gt_different_kdf_context"
+    },
+    {
+      "GT_match": false,
+      "base_fixture": "known_numerical_core",
+      "classification": "GT_MISMATCH",
+      "name": "opposite_sign_on_second_pairing",
+      "wrong_GT_hex": "015a008f"
+    }
+  ],
+  "positive_case_count": 8,
+  "positive_cases": [
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "free_columns": [
+              1
+            ],
+            "particular": [
+              4,
+              0
+            ],
+            "pivot_columns": [
+              0
+            ],
+            "rref_augmented": [
+              [
+                1,
+                0,
+                4
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              9,
+              130
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              1,
+              0
+            ]
+          ],
+          "point_columns": [
+            [
+              1,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            4
+          ],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              9,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "408e2fd50a429c38b9bd372a1a02734457d2400e862b06081db971a11e80e199",
+          "original_target_sha256": "7137deae9965dfbafcab8b8330d6143ee5964a5c1e9c8fb5f62e607759f40e62",
+          "point_coefficients": [
+            122
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "a5bfa1c8219d83da9c514c786188ffcfe60cd72a5e688bd26414497f87444db8",
+      "key_match": true,
+      "name": "known_numerical_core",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "09b7f13b0611a139f5e7801def518a4f2973b4f40b8b21167027f345e17b02c7",
+      "replay": {
+        "GT_hex": "00610017",
+        "L": "04000b015f",
+        "Q_h": "040031004c",
+        "R_h": "04008601ec",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "dd26b53dbd5b9665525b809359769f4afe0c9c87c23598ca9cdb3872a9d035aa",
+        "original_context_sha256": "be717d1a830624ebf4676e37fda538e19a2f598059669a25b46e07382e07f3ed",
+        "original_target_sha256": "7137deae9965dfbafcab8b8330d6143ee5964a5c1e9c8fb5f62e607759f40e62",
+        "point_coefficients": [
+          122
+        ],
+        "point_handle_ids": [
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                129
+              ],
+              [
+                1
+              ]
+            ],
+            "free_columns": [
+              1
+            ],
+            "particular": [
+              30,
+              0
+            ],
+            "pivot_columns": [
+              0
+            ],
+            "rref_augmented": [
+              [
+                1,
+                2,
+                30
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              37,
+              12,
+              130
+            ],
+            [
+              129,
+              1,
+              0
+            ],
+            [
+              130,
+              1,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              1,
+              2
+            ]
+          ],
+          "point_columns": [
+            [
+              1,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            30
+          ],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              37,
+              129
+            ],
+            [
+              12,
+              1
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "8528a76283cbda87359d984bdf778f33f75c27221322f040e6ff23353995cb33",
+          "original_target_sha256": "e2e59444ffa597fed8ba88738b9ec3fa1226f1e7eec7ab82fe7d9cca7b6cc7b9",
+          "point_coefficients": [
+            70
+          ],
+          "point_handle_ids": [
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130,
+            129
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "feb555cea3ccae63c302380dfb13bee780afe95ddcf74fad3a838292601400c9",
+      "key_match": true,
+      "name": "numerical_core_linear_sum",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "301b694e1228d2c8b8213e38a3d73b53ecdddac9ab24101623f088ffc5b6d703",
+      "replay": {
+        "GT_hex": "00cb0133",
+        "L": "04018c0009",
+        "Q_h": "0400bf0104",
+        "R_h": "0400f10062",
+        "gamma": [
+          130,
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "ab4c4b43f4bb0141efaf874cca13b4fc03bebdbdc5b60611d8be0d45f0cb2982",
+        "original_context_sha256": "e1656b3a109359186e0f1323d00c69ecd0a47e513a5c32957091aac9963d6c69",
+        "original_target_sha256": "e2e59444ffa597fed8ba88738b9ec3fa1226f1e7eec7ab82fe7d9cca7b6cc7b9",
+        "point_coefficients": [
+          70
+        ],
+        "point_handle_ids": [
+          "public-setup-h"
+        ],
+        "q": [
+          0,
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          [
+            130
+          ],
+          [
+            130
+          ]
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130,
+          129
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [],
+          "fiber": {
+            "basis_rows": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              0,
+              1
+            ],
+            "particular": [
+              0,
+              0
+            ],
+            "pivot_columns": [],
+            "rref_augmented": []
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              114,
+              130
+            ],
+            [
+              1,
+              130,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [],
+          "point_columns": [
+            [
+              17,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [],
+          "source_order": [
+            "v1",
+            "v2"
+          ],
+          "target_columns": [
+            [
+              5,
+              1,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "b2d39b8cbbdcb7889ff15def591c3dc6f1c4e9fa465fddcdc857b54c149dfe07",
+          "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+          "point_coefficients": [
+            130,
+            12
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "94ae70b816ef71fc38097ef28b12d97875cefb9885bbd4dcf0f8e9fed6c8cb3e",
+      "key_match": true,
+      "name": "known_point_affine_offset",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "e34fbfc68cb09ddd9a1e4b15f7b37412ff4754f899b91b43e6c80d41b50be5a8",
+      "replay": {
+        "GT_hex": "01c401a9",
+        "L": "04000b015f",
+        "Q_h": "040031004c",
+        "R_h": "04008601ec",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "8fe7292d2dec14a822eb97eab8670c41e6d2e0bf0d70e3ea9da6472b8c93457a",
+        "original_context_sha256": "b0a56c641589c94f9f175ea611621465ec28d5f88fda605fffdefba463a8cb7c",
+        "original_target_sha256": "92790a0605f5409023b79e5baa76affa75a1b3e80567259a59b5f7d4be101c70",
+        "point_coefficients": [
+          130,
+          12
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                129,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              1,
+              2,
+              3
+            ],
+            "particular": [
+              30,
+              0,
+              0,
+              0
+            ],
+            "pivot_columns": [
+              0
+            ],
+            "rref_augmented": [
+              [
+                1,
+                2,
+                0,
+                0,
+                30
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              33,
+              11,
+              124,
+              130
+            ],
+            [
+              129,
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              130,
+              0
+            ],
+            [
+              0,
+              3,
+              129,
+              0
+            ],
+            [
+              130,
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              1,
+              2,
+              0,
+              0
+            ]
+          ],
+          "point_columns": [
+            [
+              7,
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            30
+          ],
+          "source_order": [
+            "v1",
+            "v2",
+            "mask1",
+            "mask2"
+          ],
+          "target_columns": [
+            [
+              33,
+              129,
+              3,
+              0
+            ],
+            [
+              11,
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "f97efe2bda12cfbf23e4c8a2d0061061a84915b8bb701ad8de1b0d9433189bb5",
+          "original_target_sha256": "1b7552cdcba495909a7f115cedf115b1addcf1656f051e3f4d0d83e9b65092a7",
+          "point_coefficients": [
+            128,
+            97
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130,
+            129
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "c4a7754f8cdc87ec78190c0f206ba6ca40278fcc5916d9e7412020b3616251fb",
+      "key_match": true,
+      "name": "mixed_masks_with_actual_rhs",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "e4119b3e145abb25ba0e25241c59fe1979d33c1eaa57f8f8806416cf704c1055",
+      "replay": {
+        "GT_hex": "0128008c",
+        "L": "04007a00ef",
+        "Q_h": "0400bf0104",
+        "R_h": "0401dc0127",
+        "gamma": [
+          130,
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "d9ae1f875f1f1bdb2dfe42d1fdba64b637198bc55cf5ad2dc90a8edbb4bbd07e",
+        "original_context_sha256": "f7b51f5442d9d4793d229e6d9c630c70b6c5f5c46469abe0d6672aa3b2de18af",
+        "original_target_sha256": "1b7552cdcba495909a7f115cedf115b1addcf1656f051e3f4d0d83e9b65092a7",
+        "point_coefficients": [
+          128,
+          97
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          0,
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          [
+            130
+          ],
+          [
+            130
+          ]
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130,
+          129
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                129,
+                130
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              1,
+              2
+            ],
+            "particular": [
+              53,
+              0,
+              0
+            ],
+            "pivot_columns": [
+              0
+            ],
+            "rref_augmented": [
+              [
+                1,
+                2,
+                1,
+                53
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              60,
+              12,
+              125,
+              130
+            ],
+            [
+              129,
+              1,
+              0,
+              0
+            ],
+            [
+              130,
+              0,
+              130,
+              0
+            ],
+            [
+              130,
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              1,
+              2,
+              1
+            ]
+          ],
+          "point_columns": [
+            [
+              6,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            53
+          ],
+          "source_order": [
+            "v1",
+            "v2",
+            "pad"
+          ],
+          "target_columns": [
+            [
+              60,
+              129,
+              130
+            ],
+            [
+              12,
+              1,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "1caba9158544b32360e6cddfbfa2af8d01e6f60c0857b73ef6df2c2220a3219e",
+          "original_target_sha256": "91303d0b5a832c822cba5e91fa37dc0a7acc8d3f5561c6022222e682598f7343",
+          "point_coefficients": [
+            1,
+            41
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130,
+            129
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "b011343de3118fb1b5cdc044a360d3f3fa62253092fa700ac63675a695f38f23",
+      "key_match": true,
+      "name": "numerical_pad_point_cancellation",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "bd771921bb2f4e34ef0d1f68921036d5db43743540bebaaa10dd47046d7b461e",
+      "replay": {
+        "GT_hex": "017a0168",
+        "L": "04018c0009",
+        "Q_h": "0400bf0104",
+        "R_h": "0400f10062",
+        "gamma": [
+          130,
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "cae22fbbbc32aceb8dcab7ecdae39df201d88830ce1efbf5432a7e0b7f683043",
+        "original_context_sha256": "2e218e46cac865ed6001ccb46423fb64b17cd2ab936b3727da65865ccc7e0fda",
+        "original_target_sha256": "91303d0b5a832c822cba5e91fa37dc0a7acc8d3f5561c6022222e682598f7343",
+        "point_coefficients": [
+          1,
+          41
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          0,
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          [
+            130
+          ],
+          [
+            130
+          ]
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130,
+          129
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [],
+          "fiber": {
+            "basis_rows": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              0,
+              1,
+              2
+            ],
+            "particular": [
+              0,
+              0,
+              0
+            ],
+            "pivot_columns": [],
+            "rref_augmented": []
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              9,
+              2,
+              114,
+              125,
+              130
+            ],
+            [
+              1,
+              0,
+              130,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              130,
+              0
+            ],
+            [
+              0,
+              0,
+              130,
+              130,
+              0
+            ],
+            [
+              130,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [],
+          "point_columns": [
+            [
+              17,
+              1,
+              0,
+              1
+            ],
+            [
+              6,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "visible-point-1",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [],
+          "source_order": [
+            "v1",
+            "v2",
+            "shared"
+          ],
+          "target_columns": [
+            [
+              9,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "5228ad38da2b8e678f8a7e31b52fd8a45dbdc3be6303f3c38de80a7bd8418434",
+          "original_target_sha256": "d4c2b55385239d70a510edb50df5c78ec0eeed4ad8fa7fe226ef5b1c338dab80",
+          "point_coefficients": [
+            66,
+            65,
+            129
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "visible-point-1",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "c59763d55612739d80c1f54338e6921c97320b568cd7f9931902c71e5dfbab96",
+          "x": [
+            66,
+            65
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "e7013c74ab1fd6fdc7eca46de53bccebe59ad741bef9a1b34a524c469cdffed5",
+      "key_match": true,
+      "name": "aliased_source_affine_sums",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "632a9724e53a3501b1d23f02d3181762e6c850aad38c073e20ed3651e110689a",
+      "replay": {
+        "GT_hex": "004e01c5",
+        "L": "040031004c",
+        "Q_h": "0400ab00c6",
+        "R_h": "040086001f",
+        "gamma": [
+          130,
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "8fccaae05724b2a1f9937fa1383e19e498e68f21ebc39923f50aac3499517a01",
+        "original_context_sha256": "9ce999c14a8f275e51aecddecd35dba8d194c743ef9c8892e21d174b19d13c9d",
+        "original_target_sha256": "d4c2b55385239d70a510edb50df5c78ec0eeed4ad8fa7fe226ef5b1c338dab80",
+        "point_coefficients": [
+          66,
+          65,
+          129
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "visible-point-1",
+          "public-setup-h"
+        ],
+        "q": [
+          67,
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          [
+            130
+          ],
+          [
+            130
+          ]
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          66,
+          65
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [],
+          "fiber": {
+            "basis_rows": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "free_columns": [
+              0,
+              1,
+              2
+            ],
+            "particular": [
+              0,
+              0,
+              0
+            ],
+            "pivot_columns": [],
+            "rref_augmented": []
+          },
+          "joint_matrix": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              9,
+              12,
+              124,
+              128,
+              130
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              130,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              130,
+              0
+            ],
+            [
+              44,
+              65,
+              22,
+              0,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [],
+          "point_columns": [
+            [
+              7,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "visible-point-1",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [],
+          "source_order": [
+            "v1",
+            "v2",
+            "v4"
+          ],
+          "target_columns": [
+            [
+              5,
+              1,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              1,
+              0
+            ],
+            [
+              12,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "ca662b484ecbf96b5e59e45ba6ae5f80dec02f9c786a71d88f8d7ab1c28e9958",
+          "original_target_sha256": "746cc36850176d640b532d1659eb42f036d0ea4bbabfb8a39195e4ade8e54b4f",
+          "point_coefficients": [
+            38,
+            108,
+            0
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "visible-point-1",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "82285052a104949840a8ed538ddee4739ff3ef2884a4224b5cbfa93d0872ce5c",
+          "x": [
+            0,
+            38,
+            108
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "e32acce8c7585467e163fb6c9b3574ad20de3c5e2d07e712ffa73fd1a47e8b0a",
+      "key_match": true,
+      "name": "three_slot_affine_residual",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "3e41a4f302b9e39606c7cef772a9bc4b0c44fd902a079e834793a07338c9b7e2",
+      "replay": {
+        "GT_hex": "01690085",
+        "L": "0400420040",
+        "Q_h": "0400ad01a9",
+        "R_h": "0401dd0168",
+        "gamma": [
+          44,
+          65,
+          22
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "fa9dde5a14e0d098fdfa6a5269b038ccf2d3a1af9a189b6a274dfd54ece539bf",
+        "original_context_sha256": "5179100137efd49f64dbe728e8ffa47c4768006d366cc91cc8f63caffff15108",
+        "original_target_sha256": "746cc36850176d640b532d1659eb42f036d0ea4bbabfb8a39195e4ade8e54b4f",
+        "point_coefficients": [
+          38,
+          108,
+          0
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "visible-point-1",
+          "public-setup-h"
+        ],
+        "q": [
+          91,
+          41,
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          [
+            40,
+            130
+          ],
+          [
+            39,
+            130
+          ],
+          [
+            37,
+            130
+          ]
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          0,
+          38,
+          108
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    },
+    {
+      "GT_match": true,
+      "compiled": {
+        "diagnostic": {
+          "constant_coordinate_retained": true,
+          "equation_ids": [
+            "visible-equation-0"
+          ],
+          "fiber": {
+            "basis_rows": [
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "free_columns": [
+              0
+            ],
+            "particular": [
+              0,
+              17
+            ],
+            "pivot_columns": [
+              1
+            ],
+            "rref_augmented": [
+              [
+                0,
+                1,
+                17
+              ]
+            ]
+          },
+          "joint_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              114,
+              130
+            ],
+            [
+              1,
+              130,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "joint_rhs": [
+            0,
+            0,
+            0,
+            130
+          ],
+          "matrix": [
+            [
+              0,
+              1
+            ]
+          ],
+          "point_columns": [
+            [
+              17,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "public_h_always_included": true,
+          "rhs": [
+            17
+          ],
+          "source_order": [
+            "v1",
+            "offset"
+          ],
+          "target_columns": [
+            [
+              5,
+              1
+            ]
+          ]
+        },
+        "recipe": {
+          "observer_ledger_sha256": "b45951fe13efc5d7492c0fbdcfd544bd0e1bafe8f99dd05e391bd19fc7551d9b",
+          "original_target_sha256": "f59d84d5e25cca3466dd9525356aaeb1a50760a50f794863a801560dccb3adcf",
+          "point_coefficients": [
+            130,
+            12
+          ],
+          "point_handle_ids": [
+            "visible-point-0",
+            "public-setup-h"
+          ],
+          "schema": "CHARE-affine-recovery-recipe-v1",
+          "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+          "x": [
+            130
+          ]
+        },
+        "status": "REPRESENTED_CANDIDATE"
+      },
+      "expected_output_sha256": "e7242d7eabb5e0a00f71b11ebf5b396e3e3cc8bd435f64dc6849a74c8ef8a30d",
+      "key_match": true,
+      "name": "opened_offset_actual_rhs",
+      "original_input_unchanged": true,
+      "public_fixture_sha256": "a42352c8feb57bfba5889c846cdc3f8d17061c5931d6b1512b724ae41a3d480f",
+      "replay": {
+        "GT_hex": "00140050",
+        "L": "04000b015f",
+        "Q_h": "040031004c",
+        "R_h": "04008601ec",
+        "gamma": [
+          1
+        ],
+        "gamma_times_x": 130,
+        "key_sha256": "59f0f528b8aa5d368424c05a2d3a5edaf1fd9cc01cad03d59ad23076a0d2a4bf",
+        "original_context_sha256": "ce342bdd8885025ca4129ac1fbb917214e9a9acc03bc2b90c03dbe3dd007dd27",
+        "original_target_sha256": "f59d84d5e25cca3466dd9525356aaeb1a50760a50f794863a801560dccb3adcf",
+        "point_coefficients": [
+          130,
+          12
+        ],
+        "point_handle_ids": [
+          "visible-point-0",
+          "public-setup-h"
+        ],
+        "q": [
+          130
+        ],
+        "q_leading_coefficient": 130,
+        "quotients": [
+          []
+        ],
+        "status": "AFFINE_TINY_CURVE_REPLAY_CANDIDATE",
+        "x": [
+          130
+        ]
+      },
+      "status": "AFFINE_TINY_CURVE_REPLAY_VERIFIED"
+    }
+  ],
+  "schema": "CHARE-affine-replay-results-v1",
+  "scope": "Independent actual tiny-curve diagnostic; no original PBC/native/security-level/performance claim."
+}

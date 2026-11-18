@@ -1,0 +1,92 @@
+{
+  "schema": "CHARE_ROUND3_INDEPENDENT_CODE_SPOTCHECKS_V1",
+  "review_date": "2026-11-15",
+  "all_passed": true,
+  "scope": "Four status-tamper rejections, an accepted pending publication, rejected source rebinding, all saved replay bindings, four selected public replay calls, and one explicitly private offline coupling; not a full implementation verification",
+  "files_sha256": {
+    "fact_audit/fact_audit.py": "7eee0d0a47943286abb92aa33119890894f96f20cb25badedc3017b5738abf1f",
+    "fact_audit/fixtures.json": "eef411e35069d16fb7b0590978d27f6c18e7faf5e309e062870f36a62fed17e5",
+    "fact_curve_replay.py": "701070c2466858a2528e38824c7cf7b052b6b295404a58bb172cc2882dad050e",
+    "fact_curve/public_replay_inputs.json": "ba2ad9523456784f7b94c4bff028d2e41c80425a43bf7145e872a6c1203f0f06"
+  },
+  "pre_fix_verifier_bug": {
+    "source_sha256": "8b31a19ef99f13edcd1d21ba754469648aadd3adc2c9fd78d012a661e1b7d8dc",
+    "reproduced": true,
+    "behavior": "Changing UNCERTIFIED_SUPERSET to COMPATIBLE_EXACT_SPAN was accepted by verify_evidence",
+    "classification": "reference-evidence validation bug, not a counterexample to thm:facts"
+  },
+  "pre_fix_public_replay_snapshot_bug": {
+    "source_sha256": "6af4207beb6f833a45fb1ba1e387614757bd1f7ec6344169d3e9f6f683efbebc",
+    "reproduced": true,
+    "affected_saved_entries": 2,
+    "behavior": "Two tau=3 entries retained a mutable raw ledger reference whose setup_id was overwritten by the later tau=4 iteration, while their setup/evidence remained tau=3",
+    "classification": "exported replay artifact correctness bug; the executor correctly rejected the mismatched binding"
+  },
+  "saved_replay_bindings_checked": 23,
+  "post_fix_status_tamper_rejections": {
+    "family_status": {
+      "rejected": true,
+      "reason": "Span evidence misreports family compatibility or an actual pair failure"
+    },
+    "actual_pair_failure_ids": {
+      "rejected": true,
+      "reason": "Span evidence misreports family compatibility or an actual pair failure"
+    },
+    "span_relation": {
+      "rejected": true,
+      "reason": "Unknown verified span relation"
+    },
+    "execution_status": {
+      "rejected": true,
+      "reason": "A basis direction cannot assert an executable fixed-pair distinction"
+    }
+  },
+  "pending_publication_transition": {
+    "verified": true,
+    "previous_ledger_digest": "523de0d24b849d1e9e0e6c3f08709bfb6cda5c4fd5b2e824b8dfa01434294a23",
+    "updated_ledger_digest": "13393bcad99c2f660b892be9f29a7a56af8d37452045a7cd249ac5a4beeddf0b",
+    "scope": "Append-only coefficient and identity descriptors; no cryptographic generation/authentication verification"
+  },
+  "rebound_fact_map_rejected": {
+    "rejected": true,
+    "reason": "History changed an immutable source or its original fact displacement"
+  },
+  "executor_signature": "(pp, ledger, evidence, public_view)",
+  "selected_public_replays": [
+    {
+      "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true
+    },
+    {
+      "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true
+    },
+    {
+      "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=3",
+      "status": "SETUP_COLLISION_INCONCLUSIVE",
+      "actual_curve_test_executed": true
+    },
+    {
+      "case": "pending_canonical_point/before_canonical_point/tau=4",
+      "status": "PENDING_CANONICAL_POINTS",
+      "actual_curve_test_executed": false
+    }
+  ],
+  "offline_compatible_coupling": {
+    "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+    "canonical_records_compared": 2,
+    "extra_points_compared": 2,
+    "scalar_answers_compared": 0,
+    "public_view_sha256": "a50a8a979bf00e3b6e0150a733fa4907984e2940ea8b8bd572607a2d4ebc1879",
+    "native_replay_verified": false
+  },
+  "native_replay_verified": false,
+  "remaining_assumptions": [
+    "Canonical source descriptors and observation coefficients come from the declared trusted generation provenance.",
+    "The caller supplies the valid fixed-pair and common-prefix contracts; these are not cryptographically proved by a boolean input.",
+    "The hash identifies the supplied public setup; it is not a proof of correct setup generation.",
+    "The curve is the deliberate nonsecurity toy E/F523 with subgroup order 131, not the original PBC artifact."
+  ]
+}

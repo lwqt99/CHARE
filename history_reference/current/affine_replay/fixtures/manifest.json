@@ -1,0 +1,14 @@
+{
+  "schema": "CHARE-affine-fixtures-manifest-v1",
+  "positive_cases": [
+    "known_numerical_core",
+    "numerical_core_linear_sum",
+    "known_point_affine_offset",
+    "mixed_masks_with_actual_rhs",
+    "numerical_pad_point_cancellation",
+    "aliased_source_affine_sums",
+    "three_slot_affine_residual",
+    "opened_offset_actual_rhs"
+  ],
+  "unopened_offset_negative": "private_offset_unopened"
+}

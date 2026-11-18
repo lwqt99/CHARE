@@ -1,0 +1,1630 @@
+{
+  "schema": "CHARE_JOINT_GUARD_RESULTS_V1",
+  "native_replay_verified": false,
+  "scope": "Independent coefficient reference; fixed-pair qualification contract; point-only prospective plans",
+  "input_ledger": {
+    "p": 131,
+    "setup_id": "synthetic-joint-reference",
+    "setup_nodes": [
+      1,
+      2
+    ],
+    "fact_ids": [
+      "qualification:q0"
+    ],
+    "sources": [
+      {
+        "source_id": "v",
+        "kind": "core",
+        "slot": "slot:1",
+        "node": 1,
+        "generation": "generation:v",
+        "fact_map": [
+          0
+        ],
+        "canonical_point": {
+          "handle_id": "E:v",
+          "available": true,
+          "provenance": "Synthetic original canonical source"
+        }
+      },
+      {
+        "source_id": "w",
+        "kind": "mask",
+        "slot": "slot:1",
+        "node": 1,
+        "generation": "generation:w",
+        "fact_map": [
+          1
+        ],
+        "canonical_point": {
+          "handle_id": "E:w",
+          "available": true,
+          "provenance": "Synthetic original canonical source"
+        }
+      }
+    ],
+    "pads": [
+      {
+        "source_id": "r",
+        "generation": "pad-generation:r"
+      }
+    ],
+    "aliases": {
+      "retained:w": "w"
+    },
+    "scalars": [],
+    "points": [],
+    "factual_openings": [],
+    "public_powers_available": true
+  },
+  "original_targets": [
+    {
+      "target_id": "original-singleton-core-target",
+      "columns": [
+        {
+          "v": 1
+        }
+      ],
+      "nodes": [
+        1
+      ],
+      "original_context_id": "original-context-not-retargeted",
+      "validated_original_target_contract": true,
+      "certified_nonzero_slots": []
+    }
+  ],
+  "fact_query": {
+    "kind": "fixed_pair",
+    "y0": [
+      0
+    ],
+    "y1": [
+      1
+    ],
+    "pair_contract": {
+      "legal_pair": true,
+      "same_public_metadata_and_outcomes": true,
+      "fixed_before_fresh_sources": true,
+      "provenance": "Synthetic one-bit qualification family {0,1}"
+    }
+  },
+  "matrix_cases": [
+    {
+      "case": "both_certified",
+      "point_candidates": [
+        {
+          "observation_id": "masked-w",
+          "ordinary": {
+            "retained:w": [
+              1
+            ]
+          },
+          "pads": {
+            "r": 1
+          },
+          "offset": [
+            3,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked-w",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Public coefficients fixed before the candidate point is generated"
+        }
+      ],
+      "decision": "ADMIT_COEFFICIENT_PLAN",
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": true,
+        "joint_certified": true,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 0,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [],
+            "formal_capability_rank": 0,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "05a42eb0f6c361dd3979385c48cfb2f9d2818aa6acb7a1e9ac1e6e55a0d779bc",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "masked-w"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "COMPATIBLE",
+          "execution_status": "NO_DISTINGUISHING_WITNESS",
+          "certificate": {
+            "pole_preimages": [
+              {
+                "node": 1,
+                "vector": [
+                  1
+                ],
+                "rhs": [
+                  1
+                ]
+              },
+              {
+                "node": 2,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "polynomial_preimages": [
+              {
+                "degree": 0,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+          },
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "05a42eb0f6c361dd3979385c48cfb2f9d2818aa6acb7a1e9ac1e6e55a0d779bc",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      },
+      "visible_state_unchanged": true,
+      "candidate_digest": "8fa64118f80482ef3209d510c88646a0bd357f4cb77b487fac5b7511af1baaf7",
+      "candidate_payload_generated": false
+    },
+    {
+      "case": "key_only_certified",
+      "point_candidates": [
+        {
+          "observation_id": "quotient-w",
+          "ordinary": {
+            "w": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            3,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:quotient-w",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Public coefficients fixed before the candidate point is generated"
+        }
+      ],
+      "decision": "REJECT_COEFFICIENT_PLAN",
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": false,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 0,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [],
+            "formal_capability_rank": 0,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "e5ac5b1020e75d78f186e3dd4a5980da37fdd31272011b618e4721186417a380",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "quotient-w"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "INCOMPATIBLE",
+          "execution_status": "PAIRING_TEST_RECIPE_READY",
+          "witness": {
+            "c": [],
+            "zeta": [
+              1
+            ],
+            "left_kernel_row": [
+              1
+            ],
+            "failed_component": {
+              "kind": "polynomial",
+              "value": 1,
+              "degree": 0
+            },
+            "f_polynomials": [
+              [
+                0
+              ],
+              [
+                130,
+                1
+              ]
+            ],
+            "rational_difference": {
+              "residues": [
+                {
+                  "node": 1,
+                  "value": 0
+                },
+                {
+                  "node": 2,
+                  "value": 0
+                }
+              ],
+              "polynomial": [
+                1
+              ],
+              "cleared_denominator_numerator": [
+                2,
+                128,
+                1
+              ],
+              "denominator": [
+                2,
+                128,
+                1
+              ],
+              "formal_nonzero": true,
+              "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+            },
+            "canonical_points_required": [
+              {
+                "source_id": "w",
+                "handle_id": "E:w",
+                "available": true,
+                "provenance": "Synthetic original canonical source"
+              }
+            ],
+            "canonical_point_ids_required": [
+              "E:w"
+            ],
+            "point_terms": [
+              {
+                "observation_id": "quotient-w",
+                "handle_id": "handle:quotient-w",
+                "coefficient": 1,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              }
+            ],
+            "scalar_terms": [],
+            "known_h_correction_polynomial": [
+              128,
+              129
+            ],
+            "h_correction_available": true,
+            "public_powers_available": true,
+            "representation_prerequisites_present": true,
+            "blocked_reasons": [],
+            "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+            "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+            "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+            "native_replay_verified": false
+          },
+          "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "e5ac5b1020e75d78f186e3dd4a5980da37fdd31272011b618e4721186417a380",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      },
+      "visible_state_unchanged": true,
+      "candidate_digest": "2fc1dd14427e27bba0825e175b9259dffc1e1c2dd5e9ac7dfa7db2c9bb08d27e",
+      "candidate_payload_generated": false
+    },
+    {
+      "case": "facts_only_compatible",
+      "point_candidates": [
+        {
+          "observation_id": "core-v",
+          "ordinary": {
+            "v": [
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            3,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:core-v",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Public coefficients fixed before the candidate point is generated"
+        }
+      ],
+      "decision": "REJECT_COEFFICIENT_PLAN",
+      "assessment": {
+        "keys_certified": false,
+        "facts_compatible_for_declared_pair": true,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 1,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "UNCERTIFIED",
+              "x": [
+                130
+              ],
+              "target_direction": [
+                130,
+                0
+              ],
+              "capability_combination": [
+                130
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [
+              [
+                1,
+                0
+              ]
+            ],
+            "formal_capability_rank": 1,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "2f009d6aa2f57b5984b4968a3080094b4d9fef42fc7f3a175fe77a2ff697d9e9",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "core-v"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "COMPATIBLE",
+          "execution_status": "NO_DISTINGUISHING_WITNESS",
+          "certificate": {
+            "pole_preimages": [
+              {
+                "node": 1,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              },
+              {
+                "node": 2,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "polynomial_preimages": [
+              {
+                "degree": 0,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+          },
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "2f009d6aa2f57b5984b4968a3080094b4d9fef42fc7f3a175fe77a2ff697d9e9",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      },
+      "visible_state_unchanged": true,
+      "candidate_digest": "913442e2ad97f5c99a7216f91bad3012f971d36243c9e9f733b9ce9c63ced8b4",
+      "candidate_payload_generated": false
+    },
+    {
+      "case": "neither_certified",
+      "point_candidates": [
+        {
+          "observation_id": "core-v",
+          "ordinary": {
+            "v": [
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            3,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:core-v",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Public coefficients fixed before the candidate point is generated"
+        },
+        {
+          "observation_id": "quotient-w",
+          "ordinary": {
+            "w": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            3,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:quotient-w",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Public coefficients fixed before the candidate point is generated"
+        }
+      ],
+      "decision": "REJECT_COEFFICIENT_PLAN",
+      "assessment": {
+        "keys_certified": false,
+        "facts_compatible_for_declared_pair": false,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 1,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "UNCERTIFIED",
+              "x": [
+                130
+              ],
+              "target_direction": [
+                130,
+                0
+              ],
+              "capability_combination": [
+                130
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [
+              [
+                1,
+                0
+              ]
+            ],
+            "formal_capability_rank": 1,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "b17ea310229cbecdb3d77722e8d4487f788e1ebe24d3822188c9d20d7de22850",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "core-v",
+            "quotient-w"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "INCOMPATIBLE",
+          "execution_status": "PAIRING_TEST_RECIPE_READY",
+          "witness": {
+            "c": [],
+            "zeta": [
+              0,
+              1
+            ],
+            "left_kernel_row": [
+              0,
+              1
+            ],
+            "failed_component": {
+              "kind": "polynomial",
+              "value": 1,
+              "degree": 0
+            },
+            "f_polynomials": [
+              [
+                0
+              ],
+              [
+                130,
+                1
+              ]
+            ],
+            "rational_difference": {
+              "residues": [
+                {
+                  "node": 1,
+                  "value": 0
+                },
+                {
+                  "node": 2,
+                  "value": 0
+                }
+              ],
+              "polynomial": [
+                1
+              ],
+              "cleared_denominator_numerator": [
+                2,
+                128,
+                1
+              ],
+              "denominator": [
+                2,
+                128,
+                1
+              ],
+              "formal_nonzero": true,
+              "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+            },
+            "canonical_points_required": [
+              {
+                "source_id": "w",
+                "handle_id": "E:w",
+                "available": true,
+                "provenance": "Synthetic original canonical source"
+              }
+            ],
+            "canonical_point_ids_required": [
+              "E:w"
+            ],
+            "point_terms": [
+              {
+                "observation_id": "quotient-w",
+                "handle_id": "handle:quotient-w",
+                "coefficient": 1,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              }
+            ],
+            "scalar_terms": [],
+            "known_h_correction_polynomial": [
+              128,
+              129
+            ],
+            "h_correction_available": true,
+            "public_powers_available": true,
+            "representation_prerequisites_present": true,
+            "blocked_reasons": [],
+            "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+            "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+            "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+            "native_replay_verified": false
+          },
+          "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "b17ea310229cbecdb3d77722e8d4487f788e1ebe24d3822188c9d20d7de22850",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      },
+      "visible_state_unchanged": true,
+      "candidate_digest": "b8adb98f8872887aae876b3eb85abc82296b260579ab36300dd3a5b73edefb22",
+      "candidate_payload_generated": false
+    }
+  ],
+  "history_diagnostics": [
+    {
+      "case": "frozen_future_pad_opening",
+      "frozen": "ADMIT_COEFFICIENT_PLAN",
+      "later_candidate": "REJECT_COEFFICIENT_PLAN",
+      "no_visible_state_mutation": true
+    },
+    {
+      "case": "visible_payload_checked_with_frozen_future",
+      "decision": "VISIBLE_HISTORY_CONTRACT_FAILURE",
+      "observation_retained": true,
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": false,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 1,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [
+              [
+                0,
+                1
+              ]
+            ],
+            "formal_capability_rank": 1,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "9d35383e9763dd9b057d1bd24bc79a47c28e74203c14ce70b28ee95dd40f96f3",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "masked-w",
+            "pad-r"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "INCOMPATIBLE",
+          "execution_status": "PAIRING_TEST_RECIPE_READY",
+          "witness": {
+            "c": [],
+            "zeta": [
+              130,
+              1
+            ],
+            "left_kernel_row": [
+              130,
+              1
+            ],
+            "failed_component": {
+              "kind": "pole",
+              "value": 130,
+              "node": 1
+            },
+            "f_polynomials": [
+              [
+                0
+              ],
+              [
+                130
+              ]
+            ],
+            "rational_difference": {
+              "residues": [
+                {
+                  "node": 1,
+                  "value": 130
+                },
+                {
+                  "node": 2,
+                  "value": 0
+                }
+              ],
+              "polynomial": [
+                0
+              ],
+              "cleared_denominator_numerator": [
+                2,
+                130
+              ],
+              "denominator": [
+                2,
+                128,
+                1
+              ],
+              "formal_nonzero": true,
+              "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+            },
+            "canonical_points_required": [
+              {
+                "source_id": "w",
+                "handle_id": "E:w",
+                "available": true,
+                "provenance": "Synthetic original canonical source"
+              }
+            ],
+            "canonical_point_ids_required": [
+              "E:w"
+            ],
+            "point_terms": [
+              {
+                "observation_id": "masked-w",
+                "handle_id": "handle:masked-w",
+                "coefficient": 130,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              },
+              {
+                "observation_id": "pad-r",
+                "handle_id": "handle:pad-r",
+                "coefficient": 1,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              }
+            ],
+            "scalar_terms": [],
+            "known_h_correction_polynomial": [
+              0
+            ],
+            "h_correction_available": true,
+            "public_powers_available": true,
+            "representation_prerequisites_present": true,
+            "blocked_reasons": [],
+            "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+            "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+            "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+            "native_replay_verified": false
+          },
+          "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "9d35383e9763dd9b057d1bd24bc79a47c28e74203c14ce70b28ee95dd40f96f3",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      }
+    },
+    {
+      "case": "fulfilled_frozen_plan_counted_once",
+      "decision": "VISIBLE_HISTORY_CERTIFIED",
+      "observation_retained": true,
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": true,
+        "joint_certified": true,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 0,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [],
+            "formal_capability_rank": 0,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "91612965041d8422c5fa33a281410c4b48f3bd24a57790b2a9e483ad5d5803cc",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "pad-r"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "COMPATIBLE",
+          "execution_status": "NO_DISTINGUISHING_WITNESS",
+          "certificate": {
+            "pole_preimages": [
+              {
+                "node": 1,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              },
+              {
+                "node": 2,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "polynomial_preimages": [
+              {
+                "degree": 0,
+                "vector": [
+                  0
+                ],
+                "rhs": [
+                  0
+                ]
+              }
+            ],
+            "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+          },
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "91612965041d8422c5fa33a281410c4b48f3bd24a57790b2a9e483ad5d5803cc",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      }
+    },
+    {
+      "case": "already_visible_quotient_retained",
+      "decision": "VISIBLE_HISTORY_CONTRACT_FAILURE",
+      "observation_retained": true,
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": false,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 0,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [],
+            "formal_capability_rank": 0,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "e5ac5b1020e75d78f186e3dd4a5980da37fdd31272011b618e4721186417a380",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [],
+          "point_order": [
+            "quotient-w"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "INCOMPATIBLE",
+          "execution_status": "PAIRING_TEST_RECIPE_READY",
+          "witness": {
+            "c": [],
+            "zeta": [
+              1
+            ],
+            "left_kernel_row": [
+              1
+            ],
+            "failed_component": {
+              "kind": "polynomial",
+              "value": 1,
+              "degree": 0
+            },
+            "f_polynomials": [
+              [
+                0
+              ],
+              [
+                130,
+                1
+              ]
+            ],
+            "rational_difference": {
+              "residues": [
+                {
+                  "node": 1,
+                  "value": 0
+                },
+                {
+                  "node": 2,
+                  "value": 0
+                }
+              ],
+              "polynomial": [
+                1
+              ],
+              "cleared_denominator_numerator": [
+                2,
+                128,
+                1
+              ],
+              "denominator": [
+                2,
+                128,
+                1
+              ],
+              "formal_nonzero": true,
+              "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+            },
+            "canonical_points_required": [
+              {
+                "source_id": "w",
+                "handle_id": "E:w",
+                "available": true,
+                "provenance": "Synthetic original canonical source"
+              }
+            ],
+            "canonical_point_ids_required": [
+              "E:w"
+            ],
+            "point_terms": [
+              {
+                "observation_id": "quotient-w",
+                "handle_id": "handle:quotient-w",
+                "coefficient": 1,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              }
+            ],
+            "scalar_terms": [],
+            "known_h_correction_polynomial": [
+              128,
+              129
+            ],
+            "h_correction_available": true,
+            "public_powers_available": true,
+            "representation_prerequisites_present": true,
+            "blocked_reasons": [],
+            "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+            "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+            "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+            "native_replay_verified": false
+          },
+          "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "e5ac5b1020e75d78f186e3dd4a5980da37fdd31272011b618e4721186417a380",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      }
+    },
+    {
+      "case": "actual_scalar_opening_rechecks_retained_point",
+      "decision": "VISIBLE_HISTORY_CONTRACT_FAILURE",
+      "observation_retained": true,
+      "assessment": {
+        "keys_certified": true,
+        "facts_compatible_for_declared_pair": false,
+        "joint_certified": false,
+        "keys": [
+          {
+            "result": {
+              "target_id": "original-singleton-core-target",
+              "context_id": "original-context-not-retargeted",
+              "mode": "public_D",
+              "effective_eta": [
+                0
+              ],
+              "source_order": [
+                "v",
+                "w"
+              ],
+              "capability_rank": 1,
+              "evidence_level": "FINITE_FIELD_FORMAL",
+              "group_replay_verified": false,
+              "status": "PROTECTED",
+              "z": [
+                1,
+                0
+              ],
+              "a": [
+                0
+              ],
+              "algebraic_verification": true
+            },
+            "formal_capability_basis": [
+              [
+                0,
+                1
+              ]
+            ],
+            "formal_capability_rank": 1,
+            "source_order": [
+              "v",
+              "w"
+            ],
+            "residual_mode": "public_D",
+            "private_eta_read": false,
+            "certified_nonzero_slots": [],
+            "scope": "Completed formal residue space only; no actual point recipe or recovery is asserted"
+          }
+        ],
+        "fact_evidence": {
+          "schema": "CHARE_FACT_EVIDENCE_V1",
+          "ledger_digest": "f711781b3e260ce618852878efbed02ba2170faadfd715457f9de5749b29a139",
+          "query_kind": "fixed_pair",
+          "p": 131,
+          "difference": [
+            1
+          ],
+          "source_order": [
+            "v",
+            "w"
+          ],
+          "pad_order": [
+            "r"
+          ],
+          "scalar_order": [
+            "already-public-pad-answer"
+          ],
+          "point_order": [
+            "masked-w"
+          ],
+          "evidence_level": "FINITE_FIELD_FORMAL",
+          "native_replay_verified": false,
+          "history_contract_eligible": true,
+          "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+          "pair_legality_verified": false,
+          "factual_opening_difference_agreement": true,
+          "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+          "formal_status": "INCOMPATIBLE",
+          "execution_status": "PAIRING_TEST_RECIPE_READY",
+          "witness": {
+            "c": [
+              130
+            ],
+            "zeta": [
+              1
+            ],
+            "left_kernel_row": [
+              130,
+              1
+            ],
+            "failed_component": {
+              "kind": "pole",
+              "value": 1,
+              "node": 1
+            },
+            "f_polynomials": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "rational_difference": {
+              "residues": [
+                {
+                  "node": 1,
+                  "value": 1
+                },
+                {
+                  "node": 2,
+                  "value": 0
+                }
+              ],
+              "polynomial": [
+                0
+              ],
+              "cleared_denominator_numerator": [
+                129,
+                1
+              ],
+              "denominator": [
+                2,
+                128,
+                1
+              ],
+              "formal_nonzero": true,
+              "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+            },
+            "canonical_points_required": [
+              {
+                "source_id": "w",
+                "handle_id": "E:w",
+                "available": true,
+                "provenance": "Synthetic original canonical source"
+              }
+            ],
+            "canonical_point_ids_required": [
+              "E:w"
+            ],
+            "point_terms": [
+              {
+                "observation_id": "masked-w",
+                "handle_id": "handle:masked-w",
+                "coefficient": 1,
+                "offset_polynomial": [
+                  3,
+                  2
+                ],
+                "offset_available": true,
+                "observer_available": true
+              }
+            ],
+            "scalar_terms": [
+              {
+                "observation_id": "already-public-pad-answer",
+                "coefficient": 130,
+                "actual_rhs": 48,
+                "offset": 5,
+                "ell": 43,
+                "observer_available": true,
+                "rhs_available": true,
+                "offset_available": true,
+                "provenance": "Actual affine answer already returned to the observer"
+              }
+            ],
+            "known_h_correction_polynomial": [
+              85,
+              129
+            ],
+            "h_correction_available": true,
+            "public_powers_available": true,
+            "representation_prerequisites_present": true,
+            "blocked_reasons": [],
+            "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+            "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+            "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+            "native_replay_verified": false
+          },
+          "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+          "algebraic_verification": true,
+          "y0": [
+            0
+          ],
+          "y1": [
+            1
+          ],
+          "pair_contract_supplied": true,
+          "pair_contract": {
+            "legal_pair": true,
+            "same_public_metadata_and_outcomes": true,
+            "fixed_before_fresh_sources": true,
+            "provenance": "Synthetic one-bit qualification family {0,1}"
+          },
+          "actual_factual_openings_match_both": true,
+          "pair_status": "CONDITIONAL_LEGAL_PAIR"
+        },
+        "ledger_digest": "f711781b3e260ce618852878efbed02ba2170faadfd715457f9de5749b29a139",
+        "native_replay_verified": false,
+        "scope": "Formal coefficient admission for declared original targets and one supplied legal-pair contract"
+      }
+    },
+    {
+      "case": "rebind_old_fact_map",
+      "status": "REJECTED",
+      "reason": "This reference forbids rebinding old source identities, fact maps, generations, nodes or aliases"
+    },
+    {
+      "case": "rebind_old_generation",
+      "status": "REJECTED",
+      "reason": "This reference forbids rebinding old source identities, fact maps, generations, nodes or aliases"
+    },
+    {
+      "case": "rebind_old_node",
+      "status": "REJECTED",
+      "reason": "This reference forbids rebinding old source identities, fact maps, generations, nodes or aliases"
+    },
+    {
+      "case": "private_candidate_rhs_forbidden",
+      "status": "REJECTED",
+      "reason": "Prospective point descriptors cannot contain scalar answers or payloads"
+    },
+    {
+      "case": "already_visible_outside_model_retained",
+      "decision": "VISIBLE_SOURCE_LANGUAGE_FAILURE",
+      "observation_retained": true,
+      "assessment": {
+        "joint_certified": false,
+        "error": "UNSUPPORTED_MODEL: coefficients and affine offsets must be world-invariant on the common public prefix"
+      }
+    },
+    {
+      "case": "private_offset_redacted_on_visible_error_path",
+      "status": "VISIBLE_SOURCE_LANGUAGE_FAILURE",
+      "private_value_absent_from_snapshot": true
+    },
+    {
+      "case": "private_rhs_redacted_on_visible_error_path",
+      "status": "VISIBLE_SOURCE_LANGUAGE_FAILURE",
+      "private_value_absent_from_snapshot": true
+    },
+    {
+      "case": "unknown_private_field_redacted_history_unresolved",
+      "status": "VISIBLE_SOURCE_LANGUAGE_FAILURE",
+      "future_admission_uncertified": true
+    },
+    {
+      "case": "whole_unavailable_observation_redacted",
+      "status": "VISIBLE_SOURCE_LANGUAGE_FAILURE",
+      "private_rhs_and_coefficients_absent": true
+    }
+  ],
+  "counts": {
+    "matrix_cases": 4,
+    "history_diagnostics": 14
+  }
+}

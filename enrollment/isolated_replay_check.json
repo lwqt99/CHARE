@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "isolated_replays": 4,
+  "expected_values_used_by_replay": false,
+  "fixture_seeds_in_public_inputs": false,
+  "recovery_compiler_ast_matches_previous_round": true,
+  "scope": "The independent process reads curve parameters and public points/context only; expected hashes are compared afterwards."
+}

@@ -1,0 +1,145 @@
+{
+  "name": "opened_offset_actual_rhs",
+  "observer_ledger": {
+    "aliases": [],
+    "equations": [
+      {
+        "equation_id": "visible-equation-0",
+        "evidence_id": "fixture-observed-numerical-answer-0",
+        "rhs": 17,
+        "terms": {
+          "offset": 1
+        },
+        "visibility": "observer"
+      }
+    ],
+    "points": [
+      {
+        "expression": {
+          "constant": 0,
+          "terms": {
+            "offset": 1,
+            "v1": 1
+          },
+          "visibility": "observer"
+        },
+        "handle_id": "visible-point-0",
+        "point": "04014401fa",
+        "recipe": {
+          "kind": "visible_point_handle",
+          "observation_id": "fixture-observed-point-0"
+        },
+        "visibility": "observer"
+      }
+    ],
+    "schema": "CHARE-observer-affine-ledger-v1",
+    "source_ids": [
+      "v1",
+      "offset"
+    ]
+  },
+  "original_target": {
+    "C0": "0400c10098",
+    "C1": "04013400c6",
+    "F_columns": [
+      [
+        1,
+        0
+      ]
+    ],
+    "X": [
+      "0400750159"
+    ],
+    "affine_descriptor_visibility": "observer",
+    "c": [
+      5
+    ],
+    "context_hex": "7b224330223a2230343030633130303938222c224331223a2230343031333430306336222c2258223a5b2230343030373530313539225d2c22616666696e655f736f757263655f6d6f64656c223a7b22465f636f6c756d6e73223a5b5b312c305d5d2c22616666696e655f64657363726970746f725f7669736962696c697479223a226f62736572766572222c2263223a5b355d2c22657461223a5b305d2c22726573696475616c5f7669736962696c697479223a226f62736572766572222c22736f757263655f696473223a5b227631222c226f6666736574225d7d2c22696e7374616e6365223a226f70656e65645f6f66667365745f61637475616c5f726873222c226e6f646573223a5b315d2c2270726f6a656374696f6e73223a5b5b2230343031613930303232225d5d2c227265636f72645f696473223a5b226f726967696e616c2d7265636f72642d31225d2c2273657475705f6964223a2232376562666638666363633430303837653631353136656233303738343031666632343538346639666664666134383765316230363832323262613737396536222c22736e617073686f74223a226f726967696e616c2d6265666f72652d616666696e652d646973636c6f7375726573227d",
+    "context_object": {
+      "C0": "0400c10098",
+      "C1": "04013400c6",
+      "X": [
+        "0400750159"
+      ],
+      "affine_source_model": {
+        "F_columns": [
+          [
+            1,
+            0
+          ]
+        ],
+        "affine_descriptor_visibility": "observer",
+        "c": [
+          5
+        ],
+        "eta": [
+          0
+        ],
+        "residual_visibility": "observer",
+        "source_ids": [
+          "v1",
+          "offset"
+        ]
+      },
+      "instance": "opened_offset_actual_rhs",
+      "nodes": [
+        1
+      ],
+      "projections": [
+        [
+          "0401a90022"
+        ]
+      ],
+      "record_ids": [
+        "original-record-1"
+      ],
+      "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+      "snapshot": "original-before-affine-disclosures"
+    },
+    "eta": [
+      0
+    ],
+    "nodes": [
+      1
+    ],
+    "projections": [
+      [
+        "0401a90022"
+      ]
+    ],
+    "residual_visibility": "observer",
+    "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6",
+    "source_ids": [
+      "v1",
+      "offset"
+    ]
+  },
+  "public_setup": {
+    "A": [
+      "0400f000b2"
+    ],
+    "B": [
+      "04015901f2"
+    ],
+    "Gamma": "040135003c",
+    "N": 2,
+    "T": [
+      "04003101bf",
+      "0400bf0107"
+    ],
+    "W": {
+      "1": "0401080129",
+      "2": "04014f00d0"
+    },
+    "Y": [
+      "0400a600b2",
+      "0400750159"
+    ],
+    "Z": "00d20068",
+    "g": "04018d00a0",
+    "h": "04003101bf",
+    "setup_id": "27ebff8fccc40087e61516eb3078401ff24584f9ffdfa487e1b068222ba779e6"
+  },
+  "schema": "CHARE-affine-public-fixture-v1",
+  "scope": "Actual order-131 curve points and pairings; diagnostic only, not native PBC."
+}

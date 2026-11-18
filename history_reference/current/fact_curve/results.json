@@ -1,0 +1,443 @@
+{
+  "schema": "CHARE_FACT_CURVE_RESULTS_V1",
+  "backend": "Actual E/F_523 order-131 reduced Tate pairing from the pinned previous increment",
+  "native_replay_verified": false,
+  "distinguishing_or_blocked_cases": [
+    {
+      "case": "residue_zero_quotient_leak_key_protected/joint_pad_cancellation/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "residue_zero_quotient_leak_key_protected/joint_pad_cancellation/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "bare_pad_then_actual_opening/retained_point_after_opening/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "bare_pad_then_actual_opening/retained_point_after_opening/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "011d00ea",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "pending_canonical_point/before_canonical_point/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "PENDING_CANONICAL_POINTS",
+      "native_replay_verified": false,
+      "actual_curve_test_executed": false
+    },
+    {
+      "case": "pending_canonical_point/before_canonical_point/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "PENDING_CANONICAL_POINTS",
+      "native_replay_verified": false,
+      "actual_curve_test_executed": false
+    },
+    {
+      "case": "pending_canonical_point/after_canonical_point/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_pending",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "pending_canonical_point/after_canonical_point/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_pending",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "aliases_keep_original_fact_binding/old_fact_pair/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_old",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "aliases_keep_original_fact_binding/old_fact_pair/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_old",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "0400a10188",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04001d0165"
+        },
+        {
+          "source_id": "w2",
+          "f_h": "04004901eb"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00bf00c9"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "0400a10188",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04001d0165"
+        },
+        {
+          "source_id": "w2",
+          "f_h": "04004901eb"
+        }
+      ],
+      "observed_GT": "00bf00c9",
+      "predicted_GT": [
+        "00010000",
+        "00bf00c9"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=3",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "SETUP_COLLISION_INCONCLUSIVE",
+      "actual_curve_test_executed": true,
+      "Cstar": "00",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "00"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00010000"
+      ],
+      "matches": [
+        0,
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=3",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "SETUP_COLLISION_INCONCLUSIVE",
+      "actual_curve_test_executed": true,
+      "Cstar": "00",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "00"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00010000"
+      ],
+      "matches": [
+        0,
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=4",
+      "fixture_world_for_external_comparison_only": 0,
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    },
+    {
+      "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=4",
+      "fixture_world_for_external_comparison_only": 1,
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "011d00ea",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  ],
+  "compatible_couplings": [
+    {
+      "case": "residue_zero_quotient_leak_key_protected/bare_pad_hides_quotient/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "62a1f43571c0a41d0eed1ceca0570b651b665ca9663d467f3af05aaec7bbd99b",
+      "native_replay_verified": false
+    },
+    {
+      "case": "core_release_facts_compatible/before_release/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 0,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "2c59efc1e84424e917c83396c252cdf6f4482437c82104fac8af56efcdba002f",
+      "native_replay_verified": false
+    },
+    {
+      "case": "core_release_facts_compatible/core_released/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "fc1b29267771f5c17aec347af0541bd99e0aac97e9ab28fc916b35ef0994e860",
+      "native_replay_verified": false
+    },
+    {
+      "case": "bare_pad_then_actual_opening/pad_not_opened/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 1,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "4f43ce06655eac62a9285005daade1a506473e4c710f43f89296a66692a539d3",
+      "native_replay_verified": false
+    },
+    {
+      "case": "same_fact_mask_difference/difference_released/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "9145e25129efae791dde3488979c03df8d6b67c3e06e195178be83d8d5925756",
+      "native_replay_verified": false
+    },
+    {
+      "case": "aliases_keep_original_fact_binding/new_fact_pair/tau=4",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 1,
+      "public_view_sha256": "d308e58880137c69e3665c0d770c4317b2a20579861379ebe50ed7844c916363",
+      "native_replay_verified": false
+    },
+    {
+      "case": "joint_affine_mixed_system/points_without_relation/tau=5",
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 2,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "a50a8a979bf00e3b6e0150a733fa4907984e2940ea8b8bd572607a2d4ebc1879",
+      "native_replay_verified": false
+    }
+  ],
+  "negative_checks": [
+    {
+      "case": "modified_extra_point",
+      "status": "REPLAY_MISMATCH"
+    },
+    {
+      "case": "modified_affine_correction",
+      "status": "REJECTED",
+      "reason": "Witness representation prerequisites or affine recipe are incorrect"
+    },
+    {
+      "case": "modified_source_order",
+      "status": "REJECTED",
+      "reason": "Evidence changed source identity order"
+    }
+  ],
+  "counts": {
+    "actual_curve_tests": 14,
+    "distinct_predictions": 12,
+    "setup_collisions": 2,
+    "blocked_pending_tests": 2,
+    "compatible_couplings": 7,
+    "negative_checks": 3,
+    "serialized_entries_replayed": 23
+  }
+}

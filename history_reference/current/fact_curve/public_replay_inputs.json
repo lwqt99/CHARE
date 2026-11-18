@@ -1,0 +1,6103 @@
+[
+  {
+    "case": "residue_zero_quotient_leak_key_protected/bare_pad_hides_quotient/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "v1",
+          "kind": "core",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:v1",
+          "fact_map": [
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:v1",
+            "available": true,
+            "provenance": "Canonical generator for immutable v1"
+          }
+        },
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "masked_quotient",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_quotient",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "2439fa0c28a85583b3602a59501e228230e07767f79c8d06140a0a85dcb9efaf",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "v1",
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [],
+      "point_order": [
+        "masked_quotient"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [
+              1
+            ],
+            "rhs": [
+              1
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "2439fa0c28a85583b3602a59501e228230e07767f79c8d06140a0a85dcb9efaf",
+      "canonical_records": {
+        "E:v1": {
+          "source_id": "v1",
+          "E": "0400ca0142",
+          "projections": [
+            "0401dd00a3"
+          ]
+        },
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_quotient": "040031004c"
+      },
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "62a1f43571c0a41d0eed1ceca0570b651b665ca9663d467f3af05aaec7bbd99b",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "residue_zero_quotient_leak_key_protected/joint_pad_cancellation/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "v1",
+          "kind": "core",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:v1",
+          "fact_map": [
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:v1",
+            "available": true,
+            "provenance": "Canonical generator for immutable v1"
+          }
+        },
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "masked_quotient",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_quotient",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        },
+        {
+          "observation_id": "negative_pad",
+          "ordinary": {},
+          "pads": {
+            "r1": -1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:negative_pad",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "83c30af6b124344adf4608210f1273f5dad9c3b565fa4d0ce5ff8961e40329f3",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "v1",
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [],
+      "point_order": [
+        "masked_quotient",
+        "negative_pad"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1,
+          1
+        ],
+        "left_kernel_row": [
+          1,
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            0
+          ],
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "masked_quotient",
+            "handle_id": "handle:masked_quotient",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          },
+          {
+            "observation_id": "negative_pad",
+            "handle_id": "handle:negative_pad",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "83c30af6b124344adf4608210f1273f5dad9c3b565fa4d0ce5ff8961e40329f3",
+      "canonical_records": {
+        "E:v1": {
+          "source_id": "v1",
+          "E": "0400ca0142",
+          "projections": [
+            "0401dd00a3"
+          ]
+        },
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_quotient": "040031004c",
+        "handle:negative_pad": "0401680018"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "residue_zero_quotient_leak_key_protected/joint_pad_cancellation/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "v1",
+          "kind": "core",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:v1",
+          "fact_map": [
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:v1",
+            "available": true,
+            "provenance": "Canonical generator for immutable v1"
+          }
+        },
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "masked_quotient",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_quotient",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        },
+        {
+          "observation_id": "negative_pad",
+          "ordinary": {},
+          "pads": {
+            "r1": -1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:negative_pad",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "83c30af6b124344adf4608210f1273f5dad9c3b565fa4d0ce5ff8961e40329f3",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "v1",
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [],
+      "point_order": [
+        "masked_quotient",
+        "negative_pad"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1,
+          1
+        ],
+        "left_kernel_row": [
+          1,
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            0
+          ],
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "masked_quotient",
+            "handle_id": "handle:masked_quotient",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          },
+          {
+            "observation_id": "negative_pad",
+            "handle_id": "handle:negative_pad",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "83c30af6b124344adf4608210f1273f5dad9c3b565fa4d0ce5ff8961e40329f3",
+      "canonical_records": {
+        "E:v1": {
+          "source_id": "v1",
+          "E": "0400ca0142",
+          "projections": [
+            "0401dd00a3"
+          ]
+        },
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_quotient": "040031004c",
+        "handle:negative_pad": "0401680018"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "core_release_facts_compatible/before_release/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "v1",
+          "kind": "core",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:v1",
+          "fact_map": [
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:v1",
+            "available": true,
+            "provenance": "Canonical generator for immutable v1"
+          }
+        },
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "783abc1dc686b0a8a07dfd7fc9328a8372b6ef54056a6cbf7cf3f649001f71b5",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "v1",
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [],
+            "rhs": []
+          },
+          {
+            "node": 2,
+            "vector": [],
+            "rhs": []
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [],
+            "rhs": []
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "783abc1dc686b0a8a07dfd7fc9328a8372b6ef54056a6cbf7cf3f649001f71b5",
+      "canonical_records": {
+        "E:v1": {
+          "source_id": "v1",
+          "E": "0400ca0142",
+          "projections": [
+            "0401dd00a3"
+          ]
+        },
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {},
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 0,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "2c59efc1e84424e917c83396c252cdf6f4482437c82104fac8af56efcdba002f",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "core_release_facts_compatible/core_released/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "v1",
+          "kind": "core",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:v1",
+          "fact_map": [
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:v1",
+            "available": true,
+            "provenance": "Canonical generator for immutable v1"
+          }
+        },
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "core_release",
+          "ordinary": {
+            "v1": [
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:core_release",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "8db56cf79cb49190520ee49977771fd12ace38b44437e8d13709bf37a7d01356",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "v1",
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "core_release"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "8db56cf79cb49190520ee49977771fd12ace38b44437e8d13709bf37a7d01356",
+      "canonical_records": {
+        "E:v1": {
+          "source_id": "v1",
+          "E": "0400ca0142",
+          "projections": [
+            "0401dd00a3"
+          ]
+        },
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:core_release": "04018b00f3"
+      },
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "fc1b29267771f5c17aec347af0541bd99e0aac97e9ab28fc916b35ef0994e860",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "bare_pad_then_actual_opening/pad_not_opened/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "masked_constant",
+          "ordinary": {
+            "w1": [
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            6,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_constant",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "535cda8ac894a21497e7b4f8d30b165d586c39a1e42b14b865a277274795b7c7",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [],
+      "point_order": [
+        "masked_constant"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [
+              1
+            ],
+            "rhs": [
+              1
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "535cda8ac894a21497e7b4f8d30b165d586c39a1e42b14b865a277274795b7c7",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_constant": "04000f00c8"
+      },
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 1,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "4f43ce06655eac62a9285005daade1a506473e4c710f43f89296a66692a539d3",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "bare_pad_then_actual_opening/retained_point_after_opening/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [
+        {
+          "observation_id": "pad_opened_with_offset",
+          "ordinary": {},
+          "pads": {
+            "r1": 1
+          },
+          "offset": 5,
+          "offset_available": true,
+          "rhs": 48,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "masked_constant",
+          "ordinary": {
+            "w1": [
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            6,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_constant",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "b854c07dc1675cb238789ea038a91b9360c6d5930120cfe759c56a300c2d227e",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [
+        "pad_opened_with_offset"
+      ],
+      "point_order": [
+        "masked_constant"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          130
+        ],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          130,
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 1,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 1
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            0
+          ],
+          "cleared_denominator_numerator": [
+            129,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "masked_constant",
+            "handle_id": "handle:masked_constant",
+            "coefficient": 1,
+            "offset_polynomial": [
+              6,
+              2
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "pad_opened_with_offset",
+            "coefficient": 130,
+            "actual_rhs": 48,
+            "offset": 5,
+            "ell": 43,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          82,
+          129
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "b854c07dc1675cb238789ea038a91b9360c6d5930120cfe759c56a300c2d227e",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_constant": "04000f00c8"
+      },
+      "scalar_answers": {
+        "pad_opened_with_offset": 48
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "bare_pad_then_actual_opening/retained_point_after_opening/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r1",
+          "generation": "pad-generation:r1"
+        }
+      ],
+      "aliases": {},
+      "scalars": [
+        {
+          "observation_id": "pad_opened_with_offset",
+          "ordinary": {},
+          "pads": {
+            "r1": 1
+          },
+          "offset": 5,
+          "offset_available": true,
+          "rhs": 48,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "masked_constant",
+          "ordinary": {
+            "w1": [
+              1
+            ]
+          },
+          "pads": {
+            "r1": 1
+          },
+          "offset": [
+            6,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:masked_constant",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "b854c07dc1675cb238789ea038a91b9360c6d5930120cfe759c56a300c2d227e",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [
+        "r1"
+      ],
+      "scalar_order": [
+        "pad_opened_with_offset"
+      ],
+      "point_order": [
+        "masked_constant"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          130
+        ],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          130,
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 1,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 1
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            0
+          ],
+          "cleared_denominator_numerator": [
+            129,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "masked_constant",
+            "handle_id": "handle:masked_constant",
+            "coefficient": 1,
+            "offset_polynomial": [
+              6,
+              2
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "pad_opened_with_offset",
+            "coefficient": 130,
+            "actual_rhs": 48,
+            "offset": 5,
+            "ell": 43,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          82,
+          129
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "b854c07dc1675cb238789ea038a91b9360c6d5930120cfe759c56a300c2d227e",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:masked_constant": "04000f00c8"
+      },
+      "scalar_answers": {
+        "pad_opened_with_offset": 48
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "011d00ea",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "same_fact_mask_difference/difference_released/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "wA",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:wA",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:wA",
+            "available": true,
+            "provenance": "Canonical generator for immutable wA"
+          }
+        },
+        {
+          "source_id": "wB",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:wB",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:wB",
+            "available": true,
+            "provenance": "Canonical generator for immutable wB"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "same_fact_mask_difference",
+          "ordinary": {
+            "wA": [
+              1
+            ],
+            "wB": [
+              -1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            8,
+            2
+          ],
+          "offset_available": true,
+          "handle_id": "handle:same_fact_mask_difference",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "f83b2e9fea77ed4a72a8d017a835ce1cfcb4e4a20cf3c206dc4deb6863da08d4",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "wA",
+        "wB"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "same_fact_mask_difference"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [],
+            "rhs": [
+              0
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "f83b2e9fea77ed4a72a8d017a835ce1cfcb4e4a20cf3c206dc4deb6863da08d4",
+      "canonical_records": {
+        "E:wA": {
+          "source_id": "wA",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        },
+        "E:wB": {
+          "source_id": "wB",
+          "E": "0401b8019c",
+          "projections": [
+            "04017d01aa"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:same_fact_mask_difference": "04010200d9"
+      },
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "9145e25129efae791dde3488979c03df8d6b67c3e06e195178be83d8d5925756",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "pending_canonical_point/before_canonical_point/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w_pending",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_pending",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_pending",
+            "available": false,
+            "provenance": ""
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "pending_polynomial",
+          "ordinary": {
+            "w_pending": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:pending_polynomial",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "45e4174972fe4550af3523dbff2a628a3bf6dd522cb62a4257f579af1600f04a",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w_pending"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "pending_polynomial"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PENDING_CANONICAL_POINTS",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_pending",
+            "handle_id": "E:w_pending",
+            "available": false,
+            "provenance": ""
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_pending"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "pending_polynomial",
+            "handle_id": "handle:pending_polynomial",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": false,
+        "blocked_reasons": [
+          {
+            "kind": "CANONICAL_POINT_UNAVAILABLE",
+            "source_id": "w_pending"
+          }
+        ],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "45e4174972fe4550af3523dbff2a628a3bf6dd522cb62a4257f579af1600f04a",
+      "canonical_records": {},
+      "point_handles": {
+        "handle:pending_polynomial": "040060018c"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "PENDING_CANONICAL_POINTS",
+      "native_replay_verified": false,
+      "actual_curve_test_executed": false
+    }
+  },
+  {
+    "case": "pending_canonical_point/before_canonical_point/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w_pending",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_pending",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_pending",
+            "available": false,
+            "provenance": ""
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "pending_polynomial",
+          "ordinary": {
+            "w_pending": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:pending_polynomial",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "45e4174972fe4550af3523dbff2a628a3bf6dd522cb62a4257f579af1600f04a",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w_pending"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "pending_polynomial"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PENDING_CANONICAL_POINTS",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_pending",
+            "handle_id": "E:w_pending",
+            "available": false,
+            "provenance": ""
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_pending"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "pending_polynomial",
+            "handle_id": "handle:pending_polynomial",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": false,
+        "blocked_reasons": [
+          {
+            "kind": "CANONICAL_POINT_UNAVAILABLE",
+            "source_id": "w_pending"
+          }
+        ],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "45e4174972fe4550af3523dbff2a628a3bf6dd522cb62a4257f579af1600f04a",
+      "canonical_records": {},
+      "point_handles": {
+        "handle:pending_polynomial": "040060018c"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "PENDING_CANONICAL_POINTS",
+      "native_replay_verified": false,
+      "actual_curve_test_executed": false
+    }
+  },
+  {
+    "case": "pending_canonical_point/after_canonical_point/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w_pending",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_pending",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_pending",
+            "available": true,
+            "provenance": "Canonical point published for the original generation"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "pending_polynomial",
+          "ordinary": {
+            "w_pending": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:pending_polynomial",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "f7972af0831455e1cbb68371dc17ad5b426685a0f2a5f44924d7f042700f7728",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w_pending"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "pending_polynomial"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_pending",
+            "handle_id": "E:w_pending",
+            "available": true,
+            "provenance": "Canonical point published for the original generation"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_pending"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "pending_polynomial",
+            "handle_id": "handle:pending_polynomial",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "f7972af0831455e1cbb68371dc17ad5b426685a0f2a5f44924d7f042700f7728",
+      "canonical_records": {
+        "E:w_pending": {
+          "source_id": "w_pending",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:pending_polynomial": "040060018c"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_pending",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "pending_canonical_point/after_canonical_point/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w_pending",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_pending",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_pending",
+            "available": true,
+            "provenance": "Canonical point published for the original generation"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "pending_polynomial",
+          "ordinary": {
+            "w_pending": [
+              -1,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:pending_polynomial",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "f7972af0831455e1cbb68371dc17ad5b426685a0f2a5f44924d7f042700f7728",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w_pending"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "pending_polynomial"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_pending",
+            "handle_id": "E:w_pending",
+            "available": true,
+            "provenance": "Canonical point published for the original generation"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_pending"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "pending_polynomial",
+            "handle_id": "handle:pending_polynomial",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "f7972af0831455e1cbb68371dc17ad5b426685a0f2a5f44924d7f042700f7728",
+      "canonical_records": {
+        "E:w_pending": {
+          "source_id": "w_pending",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:pending_polynomial": "040060018c"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_pending",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "aliases_keep_original_fact_binding/old_fact_pair/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:old",
+        "qualification:new"
+      ],
+      "sources": [
+        {
+          "source_id": "w_old",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_old",
+          "fact_map": [
+            1,
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_old",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_old"
+          }
+        },
+        {
+          "source_id": "w_new",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_new",
+          "fact_map": [
+            0,
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_new",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_new"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r_old",
+          "generation": "pad-generation:r_old"
+        }
+      ],
+      "aliases": {
+        "retained_w": "w_old",
+        "copied_retained_w": "retained_w",
+        "retained_pad": "r_old"
+      },
+      "scalars": [
+        {
+          "observation_id": "old_pad_opening",
+          "ordinary": {},
+          "pads": {
+            "retained_pad": 1
+          },
+          "offset": 0,
+          "offset_available": true,
+          "rhs": 43,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "old_delivery",
+          "ordinary": {
+            "copied_retained_w": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r_old": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:old_delivery",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1,
+        0
+      ],
+      "source_order": [
+        "w_old",
+        "w_new"
+      ],
+      "pad_order": [
+        "r_old"
+      ],
+      "scalar_order": [
+        "old_pad_opening"
+      ],
+      "point_order": [
+        "old_delivery"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          130
+        ],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          130,
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_old",
+            "handle_id": "E:w_old",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_old"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_old"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "old_delivery",
+            "handle_id": "handle:old_delivery",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "old_pad_opening",
+            "coefficient": 130,
+            "actual_rhs": 43,
+            "offset": 0,
+            "ell": 43,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          88
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0,
+        0
+      ],
+      "y1": [
+        1,
+        0
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "canonical_records": {
+        "E:w_old": {
+          "source_id": "w_old",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        },
+        "E:w_new": {
+          "source_id": "w_new",
+          "E": "0401b8019c",
+          "projections": [
+            "04017d01aa"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:old_delivery": "040031004c"
+      },
+      "scalar_answers": {
+        "old_pad_opening": 43
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_old",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "aliases_keep_original_fact_binding/old_fact_pair/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:old",
+        "qualification:new"
+      ],
+      "sources": [
+        {
+          "source_id": "w_old",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_old",
+          "fact_map": [
+            1,
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_old",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_old"
+          }
+        },
+        {
+          "source_id": "w_new",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_new",
+          "fact_map": [
+            0,
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_new",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_new"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r_old",
+          "generation": "pad-generation:r_old"
+        }
+      ],
+      "aliases": {
+        "retained_w": "w_old",
+        "copied_retained_w": "retained_w",
+        "retained_pad": "r_old"
+      },
+      "scalars": [
+        {
+          "observation_id": "old_pad_opening",
+          "ordinary": {},
+          "pads": {
+            "retained_pad": 1
+          },
+          "offset": 0,
+          "offset_available": true,
+          "rhs": 43,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "old_delivery",
+          "ordinary": {
+            "copied_retained_w": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r_old": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:old_delivery",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1,
+        0
+      ],
+      "source_order": [
+        "w_old",
+        "w_new"
+      ],
+      "pad_order": [
+        "r_old"
+      ],
+      "scalar_order": [
+        "old_pad_opening"
+      ],
+      "point_order": [
+        "old_delivery"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          130
+        ],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          130,
+          1
+        ],
+        "failed_component": {
+          "kind": "polynomial",
+          "value": 1,
+          "degree": 0
+        },
+        "f_polynomials": [
+          [
+            130,
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 0
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            2,
+            128,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w_old",
+            "handle_id": "E:w_old",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_old"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w_old"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "old_delivery",
+            "handle_id": "handle:old_delivery",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "old_pad_opening",
+            "coefficient": 130,
+            "actual_rhs": 43,
+            "offset": 0,
+            "ell": 43,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          88
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0,
+        0
+      ],
+      "y1": [
+        1,
+        0
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "canonical_records": {
+        "E:w_old": {
+          "source_id": "w_old",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168"
+          ]
+        },
+        "E:w_new": {
+          "source_id": "w_new",
+          "E": "0401b8019c",
+          "projections": [
+            "04017d01aa"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:old_delivery": "040031004c"
+      },
+      "scalar_answers": {
+        "old_pad_opening": 43
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "040060018c",
+      "f_points": [
+        {
+          "source_id": "w_old",
+          "f_h": "0401870045"
+        }
+      ],
+      "observed_GT": "004001d7",
+      "predicted_GT": [
+        "00010000",
+        "004001d7"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "aliases_keep_original_fact_binding/new_fact_pair/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:old",
+        "qualification:new"
+      ],
+      "sources": [
+        {
+          "source_id": "w_old",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_old",
+          "fact_map": [
+            1,
+            0
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_old",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_old"
+          }
+        },
+        {
+          "source_id": "w_new",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w_new",
+          "fact_map": [
+            0,
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w_new",
+            "available": true,
+            "provenance": "Canonical generator for immutable w_new"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "r_old",
+          "generation": "pad-generation:r_old"
+        }
+      ],
+      "aliases": {
+        "retained_w": "w_old",
+        "copied_retained_w": "retained_w",
+        "retained_pad": "r_old"
+      },
+      "scalars": [
+        {
+          "observation_id": "old_pad_opening",
+          "ordinary": {},
+          "pads": {
+            "retained_pad": 1
+          },
+          "offset": 0,
+          "offset_available": true,
+          "rhs": 43,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "old_delivery",
+          "ordinary": {
+            "copied_retained_w": [
+              -1,
+              1
+            ]
+          },
+          "pads": {
+            "r_old": 1
+          },
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:old_delivery",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        0,
+        1
+      ],
+      "source_order": [
+        "w_old",
+        "w_new"
+      ],
+      "pad_order": [
+        "r_old"
+      ],
+      "scalar_order": [
+        "old_pad_opening"
+      ],
+      "point_order": [
+        "old_delivery"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0,
+              0
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0,
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [
+              0
+            ],
+            "rhs": [
+              0,
+              0
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0,
+        0
+      ],
+      "y1": [
+        0,
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "b9513327220aff2b8d992ac9c98c13b98008b212ef03976ba67f923f9a48442d",
+      "canonical_records": {
+        "E:w_old": {
+          "source_id": "w_old",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        },
+        "E:w_new": {
+          "source_id": "w_new",
+          "E": "0401b8019c",
+          "projections": [
+            "04017d01aa"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:old_delivery": "040031004c"
+      },
+      "scalar_answers": {
+        "old_pad_opening": 43
+      }
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 1,
+      "scalar_answers_compared": 1,
+      "public_view_sha256": "d308e58880137c69e3665c0d770c4317b2a20579861379ebe50ed7844c916363",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "joint_affine_mixed_system/points_without_relation/tau=5",
+    "public_setup": {
+      "N": 3,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "04008300db",
+        "04016400ed"
+      ],
+      "W": {
+        "1": "0401680018",
+        "2": "0401d200cb",
+        "3": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401c301f2",
+        "040087001d"
+      ],
+      "A": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "B": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "Gamma": "0401dc00e4",
+      "Z": "00d20068",
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "setup_nodes": [
+        1,
+        2,
+        3
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        },
+        {
+          "source_id": "w2",
+          "kind": "mask",
+          "slot": "slot:2",
+          "node": 2,
+          "generation": "generation:w2",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w2",
+            "available": true,
+            "provenance": "Canonical generator for immutable w2"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "rA",
+          "generation": "pad-generation:rA"
+        },
+        {
+          "source_id": "rB",
+          "generation": "pad-generation:rB"
+        }
+      ],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "mixed_C1",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ],
+            "w2": [
+              2
+            ]
+          },
+          "pads": {
+            "rA": 1,
+            "rB": 2
+          },
+          "offset": [
+            7,
+            3,
+            5
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C1",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        },
+        {
+          "observation_id": "mixed_C2",
+          "ordinary": {
+            "w1": [
+              1
+            ],
+            "w2": [
+              -2,
+              1
+            ]
+          },
+          "pads": {
+            "rA": 3,
+            "rB": -1
+          },
+          "offset": [
+            11,
+            4
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C2",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "e4f5384a860e232c23a0c1836764c50d8cb45ddc103ec45eb48b73c2bbe70210",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1",
+        "w2"
+      ],
+      "pad_order": [
+        "rA",
+        "rB"
+      ],
+      "scalar_order": [],
+      "point_order": [
+        "mixed_C1",
+        "mixed_C2"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "COMPATIBLE",
+      "execution_status": "NO_DISTINGUISHING_WITNESS",
+      "certificate": {
+        "pole_preimages": [
+          {
+            "node": 1,
+            "vector": [
+              19,
+              56
+            ],
+            "rhs": [
+              0,
+              1
+            ]
+          },
+          {
+            "node": 2,
+            "vector": [
+              19,
+              57
+            ],
+            "rhs": [
+              2,
+              0
+            ]
+          },
+          {
+            "node": 3,
+            "vector": [
+              0,
+              0
+            ],
+            "rhs": [
+              0,
+              0
+            ]
+          }
+        ],
+        "polynomial_preimages": [
+          {
+            "degree": 0,
+            "vector": [
+              94,
+              19
+            ],
+            "rhs": [
+              1,
+              1
+            ]
+          },
+          {
+            "degree": 1,
+            "vector": [
+              0,
+              0
+            ],
+            "rhs": [
+              0,
+              0
+            ]
+          }
+        ],
+        "pad_shift_formula": "Delta_r=-beta*(sum_i v_i/(tau-t_i)+sum_k vcirc_k*tau**k)"
+      },
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "ledger_digest": "e4f5384a860e232c23a0c1836764c50d8cb45ddc103ec45eb48b73c2bbe70210",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400ca0142",
+          "projections": [
+            "04010700d7",
+            "0401dc0127"
+          ]
+        },
+        "E:w2": {
+          "source_id": "w2",
+          "E": "0400170100",
+          "projections": [
+            "040060018c",
+            "0400420040"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:mixed_C1": "04006d01a9",
+        "handle:mixed_C2": "0400420040"
+      },
+      "scalar_answers": {}
+    },
+    "coupling_result": {
+      "status": "ACTUAL_CURVE_PUBLIC_VIEWS_EQUAL",
+      "canonical_records_compared": 2,
+      "extra_points_compared": 2,
+      "scalar_answers_compared": 0,
+      "public_view_sha256": "a50a8a979bf00e3b6e0150a733fa4907984e2940ea8b8bd572607a2d4ebc1879",
+      "native_replay_verified": false
+    }
+  },
+  {
+    "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+    "public_setup": {
+      "N": 3,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "04008300db",
+        "04016400ed"
+      ],
+      "W": {
+        "1": "0401680018",
+        "2": "0401d200cb",
+        "3": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401c301f2",
+        "040087001d"
+      ],
+      "A": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "B": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "Gamma": "0401dc00e4",
+      "Z": "00d20068",
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "setup_nodes": [
+        1,
+        2,
+        3
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        },
+        {
+          "source_id": "w2",
+          "kind": "mask",
+          "slot": "slot:2",
+          "node": 2,
+          "generation": "generation:w2",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w2",
+            "available": true,
+            "provenance": "Canonical generator for immutable w2"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "rA",
+          "generation": "pad-generation:rA"
+        },
+        {
+          "source_id": "rB",
+          "generation": "pad-generation:rB"
+        }
+      ],
+      "aliases": {},
+      "scalars": [
+        {
+          "observation_id": "mixed_affine_answer",
+          "ordinary": {
+            "w1": 1
+          },
+          "pads": {
+            "rA": 2,
+            "rB": 1
+          },
+          "offset": 9,
+          "offset_available": true,
+          "rhs": 103,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "mixed_C1",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ],
+            "w2": [
+              2
+            ]
+          },
+          "pads": {
+            "rA": 1,
+            "rB": 2
+          },
+          "offset": [
+            7,
+            3,
+            5
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C1",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        },
+        {
+          "observation_id": "mixed_C2",
+          "ordinary": {
+            "w1": [
+              1
+            ],
+            "w2": [
+              -2,
+              1
+            ]
+          },
+          "pads": {
+            "rA": 3,
+            "rB": -1
+          },
+          "offset": [
+            11,
+            4
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C2",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "9669fafcbf5be406efc2c4e4f444b81bdb623fb2cb224acf40123b39d9f90aca",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1",
+        "w2"
+      ],
+      "pad_order": [
+        "rA",
+        "rB"
+      ],
+      "scalar_order": [
+        "mixed_affine_answer"
+      ],
+      "point_order": [
+        "mixed_C1",
+        "mixed_C2"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          85
+        ],
+        "zeta": [
+          89,
+          1
+        ],
+        "left_kernel_row": [
+          85,
+          89,
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 86,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            89
+          ],
+          [
+            45,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 86
+            },
+            {
+              "node": 2,
+              "value": 47
+            },
+            {
+              "node": 3,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            90
+          ],
+          "cleared_denominator_numerator": [
+            117,
+            110,
+            117,
+            90
+          ],
+          "denominator": [
+            125,
+            11,
+            125,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          },
+          {
+            "source_id": "w2",
+            "handle_id": "E:w2",
+            "available": true,
+            "provenance": "Canonical generator for immutable w2"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1",
+          "E:w2"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "mixed_C1",
+            "handle_id": "handle:mixed_C1",
+            "coefficient": 89,
+            "offset_polynomial": [
+              7,
+              3,
+              5
+            ],
+            "offset_available": true,
+            "observer_available": true
+          },
+          {
+            "observation_id": "mixed_C2",
+            "handle_id": "handle:mixed_C2",
+            "coefficient": 1,
+            "offset_polynomial": [
+              11,
+              4
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "mixed_affine_answer",
+            "coefficient": 85,
+            "actual_rhs": 103,
+            "offset": 9,
+            "ell": 94,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          20,
+          122,
+          79
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "ledger_digest": "9669fafcbf5be406efc2c4e4f444b81bdb623fb2cb224acf40123b39d9f90aca",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400ca0142",
+          "projections": [
+            "04010700d7",
+            "0401dc0127"
+          ]
+        },
+        "E:w2": {
+          "source_id": "w2",
+          "E": "0400170100",
+          "projections": [
+            "040060018c",
+            "0400420040"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:mixed_C1": "04006d01a9",
+        "handle:mixed_C2": "0400420040"
+      },
+      "scalar_answers": {
+        "mixed_affine_answer": 103
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "0400a10188",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04001d0165"
+        },
+        {
+          "source_id": "w2",
+          "f_h": "04004901eb"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00bf00c9"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "joint_affine_mixed_system/joint_scalar_and_points/tau=5",
+    "public_setup": {
+      "N": 3,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "04008300db",
+        "04016400ed"
+      ],
+      "W": {
+        "1": "0401680018",
+        "2": "0401d200cb",
+        "3": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401c301f2",
+        "040087001d"
+      ],
+      "A": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "B": [
+        "0400f000b2",
+        "04006d0062"
+      ],
+      "Gamma": "0401dc00e4",
+      "Z": "00d20068",
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "setup_nodes": [
+        1,
+        2,
+        3
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        },
+        {
+          "source_id": "w2",
+          "kind": "mask",
+          "slot": "slot:2",
+          "node": 2,
+          "generation": "generation:w2",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w2",
+            "available": true,
+            "provenance": "Canonical generator for immutable w2"
+          }
+        }
+      ],
+      "pads": [
+        {
+          "source_id": "rA",
+          "generation": "pad-generation:rA"
+        },
+        {
+          "source_id": "rB",
+          "generation": "pad-generation:rB"
+        }
+      ],
+      "aliases": {},
+      "scalars": [
+        {
+          "observation_id": "mixed_affine_answer",
+          "ordinary": {
+            "w1": 1
+          },
+          "pads": {
+            "rA": 2,
+            "rB": 1
+          },
+          "offset": 9,
+          "offset_available": true,
+          "rhs": 103,
+          "rhs_available": true,
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+        }
+      ],
+      "points": [
+        {
+          "observation_id": "mixed_C1",
+          "ordinary": {
+            "w1": [
+              -1,
+              1
+            ],
+            "w2": [
+              2
+            ]
+          },
+          "pads": {
+            "rA": 1,
+            "rB": 2
+          },
+          "offset": [
+            7,
+            3,
+            5
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C1",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        },
+        {
+          "observation_id": "mixed_C2",
+          "ordinary": {
+            "w1": [
+              1
+            ],
+            "w2": [
+              -2,
+              1
+            ]
+          },
+          "pads": {
+            "rA": 3,
+            "rB": -1
+          },
+          "offset": [
+            11,
+            4
+          ],
+          "offset_available": true,
+          "handle_id": "handle:mixed_C2",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "9669fafcbf5be406efc2c4e4f444b81bdb623fb2cb224acf40123b39d9f90aca",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1",
+        "w2"
+      ],
+      "pad_order": [
+        "rA",
+        "rB"
+      ],
+      "scalar_order": [
+        "mixed_affine_answer"
+      ],
+      "point_order": [
+        "mixed_C1",
+        "mixed_C2"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [
+          85
+        ],
+        "zeta": [
+          89,
+          1
+        ],
+        "left_kernel_row": [
+          85,
+          89,
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 86,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            89
+          ],
+          [
+            45,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 86
+            },
+            {
+              "node": 2,
+              "value": 47
+            },
+            {
+              "node": 3,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            90
+          ],
+          "cleared_denominator_numerator": [
+            117,
+            110,
+            117,
+            90
+          ],
+          "denominator": [
+            125,
+            11,
+            125,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          },
+          {
+            "source_id": "w2",
+            "handle_id": "E:w2",
+            "available": true,
+            "provenance": "Canonical generator for immutable w2"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1",
+          "E:w2"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "mixed_C1",
+            "handle_id": "handle:mixed_C1",
+            "coefficient": 89,
+            "offset_polynomial": [
+              7,
+              3,
+              5
+            ],
+            "offset_available": true,
+            "observer_available": true
+          },
+          {
+            "observation_id": "mixed_C2",
+            "handle_id": "handle:mixed_C2",
+            "coefficient": 1,
+            "offset_polynomial": [
+              11,
+              4
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [
+          {
+            "observation_id": "mixed_affine_answer",
+            "coefficient": 85,
+            "actual_rhs": 103,
+            "offset": 9,
+            "ell": 94,
+            "observer_available": true,
+            "rhs_available": true,
+            "offset_available": true,
+            "provenance": "Actual returned affine answer under fixed common-prefix coefficients"
+          }
+        ],
+        "known_h_correction_polynomial": [
+          20,
+          122,
+          79
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "fbc930ade08ceeb46c7af7def6c4212377c9fd96488a2503127d7a288baf75cd",
+      "ledger_digest": "9669fafcbf5be406efc2c4e4f444b81bdb623fb2cb224acf40123b39d9f90aca",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "04007a011c",
+          "projections": [
+            "04018c0202",
+            "04016801f3"
+          ]
+        },
+        "E:w2": {
+          "source_id": "w2",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168",
+            "0400f000b2"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:mixed_C1": "04006d01a9",
+        "handle:mixed_C2": "0400420040"
+      },
+      "scalar_answers": {
+        "mixed_affine_answer": 103
+      }
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "0400a10188",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04001d0165"
+        },
+        {
+          "source_id": "w2",
+          "f_h": "04004901eb"
+        }
+      ],
+      "observed_GT": "00bf00c9",
+      "predicted_GT": [
+        "00010000",
+        "00bf00c9"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=3",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "04002a0063"
+      ],
+      "W": {
+        "1": "04000f0143",
+        "2": "0400a600b2"
+      },
+      "T": [
+        "04003101bf",
+        "0401870045"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "0401d200cb",
+      "Z": "00d20068",
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "vanishes_at_three",
+          "ordinary": {
+            "w1": [
+              -3,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:vanishes_at_three",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "909b5da564cfc33f2418b1ccec102086c20580a9ae260cd6b15a38cbf55eda2d",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "vanishes_at_three"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 129,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 129
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            6,
+            126,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "vanishes_at_three",
+            "handle_id": "handle:vanishes_at_three",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f",
+      "ledger_digest": "909b5da564cfc33f2418b1ccec102086c20580a9ae260cd6b15a38cbf55eda2d",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "04019301c0"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:vanishes_at_three": "00"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "SETUP_COLLISION_INCONCLUSIVE",
+      "actual_curve_test_executed": true,
+      "Cstar": "00",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "00"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00010000"
+      ],
+      "matches": [
+        0,
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=3",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "04002a0063"
+      ],
+      "W": {
+        "1": "04000f0143",
+        "2": "0400a600b2"
+      },
+      "T": [
+        "04003101bf",
+        "0401870045"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "0401d200cb",
+      "Z": "00d20068",
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "vanishes_at_three",
+          "ordinary": {
+            "w1": [
+              -3,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:vanishes_at_three",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "909b5da564cfc33f2418b1ccec102086c20580a9ae260cd6b15a38cbf55eda2d",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "vanishes_at_three"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 129,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 129
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            6,
+            126,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "vanishes_at_three",
+            "handle_id": "handle:vanishes_at_three",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "dc969214484da24f22b51c8487cfa00f6fb9f5716a8171fee121ea8a3d21bc0f",
+      "ledger_digest": "909b5da564cfc33f2418b1ccec102086c20580a9ae260cd6b15a38cbf55eda2d",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "04000b015f",
+          "projections": [
+            "0401dd00a3"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:vanishes_at_three": "00"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "SETUP_COLLISION_INCONCLUSIVE",
+      "actual_curve_test_executed": true,
+      "Cstar": "00",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "00"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "00010000"
+      ],
+      "matches": [
+        0,
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "vanishes_at_three",
+          "ordinary": {
+            "w1": [
+              -3,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:vanishes_at_three",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "4262aaa718927b3ee7e318bdb295a8bdead909cc4494b010e9493a19a8162688",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "vanishes_at_three"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 129,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 129
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            6,
+            126,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "vanishes_at_three",
+            "handle_id": "handle:vanishes_at_three",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "4262aaa718927b3ee7e318bdb295a8bdead909cc4494b010e9493a19a8162688",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400170100",
+          "projections": [
+            "040060018c"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:vanishes_at_three": "04010800e2"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_0",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "00010000",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        0
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  },
+  {
+    "case": "formal_nonzero_fixed_tau_collision/collision_at_tau_three/tau=4",
+    "public_setup": {
+      "N": 2,
+      "g": "04018d00a0",
+      "h": "04003101bf",
+      "Y": [
+        "0400a600b2",
+        "0401ea01dc"
+      ],
+      "W": {
+        "1": "0401d200cb",
+        "2": "04000f0143"
+      },
+      "T": [
+        "04003101bf",
+        "0401ca01d9"
+      ],
+      "A": [
+        "0400f000b2"
+      ],
+      "B": [
+        "0400f000b2"
+      ],
+      "Gamma": "04007a011c",
+      "Z": "00d20068",
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a"
+    },
+    "ledger": {
+      "schema": "CHARE_FACT_LEDGER_V1",
+      "p": 131,
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "setup_nodes": [
+        1,
+        2
+      ],
+      "fact_ids": [
+        "qualification:q0"
+      ],
+      "sources": [
+        {
+          "source_id": "w1",
+          "kind": "mask",
+          "slot": "slot:1",
+          "node": 1,
+          "generation": "generation:w1",
+          "fact_map": [
+            1
+          ],
+          "canonical_point": {
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        }
+      ],
+      "pads": [],
+      "aliases": {},
+      "scalars": [],
+      "points": [
+        {
+          "observation_id": "vanishes_at_three",
+          "ordinary": {
+            "w1": [
+              -3,
+              1
+            ]
+          },
+          "pads": {},
+          "offset": [
+            0
+          ],
+          "offset_available": true,
+          "handle_id": "handle:vanishes_at_three",
+          "observer_available": true,
+          "world_invariant": true,
+          "provenance": "Fixed coefficients and offset on the same public prefix"
+        }
+      ],
+      "factual_openings": [],
+      "public_powers_available": true
+    },
+    "evidence": {
+      "schema": "CHARE_FACT_EVIDENCE_V1",
+      "ledger_digest": "4262aaa718927b3ee7e318bdb295a8bdead909cc4494b010e9493a19a8162688",
+      "query_kind": "fixed_pair",
+      "p": 131,
+      "difference": [
+        1
+      ],
+      "source_order": [
+        "w1"
+      ],
+      "pad_order": [],
+      "scalar_order": [],
+      "point_order": [
+        "vanishes_at_three"
+      ],
+      "evidence_level": "FINITE_FIELD_FORMAL",
+      "native_replay_verified": false,
+      "history_contract_eligible": true,
+      "model_scope": "DECLARED_OBSERVER_SOURCE_LANGUAGE",
+      "pair_legality_verified": false,
+      "factual_opening_difference_agreement": true,
+      "contract": "World-invariant public-prefix coefficients/offsets and source bindings are supplied assertions, not generation proofs",
+      "formal_status": "INCOMPATIBLE",
+      "execution_status": "PAIRING_TEST_RECIPE_READY",
+      "witness": {
+        "c": [],
+        "zeta": [
+          1
+        ],
+        "left_kernel_row": [
+          1
+        ],
+        "failed_component": {
+          "kind": "pole",
+          "value": 129,
+          "node": 1
+        },
+        "f_polynomials": [
+          [
+            128,
+            1
+          ]
+        ],
+        "rational_difference": {
+          "residues": [
+            {
+              "node": 1,
+              "value": 129
+            },
+            {
+              "node": 2,
+              "value": 0
+            }
+          ],
+          "polynomial": [
+            1
+          ],
+          "cleared_denominator_numerator": [
+            6,
+            126,
+            1
+          ],
+          "denominator": [
+            2,
+            128,
+            1
+          ],
+          "formal_nonzero": true,
+          "fixed_tau_evaluation": "NOT_PERFORMED; a nonzero rational function may vanish at a legal tau"
+        },
+        "canonical_points_required": [
+          {
+            "source_id": "w1",
+            "handle_id": "E:w1",
+            "available": true,
+            "provenance": "Canonical generator for immutable w1"
+          }
+        ],
+        "canonical_point_ids_required": [
+          "E:w1"
+        ],
+        "point_terms": [
+          {
+            "observation_id": "vanishes_at_three",
+            "handle_id": "handle:vanishes_at_three",
+            "coefficient": 1,
+            "offset_polynomial": [
+              0
+            ],
+            "offset_available": true,
+            "observer_available": true
+          }
+        ],
+        "scalar_terms": [],
+        "known_h_correction_polynomial": [
+          0
+        ],
+        "h_correction_available": true,
+        "public_powers_available": true,
+        "representation_prerequisites_present": true,
+        "blocked_reasons": [],
+        "scope": "RETURNED_WITNESS_ONLY; no exhaustive search for alternative available witnesses",
+        "formula": "Cstar=sum(zeta_m*C_m)+(c*ell-sum(zeta_m*d_m(tau)))*h",
+        "test_formula": "e(g,Cstar)-sum_a e(E_a,f_a(tau)*h)",
+        "native_replay_verified": false
+      },
+      "witness_search_scope": "FIRST_FAILED_LEFT_KERNEL_BASIS_ROW",
+      "algebraic_verification": true,
+      "y0": [
+        0
+      ],
+      "y1": [
+        1
+      ],
+      "pair_contract_supplied": true,
+      "pair_contract": {
+        "legal_pair": true,
+        "same_public_metadata_and_outcomes": true,
+        "fixed_before_fresh_sources": true,
+        "provenance": "Synthetic fixed pair chosen before independent fixture source draws"
+      },
+      "actual_factual_openings_match_both": true,
+      "pair_status": "CONDITIONAL_LEGAL_PAIR"
+    },
+    "public_view": {
+      "setup_id": "3318c9266ad8ff72e36219e38c22a959e1d2e958ede96b85cc3ca5b4e117be5a",
+      "ledger_digest": "4262aaa718927b3ee7e318bdb295a8bdead909cc4494b010e9493a19a8162688",
+      "canonical_records": {
+        "E:w1": {
+          "source_id": "w1",
+          "E": "0400ca00c9",
+          "projections": [
+            "0401dd0168"
+          ]
+        }
+      },
+      "point_handles": {
+        "handle:vanishes_at_three": "04010800e2"
+      },
+      "scalar_answers": {}
+    },
+    "execution_result": {
+      "status": "MATCHES_WORLD_1",
+      "actual_curve_test_executed": true,
+      "Cstar": "04010800e2",
+      "f_points": [
+        {
+          "source_id": "w1",
+          "f_h": "04003101bf"
+        }
+      ],
+      "observed_GT": "011d00ea",
+      "predicted_GT": [
+        "00010000",
+        "011d00ea"
+      ],
+      "matches": [
+        1
+      ],
+      "native_replay_verified": false,
+      "scope": "Actual independent tiny-curve test; pair contract and source authenticity remain supplied assumptions"
+    }
+  }
+]

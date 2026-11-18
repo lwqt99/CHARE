@@ -1,0 +1,9 @@
+{
+  "compile_signature": "(pp, original_target, observer_ledger)",
+  "expected_outputs_loaded_only_by_outer_comparator": true,
+  "forbidden_private_identifiers_absent_from_recover": true,
+  "note": "Static checks support the boundary; provenance labels do not authenticate false metadata.",
+  "original_target_and_public_fixture_unchanged_in_every_positive": true,
+  "recover_signature": "(pp, original_target, observer_ledger, compiled_recipe)",
+  "recovery_module_does_not_call_fixture_generator": true
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "CHARE_FACT_LEDGER_V1",
+  "p": 101,
+  "setup_id": "setup:test",
+  "setup_nodes": [
+    1,
+    2
+  ],
+  "fact_ids": [
+    "q0"
+  ],
+  "sources": [
+    {
+      "source_id": "w0",
+      "kind": "mask",
+      "slot": "slot1",
+      "node": 1,
+      "generation": "g0",
+      "fact_map": [
+        1
+      ],
+      "canonical_point": {
+        "handle_id": "E:w0",
+        "available": true,
+        "provenance": "canonical generation"
+      }
+    }
+  ],
+  "pads": [
+    {
+      "source_id": "r0",
+      "generation": "service0"
+    }
+  ],
+  "aliases": {
+    "w:retained": "w0"
+  },
+  "scalars": [],
+  "points": [
+    {
+      "observation_id": "C0",
+      "ordinary": {
+        "w:retained": [
+          100,
+          1
+        ]
+      },
+      "pads": {
+        "r0": 1
+      },
+      "offset": [
+        3,
+        2
+      ],
+      "offset_available": true,
+      "handle_id": "C0",
+      "observer_available": true,
+      "world_invariant": true,
+      "provenance": "fixed common prefix"
+    },
+    {
+      "observation_id": "C1",
+      "ordinary": {},
+      "pads": {
+        "r0": -1
+      },
+      "offset": [
+        0
+      ],
+      "handle_id": "C1",
+      "world_invariant": true,
+      "provenance": "fixed common prefix"
+    }
+  ],
+  "factual_openings": [],
+  "public_powers_available": true
+}

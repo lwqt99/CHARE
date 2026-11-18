@@ -1,0 +1,55 @@
+{
+  "schema": "CHARE_FACT_INCREMENT_RUN_V1",
+  "generated_at_utc": "2026-11-14T16:57:11.369784+00:00",
+  "all_passed": true,
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "counts": {
+    "histories": 11,
+    "stages": 18,
+    "assertions": 128,
+    "enumerated_family_pairs": 12,
+    "unit_tests": 16,
+    "polynomial_divisions": 2340,
+    "exhaustive_single_mask_systems": 625,
+    "random_mixed_systems": 180,
+    "pad_vectors_enumerated": 8921,
+    "random_family_systems": 64,
+    "family_pairs_enumerated": 384
+  },
+  "runs": [
+    {
+      "script": "run_fixtures.py",
+      "script_sha256": "c16e0c64167ca07a19d56a9e6d9a83340493e5d81382dff6742fb6f4989bd2a6",
+      "returncode": 0,
+      "elapsed_seconds": 0.07396772199899715,
+      "raw_log": "run_fixtures.log"
+    },
+    {
+      "script": "test_fact_audit.py",
+      "script_sha256": "80b4b10d3186f0d2b1523603c972f7843752108cded5a39faf1e761ea3b60412",
+      "returncode": 0,
+      "elapsed_seconds": 0.3612886439987051,
+      "raw_log": "test_fact_audit.log"
+    }
+  ],
+  "files_sha256": {
+    "fact_audit.py": "7eee0d0a47943286abb92aa33119890894f96f20cb25badedc3017b5738abf1f",
+    "fixtures.json": "eef411e35069d16fb7b0590978d27f6c18e7faf5e309e062870f36a62fed17e5",
+    "make_fixtures.py": "5b8959f57fc25cd20a38d33f92c07ac6d2b3576155060413ce73545e4f20ccb9",
+    "run_fixtures.py": "c16e0c64167ca07a19d56a9e6d9a83340493e5d81382dff6742fb6f4989bd2a6",
+    "test_fact_audit.py": "80b4b10d3186f0d2b1523603c972f7843752108cded5a39faf1e761ea3b60412",
+    "run_all.py": "6146884e50cad2b5f4f8b7f72a3d78cdf57f8ed0524ab044ae76a9a9653df91a"
+  },
+  "bootstrap_sha256": "d75dded29f1552b6d70562d77bc2afa1723653a39d60ff8a138a00769ba36f21",
+  "prior_root_used": "/workspace/scratch/c559c27c3885/review_round2",
+  "prior_dependency_hashes": {
+    "auditor/auditor.py": "9c276ecd6da28fca60fb69d01af87c3703f37ef359337840e4acf508a9d46455",
+    "curve_replay/toy_pairing.py": "295ebf5a36440109ceae3a147f106e66376843b5c10990cac1e5e417e0a4bf5f",
+    "curve_replay/replay_checks.py": "c31e89f4c98fa26cc309de6836e01c0f7601a7454b078873aa7edb6ecf9c74c2"
+  },
+  "scope": "New finite-field qualification coefficient solver and independent enumeration only",
+  "native_curve_replay_in_this_runner": false,
+  "original_native_artifact_checks": false,
+  "original_reported_1704_checks": false,
+  "integration_results": "Separate round-3 root files; not counted as fact-audit unit or fixture checks"
+}

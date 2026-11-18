@@ -1,0 +1,18 @@
+{
+  "schema": "CHARE_FACT_TEST_SUMMARY_V1",
+  "generated_at_utc": "2026-11-14T16:57:11.358616+00:00",
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "all_passed": true,
+  "independent_enumeration_counts": {
+    "polynomial_divisions": 2340,
+    "exhaustive_single_mask_systems": 625,
+    "random_mixed_systems": 180,
+    "pad_vectors_enumerated": 8921,
+    "random_family_systems": 64,
+    "family_pairs_enumerated": 384
+  },
+  "scope": "Original cleared-denominator polynomials and exhaustive pad images; no generic-group/native replay",
+  "solver_sha256": "7eee0d0a47943286abb92aa33119890894f96f20cb25badedc3017b5738abf1f"
+}
