@@ -1,0 +1,635 @@
+{
+  "schema": "chare.pending-opening.guard.v1",
+  "results": [
+    {
+      "fixture_id": "pending-opening-1",
+      "status": "PASS",
+      "p_bits": 256,
+      "q_bits": 1536,
+      "projection_equations_checked": 12,
+      "trusted_binding": "explicit fixture manifest, not a signature implementation",
+      "freeze": {
+        "status": "ADMITTED",
+        "reason": "FROZEN_BEFORE_PRIVATE_INSTALLATION",
+        "revision": 2,
+        "private_callback_called": false,
+        "evidence": {
+          "plan_digest": "e9c77799d9c42bdf10dc46bc4f1f0eb4db201d96198f3cfdff8c8dd62aa6aac9",
+          "potential_rank": 1
+        }
+      },
+      "rejected_opening": {
+        "status": "FORMAL_FAILURE",
+        "reason": "CANONICAL_TARGET_WITNESS",
+        "revision": 3,
+        "private_callback_called": false,
+        "evidence": {
+          "status": "FORMAL_FAILURE",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "witness": {
+            "direction": [
+              83744317841741440616902767845924906116540263821716205350595254709593497412132,
+              0,
+              0,
+              0
+            ],
+            "target_indices": [
+              0
+            ],
+            "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+            "normalization": "gamma*x = -1 (mod p)",
+            "representation_level": "formal_coefficient_witness_only",
+            "original_target_id": "pending-opening-1/old-singleton",
+            "scope": "mask_granted_potential_completion_space",
+            "native_recovery_verified": false
+          },
+          "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+          "visible_rank_before": 0,
+          "potential_rank_after_proposal": 2
+        }
+      },
+      "rejected_private_callback_count": 0,
+      "current_capability_rank_at_proposal": 0,
+      "safe_branch_final_current_rank": 1,
+      "safe_branch_full_sum_pairing_relation": true,
+      "guard_trace": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "admit_target",
+          "target_id": "pending-opening-1/old-singleton"
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "admit_target",
+          "target_id": "pending-opening-1/old-singleton",
+          "original_source_ids": [
+            "v1"
+          ]
+        },
+        {
+          "seq": 3,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 1,
+          "operation": "admit_target",
+          "payload_key": "typed:[\"target\",\"pending-opening-1/old-singleton\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 4,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 1,
+          "operation": "admit_target",
+          "public_handle": "retained-target/pending-opening-1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 5,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 6,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "freeze_plan",
+          "plan_id": "pending-opening-1/plan",
+          "plan_digest": "e9c77799d9c42bdf10dc46bc4f1f0eb4db201d96198f3cfdff8c8dd62aa6aac9",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "pending-opening-1/plan"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "install_pads",
+          "plan_id": "pending-opening-1/plan"
+        },
+        {
+          "seq": 9,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 3,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"pending-opening-1/plan\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 10,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 3,
+          "operation": "install_pads",
+          "public_handle": "private-pad-deliveries-installed/pending-opening-1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 11,
+          "event": "REJECT",
+          "revision": 3,
+          "operation": "request_pad_opening",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 2,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "original_target_id": "pending-opening-1/old-singleton",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 0,
+            "potential_rank_after_proposal": 2
+          }
+        },
+        {
+          "seq": 12,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v1\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v1"
+        },
+        {
+          "seq": 13,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v1\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 14,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v1\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 15,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/ac4b91200170c868b14e6b148e82617716a4490af0a94b4f526bc5a3e5e34187",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 16,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v2\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v2"
+        },
+        {
+          "seq": 17,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v2\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v2\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 19,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/52267d2fad25fee572d1f56fc383a205ebb2a5d886f940a2e5dfd9242d9b02ec",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 20,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v3\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v3"
+        },
+        {
+          "seq": 21,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v3\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v3\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 23,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/4979530d0714212f6a011b289b86115251b04a503cb71c62eff44486282820a4",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 24,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v4\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v4"
+        },
+        {
+          "seq": 25,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v4\"]",
+          "plan_id": "pending-opening-1/plan",
+          "source_id": "v4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-1/plan\",\"v4\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 27,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/1a929163598b2621535a83ba77508a7f1ade7c19301d0cd4e64d97f6fea6327d",
+          "post_callback_audit": null
+        }
+      ],
+      "secret_fixture_scalars_persisted": false
+    },
+    {
+      "fixture_id": "pending-opening-2",
+      "status": "PASS",
+      "p_bits": 256,
+      "q_bits": 1536,
+      "projection_equations_checked": 12,
+      "trusted_binding": "explicit fixture manifest, not a signature implementation",
+      "freeze": {
+        "status": "ADMITTED",
+        "reason": "FROZEN_BEFORE_PRIVATE_INSTALLATION",
+        "revision": 2,
+        "private_callback_called": false,
+        "evidence": {
+          "plan_digest": "fc2d5b405bf16a7b1c3629d92e1e8f6460098899d72f28e221e2a135b0f9e06d",
+          "potential_rank": 1
+        }
+      },
+      "rejected_opening": {
+        "status": "FORMAL_FAILURE",
+        "reason": "CANONICAL_TARGET_WITNESS",
+        "revision": 3,
+        "private_callback_called": false,
+        "evidence": {
+          "status": "FORMAL_FAILURE",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "witness": {
+            "direction": [
+              83744317841741440616902767845924906116540263821716205350595254709593497412132,
+              0,
+              0,
+              0
+            ],
+            "target_indices": [
+              0
+            ],
+            "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+            "normalization": "gamma*x = -1 (mod p)",
+            "representation_level": "formal_coefficient_witness_only",
+            "original_target_id": "pending-opening-2/old-singleton",
+            "scope": "mask_granted_potential_completion_space",
+            "native_recovery_verified": false
+          },
+          "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+          "visible_rank_before": 0,
+          "potential_rank_after_proposal": 2
+        }
+      },
+      "rejected_private_callback_count": 0,
+      "current_capability_rank_at_proposal": 0,
+      "safe_branch_final_current_rank": 1,
+      "safe_branch_full_sum_pairing_relation": true,
+      "guard_trace": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "admit_target",
+          "target_id": "pending-opening-2/old-singleton"
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "admit_target",
+          "target_id": "pending-opening-2/old-singleton",
+          "original_source_ids": [
+            "v1"
+          ]
+        },
+        {
+          "seq": 3,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 1,
+          "operation": "admit_target",
+          "payload_key": "typed:[\"target\",\"pending-opening-2/old-singleton\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 4,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 1,
+          "operation": "admit_target",
+          "public_handle": "retained-target/pending-opening-2",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 5,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 6,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "freeze_plan",
+          "plan_id": "pending-opening-2/plan",
+          "plan_digest": "fc2d5b405bf16a7b1c3629d92e1e8f6460098899d72f28e221e2a135b0f9e06d",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "pending-opening-2/plan"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "install_pads",
+          "plan_id": "pending-opening-2/plan"
+        },
+        {
+          "seq": 9,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 3,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"pending-opening-2/plan\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 10,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 3,
+          "operation": "install_pads",
+          "public_handle": "private-pad-deliveries-installed/pending-opening-2",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 11,
+          "event": "REJECT",
+          "revision": 3,
+          "operation": "request_pad_opening",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 2,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "original_target_id": "pending-opening-2/old-singleton",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 0,
+            "potential_rank_after_proposal": 2
+          }
+        },
+        {
+          "seq": 12,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v1\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v1"
+        },
+        {
+          "seq": 13,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v1\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 14,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v1\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 15,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/51ae44c9b2aa4118eabde226cee22abdf377cd802ff29ad35218e8373d6b9f23",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 16,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v2\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v2"
+        },
+        {
+          "seq": 17,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v2\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v2\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 19,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/8755d3786136c7974d3220cf9026d8909a4a517fad542a20ac87d9141189c8e2",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 20,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v3\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v3"
+        },
+        {
+          "seq": 21,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v3\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v3\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 23,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/547be7d3dd433ff0939c8fbb5d899880a84d39cc6f9593c3ae248fea8529a797",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 24,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v4\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v4"
+        },
+        {
+          "seq": 25,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v4\"]",
+          "plan_id": "pending-opening-2/plan",
+          "source_id": "v4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"pending-opening-2/plan\",\"v4\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 27,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "public_handle": "contribution/880db31b918678f288cedda674935ad28af257178da3666fe7421fefb8389d82",
+          "post_callback_audit": null
+        }
+      ],
+      "secret_fixture_scalars_persisted": false
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "chare.reference.assembly.v1",
+  "assembly_round": "CHARE-C20261115-03",
+  "prior_round": "CHARE-C20261115-02",
+  "previous_manifest_entries_verified": 37,
+  "previous_manifest_sha256": "16ba290f383728ded47f1f366be7f5d5a88638785264b1f3de350a8e612555f7",
+  "copied_previous_files": {
+    "DEPENDENCIES.json": "fcaab07689b431ae7f8074a7b6e24e0c05bce468f3cafa810a28ef6e87220b1b",
+    "implementation/controller/README.md": "c1dafddb8feb2b76cea472161a36b065aec01a3769fc43685a0854d680e98d4c",
+    "implementation/controller/__init__.py": "8c75b8e32f1b6f386349eec74cc93712ee4c330fc45146d1c3ec6d346697f59c",
+    "implementation/controller/controller.py": "a07b1027ee90d0e5a91e69c14a0ede9bf321ac5b1e8e26815a0debea580e9d76",
+    "implementation/controller/controller_summary.json": "c8cae666da86b75ae9a68c345091aa2a8b3956ff7e8eab294d77b4e489743c46",
+    "implementation/controller/controller_traces.json": "58d41267184ca810d5f9df959e2caad114fab4601ddab37b7bfaaa37cb355542",
+    "implementation/controller/field.py": "808c785818560fc8cab0a1b377376056987f89efbaf8c1104f31afb20ef51dfb",
+    "implementation/controller/run_checks.py": "44057e5b8d67795a374af6eb595b60968bacad0321e70dbfbd9f70122ae0fd57",
+    "implementation/coordinate_delta/generate_evidence.py": "1eafc5be06c99408fcd6e80ecf415ab3813c3438bba1de41cd850a5f31047629",
+    "implementation/coordinate_delta/public_replay.py": "61d1e432cbd51eb25ff6db4c0b3034672298b6872cf019ddc7781681c6106207",
+    "implementation/coordinate_delta/verify_isolated.py": "f329400b7c50c3b9cc376f93765e67812caebb79c634ff68f9197497a15c3c88",
+    "evidence/coordinate_public_inputs.json": "2c8830f917b8047e60b6db0a1cfbcee300c427355072b2e4b2dbd6efc74e8e9e",
+    "evidence/coordinate_expected_hashes.json": "c12bc41beb3f19c6ceb3aac06e0b1d85e88b59615e6d521f85475c06f12f0d78",
+    "evidence/coordinate_guard_results.json": "b8674dd27e4038df6715598ff25dfd92e6695fda6a9d5bbd63b665e47bf8078f",
+    "evidence/inherited_backend_recheck.json": "a6d280fa03050b6ae64dd9c9aaeab4dd5c192d31b228f3047381de3e33f187a7"
+  },
+  "inherited_dependency_metadata": {
+    "origin_round": "CHARE-C20261115-02",
+    "copied_verbatim": true,
+    "interpretation": "Relative phrases such as 'this round' and 'not redistributed' describe round-02, not this assembly.",
+    "record": {
+      "schema": "chare.delta.dependencies.v1",
+      "prior_artifact": "CHARE_Increment_20261109_R2.zip",
+      "prior_library_file_id": "libfile_d951b90c5e6c819187463a157f9b0805",
+      "prior_archive_sha256": "9304d039155d6f894f37c0bddb5c3e72589b970f54998df05ec55151ac85342b",
+      "path_within_prior_archive": "CHARE_Increment_20261109_R2/verification/coordinate_pairing",
+      "files": {
+        "type_a.py": "8def1b5af7c0d406c33ac1386939225292cd4741af2c61a47346a96973334261",
+        "parameters.json": "66bf854c514e904946ccf7199d8d0430978e5040d2ccb168b95339387bf98671"
+      },
+      "unchanged_dependency_not_redistributed": true,
+      "dependency_use": "Actual coordinate pairing only; all controller and pending-opening tests in this round are new.",
+      "parameter_assurance": "Inherited probable-prime screened parameter record; prime-order group is the declared prerequisite, not a certified new security-level claim.",
+      "python_minimum": "3.10",
+      "external_python_packages": []
+    }
+  },
+  "current_assembly": {
+    "coordinate_backend_files_copied": 2,
+    "new_scientific_fixture_count": 0,
+    "original_go_measurements_rerun": false,
+    "portability_edit": {
+      "file": "implementation/controller/run_checks.py",
+      "reason": "Use the archived LF and UTF-8 byte encoding when regenerating the two deterministic JSON receipts on Windows.",
+      "input_sha256": "44057e5b8d67795a374af6eb595b60968bacad0321e70dbfbd9f70122ae0fd57",
+      "output_sha256": "b7a49b7329af4dfb02c354636d2d5ceba4834b4a66a5a0c41742d39784375f1e"
+    }
+  },
+  "scope": "independent reference module for the declared coefficient and public-replay claims"
+}

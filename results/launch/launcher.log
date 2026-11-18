@@ -1,0 +1,46 @@
+CHARE module: [local path removed]
+Launcher log: [local path removed]
+Time budget: 10m0s (tests, build, and batch).
+Full functional tests run first. Completed cases are checkpointed; a timeout is NOT a completed batch.
+Curve size configurations are not calibrated security levels.
+
+[1/3] /usr/local/go/bin/go test -mod=vendor ./... -count=1
+?   	example.org/chare	[no test files]
+ok  	example.org/chare/cmd/goland	2.030s
+ok  	example.org/chare/internal/auth	0.007s
+ok  	example.org/chare/internal/bench	3.319s
+ok  	example.org/chare/internal/core	2.426s
+ok  	example.org/chare/internal/ledger	0.006s
+ok  	example.org/chare/internal/nativegroup	0.021s
+ok  	example.org/chare/internal/pbcparams	0.008s
+ok  	example.org/chare/internal/projectpath	0.005s
+ok  	example.org/chare/internal/ripecore	7.695s
+ok  	example.org/chare/internal/runner	0.077s
+ok  	example.org/chare/internal/transport	0.006s
+
+[2/3] /usr/local/go/bin/go build -mod=vendor -o [local path removed] .
+
+[3/3] [local path removed] -config config/paper.json -out results
+Run 20261107T084253.220314242Z_paper-native-paired-three-trials-10m_6bdeeab0
+Preparing or importing public Type-A parameters; no concrete security-bit claim.
+[1/9] capacity=4 attributes=2 replicate=1
+[1/9] case_00001_n4_m2_r1: passed in 8.615s; completed-case files saved
+[2/9] capacity=4 attributes=2 replicate=2
+[2/9] case_00002_n4_m2_r2: passed in 8.514s; completed-case files saved
+[3/9] capacity=4 attributes=2 replicate=3
+[3/9] case_00003_n4_m2_r3: passed in 10.095s; completed-case files saved
+[4/9] capacity=8 attributes=2 replicate=1
+[4/9] case_00004_n8_m2_r1: passed in 23.098s; completed-case files saved
+[5/9] capacity=8 attributes=2 replicate=2
+[5/9] case_00005_n8_m2_r2: passed in 22.799s; completed-case files saved
+[6/9] capacity=8 attributes=2 replicate=3
+[6/9] case_00006_n8_m2_r3: passed in 22.9s; completed-case files saved
+[7/9] capacity=16 attributes=2 replicate=1
+[7/9] case_00007_n16_m2_r1: passed in 1m21.434s; completed-case files saved
+[8/9] capacity=16 attributes=2 replicate=2
+[8/9] case_00008_n16_m2_r2: passed in 1m21.287s; completed-case files saved
+[9/9] capacity=16 attributes=2 replicate=3
+[9/9] case_00009_n16_m2_r3: passed in 1m21.29s; completed-case files saved
+Results: [local path removed]
+Completed: 9 passed cases. Return bundle: [local path removed]
+PASSED: functional gate and configured batch

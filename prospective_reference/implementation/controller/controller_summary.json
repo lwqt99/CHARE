@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "case_count": 10,
+  "evidence_level": "executed_public_coefficient_controller_and_callback_order",
+  "native_group_recovery": false,
+  "full_random_oracle_delivery_restoration": false,
+  "authentication_fixture": "explicit trusted public manifest; no signature implementation claim",
+  "field_profiles": [
+    "p=101",
+    "same 256-bit p as prior coordinate reference"
+  ],
+  "cases": [
+    {
+      "case": "01_normal_same_fact_lifecycle",
+      "status": "PASS"
+    },
+    {
+      "case": "02_invalid_bindings_and_alias",
+      "status": "PASS"
+    },
+    {
+      "case": "03_abort_retry_retains_sources",
+      "status": "PASS"
+    },
+    {
+      "case": "04_pending_plan_blocks_enrollment",
+      "status": "PASS"
+    },
+    {
+      "case": "05_reserved_enrollment_and_legal_next_envelope",
+      "status": "PASS"
+    },
+    {
+      "case": "06_cycle_allows_one_opening_rejects_next",
+      "status": "PASS"
+    },
+    {
+      "case": "07_pending_opening_requires_future_rows",
+      "status": "PASS"
+    },
+    {
+      "case": "08_cross_call_pad_relation",
+      "status": "PASS"
+    },
+    {
+      "case": "09_new_target_checks_pending_and_retains_stale_exposure",
+      "status": "PASS"
+    },
+    {
+      "case": "10_revision_identity_and_callback_boundary",
+      "status": "PASS"
+    }
+  ]
+}

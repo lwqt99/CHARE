@@ -1,0 +1,11 @@
+# Local environment and regenerated outputs.
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db
+/review-output/
+/reviewed_figures/
+/reproduced/
+/prospective_reference/evidence/coordinate_isolated_check.json
+/history_reference/current/results/

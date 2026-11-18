@@ -1,0 +1,9 @@
+{
+  "config_override": "",
+  "finished_utc": "2026-11-07T08:48:33.63591975Z",
+  "profile": "paper",
+  "schema": "chare-launch-status-v1",
+  "started_utc": "2026-11-07T08:42:41.282298386Z",
+  "status": "passed",
+  "timeout_seconds": 600
+}

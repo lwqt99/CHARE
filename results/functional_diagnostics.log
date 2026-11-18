@@ -1,0 +1,7 @@
+=== RUN   TestLedgerFactFailureWitnessInActualPBC
+--- PASS: TestLedgerFactFailureWitnessInActualPBC (0.01s)
+=== RUN   TestRetainedAffinePointAndNativeContext
+    native_affine_test.go:110: params_sha256=855b0620a1b27d358d63e0af3f1504d288561becd59e3925f1c71e01e95af2fa ciphertext_sha256=ba7f1f56f26055861090afd5deae32492384794d02294ce7b5f3d1b01287b2ea context_sha256=7245dda4d4afb8465c1965f292a2fc13b55082889384be0d75fa28e71ffedd60 gt_sha256=72548beb4b6ee262efc9c7a38a1fd0a3f2a698fcc31bfcd0d71c613c21eed9df key_sha256=d78e3cb1e6ae2f81418a7fe23286b4f6bfbd7278860099e6c6dca1b934efcd3f
+--- PASS: TestRetainedAffinePointAndNativeContext (0.57s)
+PASS
+ok  core

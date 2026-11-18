@@ -1,0 +1,16 @@
+{
+  "case_id": "case_00002_n4_m2_r2",
+  "configuration": {
+    "capacity": 4,
+    "attributes": 2,
+    "replicate": 2,
+    "revocations": 4,
+    "acquisitions": 4,
+    "cold_audit_all_users": false,
+    "paper_study": true
+  },
+  "status": "passed",
+  "started_utc": "2026-11-07T08:43:02.160641995Z",
+  "finished_utc": "2026-11-07T08:43:10.668969715Z",
+  "checks": 124
+}

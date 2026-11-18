@@ -1,0 +1,26 @@
+{
+  "schema": "chare.reference.integration.v1",
+  "status": "PASS",
+  "round": "CHARE-C20261115-03",
+  "purpose": "portable assembly and claim-evidence integration",
+  "input_manifest_entries_checked": 20,
+  "controller_groups": 10,
+  "coordinate_fixtures_replayed": 2,
+  "coordinate_comparisons": 14,
+  "new_scientific_fixture_count": 0,
+  "original_go_measurements_rerun": false,
+  "independent_directory": true,
+  "entrypoint_results": [
+    {
+      "entrypoint": "implementation\\controller\\run_checks.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"case_count\": 10,\n  \"evidence_level\": \"executed_public_coefficient_controller_and_callback_order\",\n  \"native_group_recovery\": false,\n  \"full_random_oracle_delivery_restoration\": false,\n  \"authentication_fixture\": \"explicit trusted public manifest; no signature implementation claim\",\n  \"field_profiles\": [\n    \"p=101\",\n    \"same 256-bit p as prior coordinate reference\"\n  ],\n  \"cases\": [\n    {\n      \"case\": \"01_normal_same_fact_lifecycle\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"02_invalid_bindings_and_alias\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"03_abort_retry_retains_sources\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"04_pending_plan_blocks_enrollment\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"05_reserved_enrollment_and_legal_next_envelope\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"06_cycle_allows_one_opening_rejects_next\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"07_pending_opening_requires_future_rows\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"08_cross_call_pad_relation\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"09_new_target_checks_pending_and_retains_stale_exposure\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"10_revision_identity_and_callback_boundary\",\n      \"status\": \"PASS\"\n    }\n  ]\n}"
+    },
+    {
+      "entrypoint": "implementation\\coordinate_delta\\verify_isolated.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"fixtures\": 2, \"comparisons\": 14}"
+    }
+  ],
+  "prior_assembly_sha256": "5f93582334a921d9e1ddb42c0afa9c717da43f5bb85bb0363403e549e8b6837e"
+}

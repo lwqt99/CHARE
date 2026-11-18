@@ -1,0 +1,3 @@
+# Preserve exact measured bytes and SHA256SUMS across Linux/Windows checkouts.
+# Override repository-wide text normalization for run artifacts only.
+results/** -text

@@ -1,0 +1,174 @@
+{
+  "baseline_scope": "source-DH has independent reception keys, certificates, explicit-list authorization epochs, first acquisition and history; externally supplied public lists; not hidden-qualification functional equivalence",
+  "configuration": {
+    "schema": "chare-run-config-v1",
+    "label": "paper-native-paired-three-trials-10m",
+    "curve": {
+      "type": "a",
+      "r_bits": 256,
+      "q_bits": 1536
+    },
+    "capacities": [
+      4,
+      8,
+      16
+    ],
+    "attributes": [
+      2
+    ],
+    "replicates": 3,
+    "workload": {
+      "revocations": 0,
+      "acquisitions": 0,
+      "revocations_equal_capacity": true,
+      "acquisitions_equal_capacity": true,
+      "cold_audit_all_users": false
+    },
+    "continue_on_error": false,
+    "paper_study": true
+  },
+  "environment": {
+    "build_environment_allowlist": "[machine paths removed]",
+    "cpu": {
+      "command": "lscpu ",
+      "output": "架构：                                x86_64\nCPU 运行模式：                        32-bit, 64-bit\nAddress sizes:                        45 bits physical, 48 bits virtual\n字节序：                              Little Endian\nCPU:                                  4\n在线 CPU 列表：                       0-3\n厂商 ID：                             AuthenticAMD\n型号名称：                            AMD Ryzen 7 9700X 8-Core Processor\nCPU 系列：                            26\n型号：                                68\n每个核的线程数：                      1\n每个座的核数：                        1\n座：                                  4\n步进：                                0\nBogoMIPS：                            7599.82\n标记：                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero arat avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor fsrm avx512_vp2intersect\n超管理器厂商：                        VMware\n虚拟化类型：                          完全\nL1d 缓存：                            192 KiB (4 instances)\nL1i 缓存：                            128 KiB (4 instances)\nL2 缓存：                             4 MiB (4 instances)\nL3 缓存：                             128 MiB (4 instances)\nNUMA 节点：                           1\nNUMA 节点0 CPU：                      0-3\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Vulnerable\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\nVulnerability Vmscape:                Not affected"
+    },
+    "gcc_version_if_available": {
+      "command": "gcc --version",
+      "output": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "gmp_pkg_config": {
+      "command": "pkg-config --modversion gmp",
+      "output": "6.2.1"
+    },
+    "go_build_info": {
+      "GoVersion": "go1.25.3",
+      "Path": "example.org/chare",
+      "Main": {
+        "Path": "example.org/chare",
+        "Version": "(devel)"
+      },
+      "Deps": [
+        {
+          "Path": "github.com/Nik-U/pbc",
+          "Version": "v0.0.0-20181205041846-3e516ca0c5d6"
+        }
+      ],
+      "Settings": [
+        {
+          "Key": "-buildmode",
+          "Value": "exe"
+        },
+        {
+          "Key": "-compiler",
+          "Value": "gc"
+        },
+        {
+          "Key": "DefaultGODEBUG",
+          "Value": "containermaxprocs=0,decoratemappings=0,gotestjsonbuildtext=1,httpcookiemaxnum=0,multipathtcp=0,randseednop=0,rsa1024min=0,tlsmlkem=0,tlssha1=1,updatemaxprocs=0,x509rsacrt=0,x509sha256skid=0,x509usepolicies=0"
+        },
+        {
+          "Key": "CGO_ENABLED",
+          "Value": "1"
+        },
+        {
+          "Key": "CGO_CFLAGS"
+        },
+        {
+          "Key": "CGO_CPPFLAGS"
+        },
+        {
+          "Key": "CGO_CXXFLAGS"
+        },
+        {
+          "Key": "CGO_LDFLAGS"
+        },
+        {
+          "Key": "GOARCH",
+          "Value": "amd64"
+        },
+        {
+          "Key": "GOOS",
+          "Value": "linux"
+        },
+        {
+          "Key": "GOAMD64",
+          "Value": "v1"
+        },
+        {
+          "Key": "vcs",
+          "Value": "git"
+        }
+      ]
+    },
+    "go_version": "go1.25.3",
+    "goarch": "amd64",
+    "gomaxprocs": 4,
+    "goos": "linux",
+    "kernel": {
+      "command": "uname -a",
+      "output": "Linux [host removed] 6.8.0-87-generic #88~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Oct 14 14:03:14 UTC 2 x86_64 x86_64 x86_64 GNU/Linux"
+    },
+    "linked_libraries": {
+      "command": "ldd [local path removed]",
+      "output": "linux-vdso.so.1 (0x00007ffe6d6cf000)\n\tlibpbc.so.1 => /usr/local/lib/libpbc.so.1 (0x0000774db6ab9000)\n\tlibgmp.so.10 => /usr/local/lib/libgmp.so.10 (0x0000774db6a3e000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000774db6800000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000774db6b1f000)"
+    },
+    "logical_cpus": 4,
+    "memory_info": "MemTotal:        8083972 kB\nMemFree:          170300 kB\nMemAvailable:    4584520 kB\nBuffers:           20852 kB\nCached:          4481640 kB\nSwapCached:        11476 kB\nActive:          3552492 kB\nInactive:        3297052 kB\nActive(anon):    1450232 kB\nInactive(anon):   944244 kB\nActive(file):    2102260 kB\nInactive(file):  2352808 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nSwapTotal:       2097148 kB\nSwapFree:        1795420 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             16192 kB\nWriteback:             4 kB\nAnonPages:       2338100 kB\nMapped:           888000 kB\nShmem:             47216 kB\nKReclaimable:     264392 kB\nSlab:             468364 kB\nSReclaimable:     264392 kB\nSUnreclaim:       203972 kB\nKernelStack:       17068 kB\nPageTables:        30540 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     6139132 kB\nCommitted_AS:    7477436 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       46732 kB\nVmallocChunk:          0 kB\nPercpu:           110592 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      165696 kB\nDirectMap2M:     5076992 kB\nDirectMap1G:     5242880 kB\n",
+    "native_pbc_version": "not inferred from the Go wrapper; inspect linked-library metadata",
+    "os_release": "PRETTY_NAME=\"Ubuntu 22.04.1 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.1 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+    "pbc_go_binding_commit": "3e516ca0c5d64646fd1c3aeb1ecd41dacba1f0c6",
+    "pbc_go_local_patch": "Windows memstream temporary-file and buffer fix; see docs/VENDOR_PATCHES.md and actual source hashes",
+    "pbc_pkg_config": {
+      "command": "pkg-config --modversion pbc",
+      "error": "exit status 1",
+      "output": "Package pbc was not found in the pkg-config search path.\nPerhaps you should add the directory containing `pbc.pc'\nto the PKG_CONFIG_PATH environment variable\nPackage 'pbc', required by 'virtual:world', not found"
+    },
+    "protocol_execution": "sequential; crypto/rand provider; no forced GC policy change"
+  },
+  "error": "",
+  "failed_cases": 0,
+  "finished_utc": "2026-11-07T08:48:33.584062488Z",
+  "functional_validation": "implementation consistency checks only; not a security experiment",
+  "implementation_version": "chare-go-pbc-v0.7.0",
+  "measurement_scope": "actual PBC operations; no security proof inferred from functional checks or timings",
+  "paper_study_profile": "chare-native-study-v1; paired helper/directory paths; tree/cycle actual source-group service; component branches separate from lifecycle",
+  "parameters": {
+    "type": "a",
+    "origin": "generated_once_for_this_run",
+    "sha256": "855b0620a1b27d358d63e0af3f1504d288561becd59e3925f1c71e01e95af2fa",
+    "r_bits_actual": 256,
+    "q_bits_actual": 1536,
+    "g_bytes_uncompressed": 384,
+    "g_bytes_compressed": 193,
+    "gt_bytes": 384,
+    "pbc_zr_bytes": 32,
+    "curve_parameter_preparation_ns": 238166301,
+    "security_strength_claim": "none; parameter bit lengths are recorded, not calibrated security bits",
+    "admission": {
+      "profile": "pbc-type-a-admission-v1",
+      "before_native_parser": true,
+      "strict_fields": true,
+      "solinas_identity": true,
+      "cofactor_identity": true,
+      "cofactor_multiple_of_12": true,
+      "probable_prime_rounds": 64,
+      "max_integer_bits": 16384,
+      "security_strength_certified": false
+    }
+  },
+  "passed_cases": 9,
+  "planned_cases": 9,
+  "protocol_profile": "symmetric-rational-source-conditional-history",
+  "protocol_version": "CHARE-RATIONAL-BASE-PBC-v1",
+  "receiver_refresh_profile": "signed-state-binding-and-atomic-local-open-v1",
+  "run_id": "20261107T084253.220314242Z_paper-native-paired-three-trials-10m_6bdeeab0",
+  "schema": "chare-run-manifest-v1",
+  "skipped_cases": 0,
+  "source_snapshot_status": "recorded",
+  "started_utc": "2026-11-07T08:42:53.221010344Z",
+  "status": "completed",
+  "transport_profile": "optional exact-byte prefix cache measured alongside full wire; same original KDF; all-client entry installs and one-client packet expansion",
+  "workload_schedule": "synthetic-active-only-slot-major-v1",
+  "supplement_note": "Personal paths and repository identity removed. Scientific fields unchanged."
+}

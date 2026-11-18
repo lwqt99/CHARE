@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "scope": "Independent public-coordinate recovery and full-denominator pairing cross-check",
+  "imports_from_R2": false,
+  "checks": [
+    {
+      "name": "parameter arithmetic",
+      "status": "PASS"
+    },
+    {
+      "name": "probable-prime screening",
+      "status": "PASS",
+      "qualification": "SymPy BPSW screening; this is not a primality certificate"
+    },
+    {
+      "name": "all distinct public inputs are curve/subgroup points",
+      "status": "PASS",
+      "count": 160
+    },
+    {
+      "name": "nondegenerate subgroup pairing",
+      "status": "PASS"
+    },
+    {
+      "name": "bilinearity 2,3",
+      "status": "PASS"
+    },
+    {
+      "name": "symmetry 2,3",
+      "status": "PASS"
+    },
+    {
+      "name": "bilinearity 7,11",
+      "status": "PASS"
+    },
+    {
+      "name": "symmetry 7,11",
+      "status": "PASS"
+    },
+    {
+      "name": "public-only recovery 57665666839de10f257dd7450cc48c19b243a1847c0ad8a14ff2ceda4eacd522",
+      "status": "PASS"
+    },
+    {
+      "name": "public-only recovery f01711a3f60cf6d4399a5b253c2828f31b6cc6d84e5ea834da4b2d905f8a9775",
+      "status": "PASS"
+    },
+    {
+      "name": "public-only recovery 7dfe320877fe6674e5824e762d3448bcd7133323b35cc2ea12b983df5feea8fe",
+      "status": "PASS"
+    },
+    {
+      "name": "public-only recovery 1dc42d501e3c74fea1773d9e278bddb6cf23965ca675313a9c9af8958ce99bb2",
+      "status": "PASS"
+    }
+  ],
+  "recoveries": [
+    {
+      "target_id": "57665666839de10f257dd7450cc48c19b243a1847c0ad8a14ff2ceda4eacd522",
+      "gt_sha256": "fddfacb022cafdfc5cb25694ef130858c6d82b35b08c05db1fc46a1490ad1dac",
+      "key_sha256": "ff1a7750ef2047b0c343bfd9684c59e3b5e00018b678c7552dcd522f0a0031e3"
+    },
+    {
+      "target_id": "f01711a3f60cf6d4399a5b253c2828f31b6cc6d84e5ea834da4b2d905f8a9775",
+      "gt_sha256": "6a9853520dcfe6264a96e97987a2021f945ac4c6861fbadcf2c48c5644e41e20",
+      "key_sha256": "a4ef84a2ec890f2514636e3951dead9b87f1940ec8e44c92d5fa293be8e1da76"
+    },
+    {
+      "target_id": "7dfe320877fe6674e5824e762d3448bcd7133323b35cc2ea12b983df5feea8fe",
+      "gt_sha256": "e42496e64e3734b9c25c76bd9b197b4152ebdbc3afad5fe458116ac2b87115da",
+      "key_sha256": "7cfb56226bc0e82324510632753c12b0808de30f5d046c222d1631eb23c58bad"
+    },
+    {
+      "target_id": "1dc42d501e3c74fea1773d9e278bddb6cf23965ca675313a9c9af8958ce99bb2",
+      "gt_sha256": "f9adeae90badd481ed1060b11ed088c3796b0acc560f82758c72b8f321259903",
+      "key_sha256": "ca8f914de775fb190b8a0b15df82c77cb418866aeee5df9c7c9b057335c58f48"
+    }
+  ],
+  "pairing_calls": 13,
+  "included_vertical_denominators": 4901,
+  "wall_seconds": 18.20299999997951,
+  "timing_meaning": "Execution duration only, not paper/native latency",
+  "limitations": [
+    "No native Go/PBC benchmark reproduction",
+    "No formal verification",
+    "No primality certificate",
+    "Four fixed public recovery cases, not exhaustive protocol testing"
+  ]
+}

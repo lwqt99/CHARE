@@ -1,0 +1,16 @@
+{
+  "schema": "chare.delta.dependencies.v1",
+  "prior_artifact": "CHARE_Increment_20261109_R2.zip",
+  "prior_library_file_id": "libfile_d951b90c5e6c819187463a157f9b0805",
+  "prior_archive_sha256": "9304d039155d6f894f37c0bddb5c3e72589b970f54998df05ec55151ac85342b",
+  "path_within_prior_archive": "CHARE_Increment_20261109_R2/verification/coordinate_pairing",
+  "files": {
+    "type_a.py": "8def1b5af7c0d406c33ac1386939225292cd4741af2c61a47346a96973334261",
+    "parameters.json": "66bf854c514e904946ccf7199d8d0430978e5040d2ccb168b95339387bf98671"
+  },
+  "unchanged_dependency_not_redistributed": true,
+  "dependency_use": "Actual coordinate pairing only; all controller and pending-opening tests in this round are new.",
+  "parameter_assurance": "Inherited probable-prime screened parameter record; prime-order group is the declared prerequisite, not a certified new security-level claim.",
+  "python_minimum": "3.10",
+  "external_python_packages": []
+}

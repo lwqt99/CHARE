@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CHARE Sanity" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="CHARE" />
+    <working_directory value="$PROJECT_DIR$" />
+    <envs><env name="CGO_ENABLED" value="1" /></envs>
+    <kind value="PACKAGE" />
+    <package value="example.org/chare/cmd/goland" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/cmd/goland/main.go" />
+    <parameters value="-profile sanity" />
+    <method v="2" />
+  </configuration>
+</component>

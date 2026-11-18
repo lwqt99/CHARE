@@ -1,0 +1,4198 @@
+{
+  "status": "PASS",
+  "case_count": 10,
+  "evidence_level": "executed_public_coefficient_controller_and_callback_order",
+  "native_group_recovery": false,
+  "full_random_oracle_delivery_restoration": false,
+  "authentication_fixture": "explicit trusted public manifest; no signature implementation claim",
+  "field_profiles": [
+    "p=101",
+    "same 256-bit p as prior coordinate reference"
+  ],
+  "cases": [
+    {
+      "case": "01_normal_same_fact_lifecycle",
+      "status": "PASS",
+      "assertions": [
+        "authenticated source bindings",
+        "same immutable fact and distinct generations",
+        "guard and commit precede callback",
+        "complete contribution retained",
+        "replay no resampling"
+      ],
+      "details": {},
+      "snapshot": {
+        "revision": 15,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:normal:0",
+          "pad:normal:1",
+          "pad:normal:2"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4",
+          "mask:1:a",
+          "mask:1:b",
+          "mask:2:a",
+          "mask:2:b",
+          "mask:3:a",
+          "mask:3:b",
+          "mask:4:a",
+          "mask:4:b"
+        ],
+        "aliases": {},
+        "plans": {
+          "normal": {
+            "phase": "COMPLETE",
+            "plan_digest": "640309b60ce0808a8f0993fbce6b8a31c5ab406a2bcf107adebbfd60d8445065",
+            "emitted": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ]
+          }
+        },
+        "pending_plans": [],
+        "visible_row_ids": [
+          "typed:[\"contribution\",\"normal\",\"core:1\"]",
+          "typed:[\"contribution\",\"normal\",\"core:2\"]",
+          "typed:[\"contribution\",\"normal\",\"core:3\"]",
+          "typed:[\"contribution\",\"normal\",\"core:4\"]"
+        ],
+        "pad_relation_ids": [],
+        "current_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "potential_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "target_ids": [
+          "old-12"
+        ],
+        "callback_count": 6,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "install_source",
+          "source_id": "mask:1:a"
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_source",
+          "source_id": "mask:1:b"
+        },
+        {
+          "seq": 3,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "install_source",
+          "source_id": "mask:2:a"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "install_source",
+          "source_id": "mask:2:b"
+        },
+        {
+          "seq": 5,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "install_source",
+          "source_id": "mask:3:a"
+        },
+        {
+          "seq": 6,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "install_source",
+          "source_id": "mask:3:b"
+        },
+        {
+          "seq": 7,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "install_source",
+          "source_id": "mask:4:a"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 8,
+          "operation": "install_source",
+          "source_id": "mask:4:b"
+        },
+        {
+          "seq": 9,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 8,
+          "operation": "admit_target",
+          "target_id": "old-12"
+        },
+        {
+          "seq": 10,
+          "event": "COMMIT",
+          "revision": 9,
+          "operation": "admit_target",
+          "target_id": "old-12",
+          "original_source_ids": [
+            "core:1",
+            "core:2"
+          ]
+        },
+        {
+          "seq": 11,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 9,
+          "operation": "admit_target",
+          "payload_key": "typed:[\"target\",\"old-12\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 12,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 9,
+          "operation": "admit_target",
+          "public_handle": "public-handle:target:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 13,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 9,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 14,
+          "event": "COMMIT",
+          "revision": 10,
+          "operation": "freeze_plan",
+          "plan_id": "normal",
+          "plan_digest": "640309b60ce0808a8f0993fbce6b8a31c5ab406a2bcf107adebbfd60d8445065",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 15,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 10,
+          "operation": "install_pads",
+          "plan_id": "normal"
+        },
+        {
+          "seq": 16,
+          "event": "COMMIT",
+          "revision": 11,
+          "operation": "install_pads",
+          "plan_id": "normal"
+        },
+        {
+          "seq": 17,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 11,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"normal\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 11,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:normal:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 19,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 11,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:1\"]",
+          "plan_id": "normal",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 20,
+          "event": "COMMIT",
+          "revision": 12,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:1\"]",
+          "plan_id": "normal",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 21,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 12,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"normal\",\"core:1\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 12,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:1:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 23,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 12,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:2\"]",
+          "plan_id": "normal",
+          "source_id": "core:2"
+        },
+        {
+          "seq": 24,
+          "event": "COMMIT",
+          "revision": 13,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:2\"]",
+          "plan_id": "normal",
+          "source_id": "core:2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 25,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 13,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"normal\",\"core:2\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 13,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:2:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 27,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 13,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:3\"]",
+          "plan_id": "normal",
+          "source_id": "core:3"
+        },
+        {
+          "seq": 28,
+          "event": "COMMIT",
+          "revision": 14,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:3\"]",
+          "plan_id": "normal",
+          "source_id": "core:3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 29,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 14,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"normal\",\"core:3\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 30,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 14,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:3:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 31,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 14,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:4\"]",
+          "plan_id": "normal",
+          "source_id": "core:4"
+        },
+        {
+          "seq": 32,
+          "event": "COMMIT",
+          "revision": 15,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"normal\",\"core:4\"]",
+          "plan_id": "normal",
+          "source_id": "core:4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 33,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 15,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"normal\",\"core:4\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 34,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 15,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:4:1",
+          "post_callback_audit": null
+        }
+      ]
+    },
+    {
+      "case": "02_invalid_bindings_and_alias",
+      "status": "PASS",
+      "assertions": [
+        "unapproved generation binding rejected",
+        "same fact identity enforced",
+        "alias cannot rebind physical source",
+        "mutable fact identity rejected",
+        "public dataclasses exclude secret inputs"
+      ],
+      "details": {},
+      "snapshot": {
+        "revision": 3,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4",
+          "mask-a",
+          "mask-b"
+        ],
+        "aliases": {
+          "alias:one": "core:1"
+        },
+        "plans": {},
+        "pending_plans": [],
+        "visible_row_ids": [],
+        "pad_relation_ids": [],
+        "current_capability": [],
+        "potential_capability": [],
+        "target_ids": [],
+        "callback_count": 0,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "REJECT",
+          "revision": 0,
+          "operation": "install_source",
+          "reason": "AUTHENTICATED_GENERATION_BINDING_FAILED",
+          "status": "UNCERTIFIED",
+          "callback_count": 0,
+          "evidence": {}
+        },
+        {
+          "seq": 2,
+          "event": "REJECT",
+          "revision": 0,
+          "operation": "install_source",
+          "reason": "CANONICAL_MASK_PROFILE_REQUIRED",
+          "status": "UNCERTIFIED",
+          "callback_count": 0,
+          "evidence": {}
+        },
+        {
+          "seq": 3,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "install_source",
+          "source_id": "mask-a"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_source",
+          "source_id": "mask-b"
+        },
+        {
+          "seq": 5,
+          "event": "REJECT",
+          "revision": 2,
+          "operation": "freeze_plan",
+          "reason": "DISTINCT_IMMUTABLE_FACT_IDENTITIES",
+          "status": "UNCERTIFIED",
+          "callback_count": 0,
+          "evidence": {}
+        },
+        {
+          "seq": 6,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "register_alias",
+          "alias": "alias:one",
+          "physical_source_id": "core:1"
+        },
+        {
+          "seq": 7,
+          "event": "REJECT",
+          "revision": 3,
+          "operation": "register_alias",
+          "reason": "ALIAS_REBINDING_OR_UNKNOWN_SOURCE",
+          "status": "UNCERTIFIED",
+          "callback_count": 0,
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "case": "03_abort_retry_retains_sources",
+      "status": "PASS",
+      "assertions": [
+        "old partial survives abort",
+        "aborted reservation survives retry",
+        "old pad identity rejected",
+        "fresh pads allocated without comparing values"
+      ],
+      "details": {},
+      "snapshot": {
+        "revision": 10,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:first:0",
+          "pad:first:1",
+          "pad:first:2",
+          "pad:retry-new:0",
+          "pad:retry-new:1",
+          "pad:retry-new:2"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "aliases": {},
+        "plans": {
+          "first": {
+            "phase": "ABORTED_RETAINED",
+            "plan_digest": "adfb85ac1b411ae14f3511e0390809ffe94d718fa8b73dd090b2121bd36d911d",
+            "emitted": [
+              "core:1"
+            ]
+          },
+          "retry-new": {
+            "phase": "COMPLETE",
+            "plan_digest": "9f5218f354773f483ecfea081f8a58a1c75c73498bf817516345dde7448c1a55",
+            "emitted": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ]
+          }
+        },
+        "pending_plans": [
+          "first"
+        ],
+        "visible_row_ids": [
+          "typed:[\"contribution\",\"first\",\"core:1\"]",
+          "typed:[\"contribution\",\"retry-new\",\"core:1\"]",
+          "typed:[\"contribution\",\"retry-new\",\"core:2\"]",
+          "typed:[\"contribution\",\"retry-new\",\"core:3\"]",
+          "typed:[\"contribution\",\"retry-new\",\"core:4\"]"
+        ],
+        "pad_relation_ids": [],
+        "current_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "potential_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 7,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "first",
+          "plan_digest": "adfb85ac1b411ae14f3511e0390809ffe94d718fa8b73dd090b2121bd36d911d",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "install_pads",
+          "plan_id": "first"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "first"
+        },
+        {
+          "seq": 5,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 2,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"first\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 6,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 2,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:first:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"first\",\"core:1\"]",
+          "plan_id": "first",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"first\",\"core:1\"]",
+          "plan_id": "first",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 9,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"first\",\"core:1\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 10,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:old-partial:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 11,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "abort_plan",
+          "plan_id": "first",
+          "reservation_retained": true,
+          "visible_rows_retained": 1
+        },
+        {
+          "seq": 12,
+          "event": "REJECT",
+          "revision": 4,
+          "operation": "freeze_plan",
+          "reason": "PAD_ID_REUSE_OR_EDGE_BINDING_ERROR",
+          "status": "UNCERTIFIED",
+          "callback_count": 2,
+          "evidence": {}
+        },
+        {
+          "seq": 13,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 14,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "freeze_plan",
+          "plan_id": "retry-new",
+          "plan_digest": "9f5218f354773f483ecfea081f8a58a1c75c73498bf817516345dde7448c1a55",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 15,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "install_pads",
+          "plan_id": "retry-new"
+        },
+        {
+          "seq": 16,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "install_pads",
+          "plan_id": "retry-new"
+        },
+        {
+          "seq": 17,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"retry-new\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:retry-new:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 19,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:1\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 20,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:1\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 21,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"retry-new\",\"core:1\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:1:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 23,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:2\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:2"
+        },
+        {
+          "seq": 24,
+          "event": "COMMIT",
+          "revision": 8,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:2\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 25,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 8,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"retry-new\",\"core:2\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 8,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:2:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 27,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 8,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:3\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:3"
+        },
+        {
+          "seq": 28,
+          "event": "COMMIT",
+          "revision": 9,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:3\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 29,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 9,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"retry-new\",\"core:3\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 30,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 9,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:3:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 31,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 9,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:4\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:4"
+        },
+        {
+          "seq": 32,
+          "event": "COMMIT",
+          "revision": 10,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"retry-new\",\"core:4\"]",
+          "plan_id": "retry-new",
+          "source_id": "core:4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 33,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 10,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"retry-new\",\"core:4\"]",
+          "callback_count": 7
+        },
+        {
+          "seq": 34,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 10,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:4:1",
+          "post_callback_audit": null
+        }
+      ]
+    },
+    {
+      "case": "04_pending_plan_blocks_enrollment",
+      "status": "PASS",
+      "assertions": [
+        "zero visible capability is insufficient",
+        "pending constant has no new common root",
+        "enrollment callback not invoked"
+      ],
+      "details": {
+        "decision": {
+          "status": "FORMAL_FAILURE",
+          "reason": "PENDING_COMMON_ZERO_CONDITION_FAILED",
+          "revision": 1,
+          "private_callback_called": false,
+          "evidence": {
+            "polynomial": [
+              1
+            ],
+            "new_node": 5,
+            "value_at_new_node": 1,
+            "witness": {
+              "direction": [
+                24,
+                24,
+                24,
+                24,
+                0
+              ],
+              "target_indices": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only"
+            },
+            "scope": "universal_canonical_enlarged_family",
+            "native_recovery_verified": false
+          }
+        }
+      },
+      "snapshot": {
+        "revision": 1,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:pending-constant:0",
+          "pad:pending-constant:1",
+          "pad:pending-constant:2"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "aliases": {},
+        "plans": {
+          "pending-constant": {
+            "phase": "FROZEN",
+            "plan_digest": "bcd4a7129a4860178ee695dbacada82fcab39470da9b48f37e3b1c1c08be50e1",
+            "emitted": []
+          }
+        },
+        "pending_plans": [
+          "pending-constant"
+        ],
+        "visible_row_ids": [],
+        "pad_relation_ids": [],
+        "current_capability": [],
+        "potential_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 0,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "pending-constant",
+          "plan_digest": "bcd4a7129a4860178ee695dbacada82fcab39470da9b48f37e3b1c1c08be50e1",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "REJECT",
+          "revision": 1,
+          "operation": "enroll_core",
+          "reason": "PENDING_COMMON_ZERO_CONDITION_FAILED",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 0,
+          "evidence": {
+            "polynomial": [
+              1
+            ],
+            "new_node": 5,
+            "value_at_new_node": 1,
+            "witness": {
+              "direction": [
+                24,
+                24,
+                24,
+                24,
+                0
+              ],
+              "target_indices": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only"
+            },
+            "scope": "universal_canonical_enlarged_family",
+            "native_recovery_verified": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "05_reserved_enrollment_and_legal_next_envelope",
+      "status": "PASS",
+      "assertions": [
+        "common root enrollment accepted",
+        "old plan continues with same identities",
+        "old coefficient rows zero extended",
+        "remaining reservation retained",
+        "next envelope accepts new direction",
+        "old dictionary epoch rejected"
+      ],
+      "details": {},
+      "snapshot": {
+        "revision": 8,
+        "dictionary_epoch": 1,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4",
+          "core:5"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": [
+            6
+          ]
+        },
+        "pad_ids": [
+          "pad:reserved:0",
+          "pad:reserved:1",
+          "pad:reserved:2",
+          "pad:new-envelope:0",
+          "pad:new-envelope:1",
+          "pad:new-envelope:2",
+          "pad:new-envelope:3"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4",
+          "core:5"
+        ],
+        "aliases": {},
+        "plans": {
+          "reserved": {
+            "phase": "COMPLETE",
+            "plan_digest": "cb9baa5a3c887587bb15290d0486371eca77ed0384354544480ec14257dbcc1c",
+            "emitted": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ]
+          },
+          "new-envelope": {
+            "phase": "FROZEN",
+            "plan_digest": "951d671d142ca0342e1a618daf5614107c886a6ca57f9e3dc31e35cf91eb2614",
+            "emitted": []
+          }
+        },
+        "pending_plans": [
+          "new-envelope"
+        ],
+        "visible_row_ids": [
+          "typed:[\"contribution\",\"reserved\",\"core:1\"]",
+          "typed:[\"contribution\",\"reserved\",\"core:2\"]",
+          "typed:[\"contribution\",\"reserved\",\"core:3\"]",
+          "typed:[\"contribution\",\"reserved\",\"core:4\"]"
+        ],
+        "pad_relation_ids": [],
+        "current_capability": [
+          [
+            1,
+            41,
+            71,
+            91,
+            0
+          ]
+        ],
+        "potential_capability": [
+          [
+            1,
+            0,
+            60,
+            80,
+            60
+          ],
+          [
+            0,
+            1,
+            52,
+            52,
+            1
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 6,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "reserved",
+          "plan_digest": "cb9baa5a3c887587bb15290d0486371eca77ed0384354544480ec14257dbcc1c",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "install_pads",
+          "plan_id": "reserved"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "reserved"
+        },
+        {
+          "seq": 5,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 2,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"reserved\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 6,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 2,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:reserved:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:1\"]",
+          "plan_id": "reserved",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:1\"]",
+          "plan_id": "reserved",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 9,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"reserved\",\"core:1\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 10,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:partial:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 11,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:2\"]",
+          "plan_id": "reserved",
+          "source_id": "core:2"
+        },
+        {
+          "seq": 12,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:2\"]",
+          "plan_id": "reserved",
+          "source_id": "core:2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 13,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"reserved\",\"core:2\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 14,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:partial:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 15,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "enroll_core",
+          "new_source_id": "core:5",
+          "old_source_columns_zero_extended": true
+        },
+        {
+          "seq": 16,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "enroll_core",
+          "new_source_id": "core:5",
+          "dictionary_epoch": 1
+        },
+        {
+          "seq": 17,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 5,
+          "operation": "enroll_core",
+          "payload_key": "typed:[\"core-enrollment\",\"core:5\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 5,
+          "operation": "enroll_core",
+          "public_handle": "public-handle:new-core:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 19,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:3\"]",
+          "plan_id": "reserved",
+          "source_id": "core:3"
+        },
+        {
+          "seq": 20,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:3\"]",
+          "plan_id": "reserved",
+          "source_id": "core:3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 21,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"reserved\",\"core:3\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:old-plan-late:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 23,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:4\"]",
+          "plan_id": "reserved",
+          "source_id": "core:4"
+        },
+        {
+          "seq": 24,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"reserved\",\"core:4\"]",
+          "plan_id": "reserved",
+          "source_id": "core:4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 25,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"reserved\",\"core:4\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 7,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:old-plan-late:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 27,
+          "event": "REJECT",
+          "revision": 7,
+          "operation": "freeze_plan",
+          "reason": "STALE_DICTIONARY_EPOCH",
+          "status": "UNCERTIFIED",
+          "callback_count": 6,
+          "evidence": {}
+        },
+        {
+          "seq": 28,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 7,
+          "operation": "freeze_plan",
+          "potential_rank": 2
+        },
+        {
+          "seq": 29,
+          "event": "COMMIT",
+          "revision": 8,
+          "operation": "freeze_plan",
+          "plan_id": "new-envelope",
+          "plan_digest": "951d671d142ca0342e1a618daf5614107c886a6ca57f9e3dc31e35cf91eb2614",
+          "reservation": "all_frozen_contribution_rows"
+        }
+      ]
+    },
+    {
+      "case": "06_cycle_allows_one_opening_rejects_next",
+      "status": "PASS",
+      "assertions": [
+        "safe opening actually admitted",
+        "second opening rejected before emission",
+        "no blanket reject-all-openings policy"
+      ],
+      "details": {
+        "decision": {
+          "status": "FORMAL_FAILURE",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "revision": 7,
+          "private_callback_called": false,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                0,
+                100,
+                0,
+                0
+              ],
+              "target_indices": [
+                1
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 1,
+            "potential_rank_after_proposal": 2
+          }
+        }
+      },
+      "snapshot": {
+        "revision": 7,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:cycle:0",
+          "pad:cycle:1",
+          "pad:cycle:2",
+          "pad:cycle:3"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "aliases": {},
+        "plans": {
+          "cycle": {
+            "phase": "COMPLETE",
+            "plan_digest": "394b6abf15b20b265ed4cb8e2cf5ddc27fc2cb3bf74eec6b5ddd2c24f36b4c48",
+            "emitted": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ]
+          }
+        },
+        "pending_plans": [],
+        "visible_row_ids": [
+          "typed:[\"contribution\",\"cycle\",\"core:1\"]",
+          "typed:[\"contribution\",\"cycle\",\"core:2\"]",
+          "typed:[\"contribution\",\"cycle\",\"core:3\"]",
+          "typed:[\"contribution\",\"cycle\",\"core:4\"]"
+        ],
+        "pad_relation_ids": [
+          "cycle-first"
+        ],
+        "current_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "potential_capability": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 6,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "cycle",
+          "plan_digest": "394b6abf15b20b265ed4cb8e2cf5ddc27fc2cb3bf74eec6b5ddd2c24f36b4c48",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "install_pads",
+          "plan_id": "cycle"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "cycle"
+        },
+        {
+          "seq": 5,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 2,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"cycle\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 6,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 2,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:cycle:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:1\"]",
+          "plan_id": "cycle",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:1\"]",
+          "plan_id": "cycle",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 9,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"cycle\",\"core:1\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 10,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:1:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 11,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 3,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:2\"]",
+          "plan_id": "cycle",
+          "source_id": "core:2"
+        },
+        {
+          "seq": 12,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:2\"]",
+          "plan_id": "cycle",
+          "source_id": "core:2",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 13,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"cycle\",\"core:2\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 14,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:2:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 15,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:3\"]",
+          "plan_id": "cycle",
+          "source_id": "core:3"
+        },
+        {
+          "seq": 16,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:3\"]",
+          "plan_id": "cycle",
+          "source_id": "core:3",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 17,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"cycle\",\"core:3\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 18,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:3:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 19,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:4\"]",
+          "plan_id": "cycle",
+          "source_id": "core:4"
+        },
+        {
+          "seq": 20,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"cycle\",\"core:4\"]",
+          "plan_id": "cycle",
+          "source_id": "core:4",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 21,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"cycle\",\"core:4\"]",
+          "callback_count": 5
+        },
+        {
+          "seq": 22,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:contribution:core:4:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 23,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 6,
+          "operation": "request_pad_opening",
+          "relation_id": "cycle-first",
+          "potential_rank_after_proposal": 1
+        },
+        {
+          "seq": 24,
+          "event": "COMMIT",
+          "revision": 7,
+          "operation": "request_pad_opening",
+          "relation_id": "cycle-first",
+          "opening_committed_before_callback": true
+        },
+        {
+          "seq": 25,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 7,
+          "operation": "request_pad_opening",
+          "payload_key": "typed:[\"pad-opening\",\"cycle-first\"]",
+          "callback_count": 6
+        },
+        {
+          "seq": 26,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 7,
+          "operation": "request_pad_opening",
+          "public_handle": "public-handle:one-edge:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 27,
+          "event": "REJECT",
+          "revision": 7,
+          "operation": "request_pad_opening",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 6,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                0,
+                100,
+                0,
+                0
+              ],
+              "target_indices": [
+                1
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 1,
+            "potential_rank_after_proposal": 2
+          }
+        }
+      ]
+    },
+    {
+      "case": "07_pending_opening_requires_future_rows",
+      "status": "PASS",
+      "subtraces": [
+        {
+          "case": "07_future_rows_guard_7bits",
+          "status": "PASS",
+          "assertions": [
+            "current+fullsum naive check passes",
+            "future joint rows find clipped singleton",
+            "no private opening callback",
+            "same guard works over original 256-bit field"
+          ],
+          "details": {
+            "naive_current_plus_full_direction_would_admit": true,
+            "decision": {
+              "status": "FORMAL_FAILURE",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "revision": 2,
+              "private_callback_called": false,
+              "evidence": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    100,
+                    0,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    0
+                  ],
+                  "functional": 100,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+                "visible_rank_before": 0,
+                "potential_rank_after_proposal": 2
+              }
+            }
+          },
+          "snapshot": {
+            "revision": 2,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:future-path:0",
+              "pad:future-path:1",
+              "pad:future-path:2"
+            ],
+            "source_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "aliases": {},
+            "plans": {
+              "future-path": {
+                "phase": "READY",
+                "plan_digest": "ab0f7e7dacbd8bd3d5b4c094b16b60ba4bf12e361e901151c68131e8700c1de4",
+                "emitted": []
+              }
+            },
+            "pending_plans": [
+              "future-path"
+            ],
+            "visible_row_ids": [],
+            "pad_relation_ids": [],
+            "current_capability": [],
+            "potential_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 1,
+            "contract_violation": false,
+            "queued_observations": 0,
+            "certification": {
+              "status": "PROTECTED"
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "future-path",
+              "plan_digest": "ab0f7e7dacbd8bd3d5b4c094b16b60ba4bf12e361e901151c68131e8700c1de4",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "install_pads",
+              "plan_id": "future-path"
+            },
+            {
+              "seq": 4,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "future-path"
+            },
+            {
+              "seq": 5,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 2,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"future-path\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 6,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 2,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install:future-path:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 7,
+              "event": "REJECT",
+              "revision": 2,
+              "operation": "request_pad_opening",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "status": "FORMAL_FAILURE",
+              "callback_count": 1,
+              "evidence": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    100,
+                    0,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    0
+                  ],
+                  "functional": 100,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+                "visible_rank_before": 0,
+                "potential_rank_after_proposal": 2
+              }
+            }
+          ]
+        },
+        {
+          "case": "07_future_rows_guard_256bits",
+          "status": "PASS",
+          "assertions": [
+            "current+fullsum naive check passes",
+            "future joint rows find clipped singleton",
+            "no private opening callback",
+            "same guard works over original 256-bit field"
+          ],
+          "details": {
+            "naive_current_plus_full_direction_would_admit": true,
+            "decision": {
+              "status": "FORMAL_FAILURE",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "revision": 2,
+              "private_callback_called": false,
+              "evidence": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                    0,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    0
+                  ],
+                  "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+                "visible_rank_before": 0,
+                "potential_rank_after_proposal": 2
+              }
+            }
+          },
+          "snapshot": {
+            "revision": 2,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:future-path:0",
+              "pad:future-path:1",
+              "pad:future-path:2"
+            ],
+            "source_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "aliases": {},
+            "plans": {
+              "future-path": {
+                "phase": "READY",
+                "plan_digest": "ab0f7e7dacbd8bd3d5b4c094b16b60ba4bf12e361e901151c68131e8700c1de4",
+                "emitted": []
+              }
+            },
+            "pending_plans": [
+              "future-path"
+            ],
+            "visible_row_ids": [],
+            "pad_relation_ids": [],
+            "current_capability": [],
+            "potential_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 1,
+            "contract_violation": false,
+            "queued_observations": 0,
+            "certification": {
+              "status": "PROTECTED"
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "future-path",
+              "plan_digest": "ab0f7e7dacbd8bd3d5b4c094b16b60ba4bf12e361e901151c68131e8700c1de4",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "install_pads",
+              "plan_id": "future-path"
+            },
+            {
+              "seq": 4,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "future-path"
+            },
+            {
+              "seq": 5,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 2,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"future-path\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 6,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 2,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install:future-path:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 7,
+              "event": "REJECT",
+              "revision": 2,
+              "operation": "request_pad_opening",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "status": "FORMAL_FAILURE",
+              "callback_count": 1,
+              "evidence": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                    0,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    0
+                  ],
+                  "functional": 83744317841741440616902767845924906116540263821716205350595254709593497412132,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+                "visible_rank_before": 0,
+                "potential_rank_after_proposal": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "08_cross_call_pad_relation",
+      "status": "PASS",
+      "assertions": [
+        "two individually incomplete calls initially add no core capability",
+        "joint relation rejected",
+        "witness uses same physical core coordinate"
+      ],
+      "details": {
+        "decision": {
+          "status": "FORMAL_FAILURE",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "revision": 6,
+          "private_callback_called": false,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                100,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 0,
+            "potential_rank_after_proposal": 3
+          }
+        }
+      },
+      "snapshot": {
+        "revision": 6,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:call-a:0",
+          "pad:call-a:1",
+          "pad:call-a:2",
+          "pad:call-b:0",
+          "pad:call-b:1",
+          "pad:call-b:2"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "aliases": {},
+        "plans": {
+          "call-a": {
+            "phase": "EMITTING",
+            "plan_digest": "5e3a59fb7b23699c40d8b953a67a7cae322f6f23a2364c6a1e4e83edbdae3e6f",
+            "emitted": [
+              "core:1"
+            ]
+          },
+          "call-b": {
+            "phase": "EMITTING",
+            "plan_digest": "8967ea649a309edaa1d17f050746bb470b72c8b9f49b9a060bffd41bfa3a6b27",
+            "emitted": [
+              "core:1"
+            ]
+          }
+        },
+        "pending_plans": [
+          "call-a",
+          "call-b"
+        ],
+        "visible_row_ids": [
+          "typed:[\"contribution\",\"call-a\",\"core:1\"]",
+          "typed:[\"contribution\",\"call-b\",\"core:1\"]"
+        ],
+        "pad_relation_ids": [],
+        "current_capability": [],
+        "potential_capability": [
+          [
+            1,
+            0,
+            100,
+            99
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 4,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "PROTECTED"
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "call-a",
+          "plan_digest": "5e3a59fb7b23699c40d8b953a67a7cae322f6f23a2364c6a1e4e83edbdae3e6f",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "install_pads",
+          "plan_id": "call-a"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "call-a"
+        },
+        {
+          "seq": 5,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 2,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"call-a\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 6,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 2,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:call-a:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 7,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 2,
+          "operation": "freeze_plan",
+          "potential_rank": 2
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "freeze_plan",
+          "plan_id": "call-b",
+          "plan_digest": "8967ea649a309edaa1d17f050746bb470b72c8b9f49b9a060bffd41bfa3a6b27",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 9,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 3,
+          "operation": "install_pads",
+          "plan_id": "call-b"
+        },
+        {
+          "seq": 10,
+          "event": "COMMIT",
+          "revision": 4,
+          "operation": "install_pads",
+          "plan_id": "call-b"
+        },
+        {
+          "seq": 11,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 4,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"call-b\"]",
+          "callback_count": 2
+        },
+        {
+          "seq": 12,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 4,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:call-b:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 13,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 4,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"call-a\",\"core:1\"]",
+          "plan_id": "call-a",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 14,
+          "event": "COMMIT",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"call-a\",\"core:1\"]",
+          "plan_id": "call-a",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 15,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"call-a\",\"core:1\"]",
+          "callback_count": 3
+        },
+        {
+          "seq": 16,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:partial:call-a:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 17,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 5,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"call-b\",\"core:1\"]",
+          "plan_id": "call-b",
+          "source_id": "core:1"
+        },
+        {
+          "seq": 18,
+          "event": "COMMIT",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "row_id": "typed:[\"contribution\",\"call-b\",\"core:1\"]",
+          "plan_id": "call-b",
+          "source_id": "core:1",
+          "possibly_visible_row_retained": true
+        },
+        {
+          "seq": 19,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "payload_key": "typed:[\"contribution\",\"call-b\",\"core:1\"]",
+          "callback_count": 4
+        },
+        {
+          "seq": 20,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 6,
+          "operation": "emit_contribution",
+          "public_handle": "public-handle:partial:call-b:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 21,
+          "event": "REJECT",
+          "revision": 6,
+          "operation": "request_pad_opening",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 4,
+          "evidence": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                100,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+            "visible_rank_before": 0,
+            "potential_rank_after_proposal": 3
+          }
+        }
+      ]
+    },
+    {
+      "case": "09_new_target_checks_pending_and_retains_stale_exposure",
+      "status": "PASS",
+      "assertions": [
+        "already-visible stale observation retained",
+        "new target checks possible contributions",
+        "target callback not invoked",
+        "no claimed prevention of compelled exposure"
+      ],
+      "details": {
+        "decision": {
+          "status": "FORMAL_FAILURE",
+          "reason": "NEW_TARGET_UNSAFE_UNDER_PENDING_COMPLETION",
+          "revision": 3,
+          "private_callback_called": false,
+          "evidence": {
+            "witness": {
+              "direction": [
+                100,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "current_plus_frozen_possible_contributions"
+            },
+            "native_recovery_verified": false
+          }
+        }
+      },
+      "snapshot": {
+        "revision": 3,
+        "dictionary_epoch": 0,
+        "core_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "envelope": {
+          "dimension": 2,
+          "reserved_nodes": []
+        },
+        "pad_ids": [
+          "pad:forced-before-payload:0",
+          "pad:forced-before-payload:1",
+          "pad:forced-before-payload:2"
+        ],
+        "source_ids": [
+          "core:1",
+          "core:2",
+          "core:3",
+          "core:4"
+        ],
+        "aliases": {},
+        "plans": {
+          "forced-before-payload": {
+            "phase": "READY",
+            "plan_digest": "5edc17b28c83dce1b703ef698c997b60edb12a6acf560c036e909a4dd34eab4f",
+            "emitted": []
+          }
+        },
+        "pending_plans": [
+          "forced-before-payload"
+        ],
+        "visible_row_ids": [],
+        "pad_relation_ids": [
+          "forced-edge"
+        ],
+        "current_capability": [],
+        "potential_capability": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "target_ids": [],
+        "callback_count": 1,
+        "contract_violation": false,
+        "queued_observations": 0,
+        "certification": {
+          "status": "FORMAL_FAILURE",
+          "reason": "CANONICAL_TARGET_WITNESS",
+          "witness": {
+            "direction": [
+              100,
+              0,
+              0,
+              0
+            ],
+            "target_indices": [
+              0
+            ],
+            "functional": 100,
+            "normalization": "gamma*x = -1 (mod p)",
+            "representation_level": "formal_coefficient_witness_only",
+            "scope": "mask_granted_potential_completion_space",
+            "native_recovery_verified": false
+          },
+          "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations."
+        },
+        "restoration_implemented": "joint_pad_linear_span_only"
+      },
+      "events": [
+        {
+          "seq": 0,
+          "event": "INITIALIZED",
+          "revision": 0,
+          "core_count": 4,
+          "assurance": "authenticated_generation_premise",
+          "capability_scope": "ordinary_masks_granted; coefficient_only"
+        },
+        {
+          "seq": 1,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 0,
+          "operation": "freeze_plan",
+          "potential_rank": 1
+        },
+        {
+          "seq": 2,
+          "event": "COMMIT",
+          "revision": 1,
+          "operation": "freeze_plan",
+          "plan_id": "forced-before-payload",
+          "plan_digest": "5edc17b28c83dce1b703ef698c997b60edb12a6acf560c036e909a4dd34eab4f",
+          "reservation": "all_frozen_contribution_rows"
+        },
+        {
+          "seq": 3,
+          "event": "PUBLIC_GUARD_PASS",
+          "revision": 1,
+          "operation": "install_pads",
+          "plan_id": "forced-before-payload"
+        },
+        {
+          "seq": 4,
+          "event": "COMMIT",
+          "revision": 2,
+          "operation": "install_pads",
+          "plan_id": "forced-before-payload"
+        },
+        {
+          "seq": 5,
+          "event": "PRIVATE_CALLBACK_BEGIN",
+          "revision": 2,
+          "operation": "install_pads",
+          "payload_key": "typed:[\"installation\",\"forced-before-payload\"]",
+          "callback_count": 1
+        },
+        {
+          "seq": 6,
+          "event": "PRIVATE_CALLBACK_END",
+          "revision": 2,
+          "operation": "install_pads",
+          "public_handle": "public-handle:install:forced-before-payload:1",
+          "post_callback_audit": null
+        },
+        {
+          "seq": 7,
+          "event": "STALE_VISIBLE_OBSERVATION_RETAINED",
+          "revision": 2,
+          "operation": "observe_pad_opening",
+          "observed_revision": 0,
+          "actual_revision": 2
+        },
+        {
+          "seq": 8,
+          "event": "COMMIT",
+          "revision": 3,
+          "operation": "observe_pad_opening",
+          "relation_id": "forced-edge",
+          "already_visible": true
+        },
+        {
+          "seq": 9,
+          "event": "EXPOSURE_AUDIT",
+          "revision": 3,
+          "outcome": {
+            "status": "FORMAL_FAILURE",
+            "reason": "CANONICAL_TARGET_WITNESS",
+            "witness": {
+              "direction": [
+                100,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "mask_granted_potential_completion_space",
+              "native_recovery_verified": false
+            },
+            "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations."
+          }
+        },
+        {
+          "seq": 10,
+          "event": "REJECT",
+          "revision": 3,
+          "operation": "admit_target",
+          "reason": "NEW_TARGET_UNSAFE_UNDER_PENDING_COMPLETION",
+          "status": "FORMAL_FAILURE",
+          "callback_count": 1,
+          "evidence": {
+            "witness": {
+              "direction": [
+                100,
+                0,
+                0,
+                0
+              ],
+              "target_indices": [
+                0
+              ],
+              "functional": 100,
+              "normalization": "gamma*x = -1 (mod p)",
+              "representation_level": "formal_coefficient_witness_only",
+              "scope": "current_plus_frozen_possible_contributions"
+            },
+            "native_recovery_verified": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "10_revision_identity_and_callback_boundary",
+      "status": "PASS",
+      "subtraces": [
+        {
+          "case": "typed_identity_stale_revision_and_reentry",
+          "status": "PASS",
+          "assertions": [
+            "separator-containing IDs do not collide",
+            "stale request cannot emit",
+            "controlled callback reentry rejected",
+            "two physical rows retained"
+          ],
+          "details": {},
+          "snapshot": {
+            "revision": 6,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "x:y",
+              "y",
+              "z",
+              "w"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:a:0",
+              "pad:a:1",
+              "pad:a:2",
+              "pad:a:x:0",
+              "pad:a:x:1",
+              "pad:a:x:2"
+            ],
+            "source_ids": [
+              "x:y",
+              "y",
+              "z",
+              "w"
+            ],
+            "aliases": {},
+            "plans": {
+              "a": {
+                "phase": "EMITTING",
+                "plan_digest": "ee5cba673bc56eae7d8a571038849584e430dd9d5a883a177155ee381a530939",
+                "emitted": [
+                  "x:y"
+                ]
+              },
+              "a:x": {
+                "phase": "EMITTING",
+                "plan_digest": "30af9446feb89140340531b46f64515ad0c65c1f0bbc27833f6efd6fcc6b9c3e",
+                "emitted": [
+                  "y"
+                ]
+              }
+            },
+            "pending_plans": [
+              "a",
+              "a:x"
+            ],
+            "visible_row_ids": [
+              "typed:[\"contribution\",\"a\",\"x:y\"]",
+              "typed:[\"contribution\",\"a:x\",\"y\"]"
+            ],
+            "pad_relation_ids": [],
+            "current_capability": [],
+            "potential_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 4,
+            "contract_violation": false,
+            "queued_observations": 0,
+            "certification": {
+              "status": "PROTECTED"
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "a",
+              "plan_digest": "ee5cba673bc56eae7d8a571038849584e430dd9d5a883a177155ee381a530939",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "REJECT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "reason": "STALE_REVISION",
+              "status": "UNCERTIFIED",
+              "callback_count": 0,
+              "evidence": {
+                "expected": 0,
+                "actual": 1
+              }
+            },
+            {
+              "seq": 4,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 5,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "freeze_plan",
+              "plan_id": "a:x",
+              "plan_digest": "30af9446feb89140340531b46f64515ad0c65c1f0bbc27833f6efd6fcc6b9c3e",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 6,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "a"
+            },
+            {
+              "seq": 7,
+              "event": "COMMIT",
+              "revision": 3,
+              "operation": "install_pads",
+              "plan_id": "a"
+            },
+            {
+              "seq": 8,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 3,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"a\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 9,
+              "event": "REJECT",
+              "revision": 3,
+              "operation": "abort_plan",
+              "reason": "MUTATING_CALLBACK_REENTRY",
+              "status": "UNCERTIFIED",
+              "callback_count": 1,
+              "evidence": {}
+            },
+            {
+              "seq": 10,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 3,
+              "operation": "install_pads",
+              "public_handle": "public-handle:installed",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 11,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"a\",\"x:y\"]",
+              "plan_id": "a",
+              "source_id": "x:y"
+            },
+            {
+              "seq": 12,
+              "event": "COMMIT",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"a\",\"x:y\"]",
+              "plan_id": "a",
+              "source_id": "x:y",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 13,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"a\",\"x:y\"]",
+              "callback_count": 2
+            },
+            {
+              "seq": 14,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:one:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 15,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 4,
+              "operation": "install_pads",
+              "plan_id": "a:x"
+            },
+            {
+              "seq": 16,
+              "event": "COMMIT",
+              "revision": 5,
+              "operation": "install_pads",
+              "plan_id": "a:x"
+            },
+            {
+              "seq": 17,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 5,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"a:x\"]",
+              "callback_count": 3
+            },
+            {
+              "seq": 18,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 5,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install-two:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 19,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"a:x\",\"y\"]",
+              "plan_id": "a:x",
+              "source_id": "y"
+            },
+            {
+              "seq": 20,
+              "event": "COMMIT",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"a:x\",\"y\"]",
+              "plan_id": "a:x",
+              "source_id": "y",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 21,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"a:x\",\"y\"]",
+              "callback_count": 4
+            },
+            {
+              "seq": 22,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:two:1",
+              "post_callback_audit": null
+            }
+          ]
+        },
+        {
+          "case": "callback_exception_does_not_rollback_opening",
+          "status": "PASS",
+          "assertions": [
+            "opening row committed before callback",
+            "exception retains possible exposure",
+            "subsequent unsafe opening denied",
+            "exception body not leaked in log"
+          ],
+          "details": {},
+          "snapshot": {
+            "revision": 7,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:exception-cycle:0",
+              "pad:exception-cycle:1",
+              "pad:exception-cycle:2",
+              "pad:exception-cycle:3"
+            ],
+            "source_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "aliases": {},
+            "plans": {
+              "exception-cycle": {
+                "phase": "COMPLETE",
+                "plan_digest": "be627842f5776c0bc5719a86489aba812b4c6b0700ef9e052def3da883e9c0c6",
+                "emitted": [
+                  "core:1",
+                  "core:2",
+                  "core:3",
+                  "core:4"
+                ]
+              }
+            },
+            "pending_plans": [],
+            "visible_row_ids": [
+              "typed:[\"contribution\",\"exception-cycle\",\"core:1\"]",
+              "typed:[\"contribution\",\"exception-cycle\",\"core:2\"]",
+              "typed:[\"contribution\",\"exception-cycle\",\"core:3\"]",
+              "typed:[\"contribution\",\"exception-cycle\",\"core:4\"]"
+            ],
+            "pad_relation_ids": [
+              "uncertain-first"
+            ],
+            "current_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "potential_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 6,
+            "contract_violation": false,
+            "queued_observations": 0,
+            "certification": {
+              "status": "PROTECTED"
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "exception-cycle",
+              "plan_digest": "be627842f5776c0bc5719a86489aba812b4c6b0700ef9e052def3da883e9c0c6",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "install_pads",
+              "plan_id": "exception-cycle"
+            },
+            {
+              "seq": 4,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "exception-cycle"
+            },
+            {
+              "seq": 5,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 2,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"exception-cycle\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 6,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 2,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install:exception-cycle:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 7,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 2,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:1\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:1"
+            },
+            {
+              "seq": 8,
+              "event": "COMMIT",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:1\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:1",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 9,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"exception-cycle\",\"core:1\"]",
+              "callback_count": 2
+            },
+            {
+              "seq": 10,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:1:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 11,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:2\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:2"
+            },
+            {
+              "seq": 12,
+              "event": "COMMIT",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:2\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:2",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 13,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"exception-cycle\",\"core:2\"]",
+              "callback_count": 3
+            },
+            {
+              "seq": 14,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:2:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 15,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:3\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:3"
+            },
+            {
+              "seq": 16,
+              "event": "COMMIT",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:3\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:3",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 17,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"exception-cycle\",\"core:3\"]",
+              "callback_count": 4
+            },
+            {
+              "seq": 18,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:3:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 19,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:4\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:4"
+            },
+            {
+              "seq": 20,
+              "event": "COMMIT",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"exception-cycle\",\"core:4\"]",
+              "plan_id": "exception-cycle",
+              "source_id": "core:4",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 21,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"exception-cycle\",\"core:4\"]",
+              "callback_count": 5
+            },
+            {
+              "seq": 22,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:4:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 23,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 6,
+              "operation": "request_pad_opening",
+              "relation_id": "uncertain-first",
+              "potential_rank_after_proposal": 1
+            },
+            {
+              "seq": 24,
+              "event": "COMMIT",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "relation_id": "uncertain-first",
+              "opening_committed_before_callback": true
+            },
+            {
+              "seq": 25,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "payload_key": "typed:[\"pad-opening\",\"uncertain-first\"]",
+              "callback_count": 6
+            },
+            {
+              "seq": 26,
+              "event": "PRIVATE_CALLBACK_UNCERTAIN",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "error_type": "RuntimeError",
+              "coefficient_rows_retained": true
+            },
+            {
+              "seq": 27,
+              "event": "REJECT",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "status": "FORMAL_FAILURE",
+              "callback_count": 6,
+              "evidence": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    0,
+                    100,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    1
+                  ],
+                  "functional": 100,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations.",
+                "visible_rank_before": 1,
+                "potential_rank_after_proposal": 2
+              }
+            }
+          ]
+        },
+        {
+          "case": "already_visible_callback_queue_is_drained",
+          "status": "PASS",
+          "assertions": [
+            "external reentrant observation queued instead of discarded",
+            "stale external observation retained after callback",
+            "post-callback breach reported, not silently protected"
+          ],
+          "details": {},
+          "snapshot": {
+            "revision": 8,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:queued-cycle:0",
+              "pad:queued-cycle:1",
+              "pad:queued-cycle:2",
+              "pad:queued-cycle:3"
+            ],
+            "source_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "aliases": {},
+            "plans": {
+              "queued-cycle": {
+                "phase": "COMPLETE",
+                "plan_digest": "425a59657b6d8bf0d5f9d9b9ef2e19cedc35288a4845bcd238b936c348abba0b",
+                "emitted": [
+                  "core:1",
+                  "core:2",
+                  "core:3",
+                  "core:4"
+                ]
+              }
+            },
+            "pending_plans": [],
+            "visible_row_ids": [
+              "typed:[\"contribution\",\"queued-cycle\",\"core:1\"]",
+              "typed:[\"contribution\",\"queued-cycle\",\"core:2\"]",
+              "typed:[\"contribution\",\"queued-cycle\",\"core:3\"]",
+              "typed:[\"contribution\",\"queued-cycle\",\"core:4\"]"
+            ],
+            "pad_relation_ids": [
+              "controlled-first",
+              "external-queued"
+            ],
+            "current_capability": [
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ]
+            ],
+            "potential_capability": [
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 6,
+            "contract_violation": false,
+            "queued_observations": 0,
+            "certification": {
+              "status": "FORMAL_FAILURE",
+              "reason": "CANONICAL_TARGET_WITNESS",
+              "witness": {
+                "direction": [
+                  0,
+                  100,
+                  0,
+                  0
+                ],
+                "target_indices": [
+                  1
+                ],
+                "functional": 100,
+                "normalization": "gamma*x = -1 (mod p)",
+                "representation_level": "formal_coefficient_witness_only",
+                "scope": "mask_granted_potential_completion_space",
+                "native_recovery_verified": false
+              },
+              "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations."
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "queued-cycle",
+              "plan_digest": "425a59657b6d8bf0d5f9d9b9ef2e19cedc35288a4845bcd238b936c348abba0b",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "install_pads",
+              "plan_id": "queued-cycle"
+            },
+            {
+              "seq": 4,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "queued-cycle"
+            },
+            {
+              "seq": 5,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 2,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"queued-cycle\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 6,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 2,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install:queued-cycle:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 7,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 2,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:1\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:1"
+            },
+            {
+              "seq": 8,
+              "event": "COMMIT",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:1\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:1",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 9,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"queued-cycle\",\"core:1\"]",
+              "callback_count": 2
+            },
+            {
+              "seq": 10,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:1:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 11,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:2\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:2"
+            },
+            {
+              "seq": 12,
+              "event": "COMMIT",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:2\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:2",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 13,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"queued-cycle\",\"core:2\"]",
+              "callback_count": 3
+            },
+            {
+              "seq": 14,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:2:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 15,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:3\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:3"
+            },
+            {
+              "seq": 16,
+              "event": "COMMIT",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:3\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:3",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 17,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"queued-cycle\",\"core:3\"]",
+              "callback_count": 4
+            },
+            {
+              "seq": 18,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:3:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 19,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:4\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:4"
+            },
+            {
+              "seq": 20,
+              "event": "COMMIT",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"queued-cycle\",\"core:4\"]",
+              "plan_id": "queued-cycle",
+              "source_id": "core:4",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 21,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"queued-cycle\",\"core:4\"]",
+              "callback_count": 5
+            },
+            {
+              "seq": 22,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:4:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 23,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 6,
+              "operation": "request_pad_opening",
+              "relation_id": "controlled-first",
+              "potential_rank_after_proposal": 1
+            },
+            {
+              "seq": 24,
+              "event": "COMMIT",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "relation_id": "controlled-first",
+              "opening_committed_before_callback": true
+            },
+            {
+              "seq": 25,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "payload_key": "typed:[\"pad-opening\",\"controlled-first\"]",
+              "callback_count": 6
+            },
+            {
+              "seq": 26,
+              "event": "VISIBLE_OBSERVATION_QUEUED",
+              "revision": 7,
+              "operation": "observe_pad_opening",
+              "relation_id": "external-queued",
+              "observed_revision": 0
+            },
+            {
+              "seq": 27,
+              "event": "STALE_VISIBLE_OBSERVATION_RETAINED",
+              "revision": 7,
+              "operation": "observe_pad_opening",
+              "observed_revision": 0,
+              "actual_revision": 7
+            },
+            {
+              "seq": 28,
+              "event": "COMMIT",
+              "revision": 8,
+              "operation": "observe_pad_opening",
+              "relation_id": "external-queued",
+              "already_visible": true
+            },
+            {
+              "seq": 29,
+              "event": "EXPOSURE_AUDIT",
+              "revision": 8,
+              "outcome": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    0,
+                    100,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    1
+                  ],
+                  "functional": 100,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations."
+              }
+            },
+            {
+              "seq": 30,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 8,
+              "operation": "request_pad_opening",
+              "public_handle": "public-handle:first-opening",
+              "post_callback_audit": {
+                "status": "FORMAL_FAILURE",
+                "reason": "CANONICAL_TARGET_WITNESS",
+                "witness": {
+                  "direction": [
+                    0,
+                    100,
+                    0,
+                    0
+                  ],
+                  "target_indices": [
+                    1
+                  ],
+                  "functional": 100,
+                  "normalization": "gamma*x = -1 (mod p)",
+                  "representation_level": "formal_coefficient_witness_only",
+                  "scope": "mask_granted_potential_completion_space",
+                  "native_recovery_verified": false
+                },
+                "completion_caveat": "Aborted/uncertain plans are conservative possible-completion reservations."
+              }
+            }
+          ]
+        },
+        {
+          "case": "malformed_replay_is_not_silently_filtered",
+          "status": "PASS",
+          "assertions": [
+            "full descriptor validated before replay comparison",
+            "already-visible malformed payload retained and uncertified"
+          ],
+          "details": {},
+          "snapshot": {
+            "revision": 8,
+            "dictionary_epoch": 0,
+            "core_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "nodes": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "envelope": {
+              "dimension": 2,
+              "reserved_nodes": []
+            },
+            "pad_ids": [
+              "pad:malformed-replay:0",
+              "pad:malformed-replay:1",
+              "pad:malformed-replay:2",
+              "pad:malformed-replay:3"
+            ],
+            "source_ids": [
+              "core:1",
+              "core:2",
+              "core:3",
+              "core:4"
+            ],
+            "aliases": {},
+            "plans": {
+              "malformed-replay": {
+                "phase": "COMPLETE",
+                "plan_digest": "ba4e5ad62d288f5b4ba7d1b94ccc3d8d3cb78e9e2e0b9ecb1eafd778e2766499",
+                "emitted": [
+                  "core:1",
+                  "core:2",
+                  "core:3",
+                  "core:4"
+                ]
+              }
+            },
+            "pending_plans": [],
+            "visible_row_ids": [
+              "typed:[\"contribution\",\"malformed-replay\",\"core:1\"]",
+              "typed:[\"contribution\",\"malformed-replay\",\"core:2\"]",
+              "typed:[\"contribution\",\"malformed-replay\",\"core:3\"]",
+              "typed:[\"contribution\",\"malformed-replay\",\"core:4\"]"
+            ],
+            "pad_relation_ids": [
+              "original-relation"
+            ],
+            "current_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "potential_capability": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "target_ids": [],
+            "callback_count": 6,
+            "contract_violation": true,
+            "queued_observations": 0,
+            "certification": {
+              "status": "UNCERTIFIED",
+              "reason": "UNMODELED_VISIBLE_PAYLOAD_RETAINED"
+            },
+            "restoration_implemented": "joint_pad_linear_span_only"
+          },
+          "events": [
+            {
+              "seq": 0,
+              "event": "INITIALIZED",
+              "revision": 0,
+              "core_count": 4,
+              "assurance": "authenticated_generation_premise",
+              "capability_scope": "ordinary_masks_granted; coefficient_only"
+            },
+            {
+              "seq": 1,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 0,
+              "operation": "freeze_plan",
+              "potential_rank": 1
+            },
+            {
+              "seq": 2,
+              "event": "COMMIT",
+              "revision": 1,
+              "operation": "freeze_plan",
+              "plan_id": "malformed-replay",
+              "plan_digest": "ba4e5ad62d288f5b4ba7d1b94ccc3d8d3cb78e9e2e0b9ecb1eafd778e2766499",
+              "reservation": "all_frozen_contribution_rows"
+            },
+            {
+              "seq": 3,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 1,
+              "operation": "install_pads",
+              "plan_id": "malformed-replay"
+            },
+            {
+              "seq": 4,
+              "event": "COMMIT",
+              "revision": 2,
+              "operation": "install_pads",
+              "plan_id": "malformed-replay"
+            },
+            {
+              "seq": 5,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 2,
+              "operation": "install_pads",
+              "payload_key": "typed:[\"installation\",\"malformed-replay\"]",
+              "callback_count": 1
+            },
+            {
+              "seq": 6,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 2,
+              "operation": "install_pads",
+              "public_handle": "public-handle:install:malformed-replay:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 7,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 2,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:1\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:1"
+            },
+            {
+              "seq": 8,
+              "event": "COMMIT",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:1\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:1",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 9,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"malformed-replay\",\"core:1\"]",
+              "callback_count": 2
+            },
+            {
+              "seq": 10,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:1:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 11,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 3,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:2\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:2"
+            },
+            {
+              "seq": 12,
+              "event": "COMMIT",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:2\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:2",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 13,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"malformed-replay\",\"core:2\"]",
+              "callback_count": 3
+            },
+            {
+              "seq": 14,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:2:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 15,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 4,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:3\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:3"
+            },
+            {
+              "seq": 16,
+              "event": "COMMIT",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:3\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:3",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 17,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"malformed-replay\",\"core:3\"]",
+              "callback_count": 4
+            },
+            {
+              "seq": 18,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:3:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 19,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 5,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:4\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:4"
+            },
+            {
+              "seq": 20,
+              "event": "COMMIT",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "row_id": "typed:[\"contribution\",\"malformed-replay\",\"core:4\"]",
+              "plan_id": "malformed-replay",
+              "source_id": "core:4",
+              "possibly_visible_row_retained": true
+            },
+            {
+              "seq": 21,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "payload_key": "typed:[\"contribution\",\"malformed-replay\",\"core:4\"]",
+              "callback_count": 5
+            },
+            {
+              "seq": 22,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 6,
+              "operation": "emit_contribution",
+              "public_handle": "public-handle:contribution:core:4:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 23,
+              "event": "PUBLIC_GUARD_PASS",
+              "revision": 6,
+              "operation": "request_pad_opening",
+              "relation_id": "original-relation",
+              "potential_rank_after_proposal": 1
+            },
+            {
+              "seq": 24,
+              "event": "COMMIT",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "relation_id": "original-relation",
+              "opening_committed_before_callback": true
+            },
+            {
+              "seq": 25,
+              "event": "PRIVATE_CALLBACK_BEGIN",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "payload_key": "typed:[\"pad-opening\",\"original-relation\"]",
+              "callback_count": 6
+            },
+            {
+              "seq": 26,
+              "event": "PRIVATE_CALLBACK_END",
+              "revision": 7,
+              "operation": "request_pad_opening",
+              "public_handle": "public-handle:safe-opening:1",
+              "post_callback_audit": null
+            },
+            {
+              "seq": 27,
+              "event": "UNMODELED_VISIBLE_PAYLOAD",
+              "revision": 7,
+              "operation": "observe_pad_opening",
+              "public_handle": "already-visible:malformed",
+              "relation_id": "original-relation",
+              "public_descriptor": {
+                "pad:malformed-replay:0": 1,
+                "unmodeled-extra": [
+                  1
+                ]
+              }
+            },
+            {
+              "seq": 28,
+              "event": "COMMIT",
+              "revision": 8,
+              "operation": "observe_pad_opening",
+              "coefficient_language_unavailable": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

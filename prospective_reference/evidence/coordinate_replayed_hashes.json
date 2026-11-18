@@ -1,0 +1,51 @@
+{
+  "schema": "chare.pending-opening.public-replay.v1",
+  "results": [
+    {
+      "fixture_id": "pending-opening-1",
+      "recovery": {
+        "target_element_sha256": "66c64cd882e070dd3cb46ad720d3c8205fb88dabbecf7b672a24b6d73bc04fe7",
+        "key_sha256": "e1784b139057b83c543246c78108ab2c4279f13c46c445e8199e8f6aab18a096",
+        "context_sha256": "e20eee63311eab2a355d71c35c8a4f3a173091fd3df9ceb031a6e3d926b040f8",
+        "isolated_core_point_sha256": "006fe67738e9eb3138bd06702f1b5281da45d3bb60d1ff3953e33e4aba9143d6"
+      },
+      "wrong_context": {
+        "target_element_sha256": "66c64cd882e070dd3cb46ad720d3c8205fb88dabbecf7b672a24b6d73bc04fe7",
+        "key_sha256": "ed03ceae4735c7bc2bd492ca6ea1f713c1d6a6caf06ea8b096816cfd06dce132",
+        "context_sha256": "8f4d907cd4c2442f16ab2e9d2b8c371a55dd6ca1b14e2b4f83a34232d31584f2",
+        "isolated_core_point_sha256": "006fe67738e9eb3138bd06702f1b5281da45d3bb60d1ff3953e33e4aba9143d6"
+      },
+      "wrong_pad": {
+        "target_element_sha256": "bc0434544351229f637889675ceeddde086deab64646aea9d0d5fff4a1dd937c",
+        "key_sha256": "da1706542ea38e22504e0db2050057f6e17d405596f05258d7e4e29d45ab02f4",
+        "context_sha256": "e20eee63311eab2a355d71c35c8a4f3a173091fd3df9ceb031a6e3d926b040f8",
+        "isolated_core_point_sha256": "a6d10daac7b8bd54640687dedf6e0a1f1a73dc59b7e6d0569fc380a423290863"
+      },
+      "missing_opening_rejected": true,
+      "input_scope": "public points; original public context; no expected key or source scalar"
+    },
+    {
+      "fixture_id": "pending-opening-2",
+      "recovery": {
+        "target_element_sha256": "67e93485a88101f38c75ab95e0add94e7d154cc2077d64b1ca5c1e336baafd55",
+        "key_sha256": "8da6affd5d3de69cf9b9b9d3fb6ff31a2c9ceb1070993bd71b088b7551c11d2f",
+        "context_sha256": "2cb7b46ecdc95faf2630c5166ea4123e4cb608eefa92756928f594914defee0a",
+        "isolated_core_point_sha256": "19ca90f7e4bdb23cc4d423fb5d7b17cbea71e2bf664dfaf83468f2825b4440ad"
+      },
+      "wrong_context": {
+        "target_element_sha256": "67e93485a88101f38c75ab95e0add94e7d154cc2077d64b1ca5c1e336baafd55",
+        "key_sha256": "af3f215a1986a35bb0be8940efa1ae0a380ea964dc2f882070654646a325c45f",
+        "context_sha256": "f023aa51fe67a710e5fc7f0c3e03af48058b7e62da2f6273888f37b6f9642cda",
+        "isolated_core_point_sha256": "19ca90f7e4bdb23cc4d423fb5d7b17cbea71e2bf664dfaf83468f2825b4440ad"
+      },
+      "wrong_pad": {
+        "target_element_sha256": "16b0dd3458854492948bdeaaacca8444d7622aa18778a1b53039b4d25c94637a",
+        "key_sha256": "e1c5fda36ae901c111a8bbd6c22e1cac6f3f96879c74681e4fa8beb4c94c0f36",
+        "context_sha256": "2cb7b46ecdc95faf2630c5166ea4123e4cb608eefa92756928f594914defee0a",
+        "isolated_core_point_sha256": "0992b8934c0c64151d7741ae0b9d9acae3c567d1bca198e3bb5e51ce18cc2b24"
+      },
+      "missing_opening_rejected": true,
+      "input_scope": "public points; original public context; no expected key or source scalar"
+    }
+  ]
+}

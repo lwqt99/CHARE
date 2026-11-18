@@ -1,0 +1,17 @@
+# Local native builds, caches, and fresh runs.
+/build/
+/artifacts/
+/generated/
+*.exe
+*.test
+*.out
+*.log
+*.prof
+*.tmp
+*.dll
+*.so
+*.dylib
+.DS_Store
+.idea/
+
+/results/

@@ -1,0 +1,19 @@
+{
+  "schema": "chare.pending-opening.expected.v1",
+  "expected": [
+    {
+      "fixture_id": "pending-opening-1",
+      "target_element_sha256": "66c64cd882e070dd3cb46ad720d3c8205fb88dabbecf7b672a24b6d73bc04fe7",
+      "key_sha256": "e1784b139057b83c543246c78108ab2c4279f13c46c445e8199e8f6aab18a096",
+      "context_sha256": "e20eee63311eab2a355d71c35c8a4f3a173091fd3df9ceb031a6e3d926b040f8",
+      "isolated_core_point_sha256": "006fe67738e9eb3138bd06702f1b5281da45d3bb60d1ff3953e33e4aba9143d6"
+    },
+    {
+      "fixture_id": "pending-opening-2",
+      "target_element_sha256": "67e93485a88101f38c75ab95e0add94e7d154cc2077d64b1ca5c1e336baafd55",
+      "key_sha256": "8da6affd5d3de69cf9b9b9d3fb6ff31a2c9ceb1070993bd71b088b7551c11d2f",
+      "context_sha256": "2cb7b46ecdc95faf2630c5166ea4123e4cb608eefa92756928f594914defee0a",
+      "isolated_core_point_sha256": "19ca90f7e4bdb23cc4d423fb5d7b17cbea71e2bf664dfaf83468f2825b4440ad"
+    }
+  ]
+}

@@ -1,0 +1,1357 @@
+[
+  {
+    "name": "native_study/helper_delta_exact",
+    "passed": true,
+    "detail": "same row, old helper, full N-1 checks, exact full helper bytes"
+  },
+  {
+    "name": "native_study/directory_update_equivalence",
+    "passed": true,
+    "detail": "rebuild and cache use the same new records; immutable context encodings are not conflated"
+  },
+  {
+    "name": "native_study/own_delta_zero",
+    "passed": true,
+    "detail": "own-slot decision does not change the off-slot help"
+  },
+  {
+    "name": "native_study/old_state_retained",
+    "passed": true,
+    "detail": "paired algorithms did not mutate retained previous helper or aggregate"
+  },
+  {
+    "name": "native_study/delta_decapsulation",
+    "passed": true,
+    "detail": "actual PBC decapsulation with staged helper and actual old receiver masks"
+  },
+  {
+    "name": "native_study/changed_cohort_requires_rebuild",
+    "passed": true,
+    "detail": "old helper cannot be relabeled onto a different candidate set"
+  },
+  {
+    "name": "CHARE-service-tree/aggregate_native_identity",
+    "passed": true,
+    "detail": "actual independent PBC sum equals the intended weighted output"
+  },
+  {
+    "name": "CHARE-service-tree/prefix_capability",
+    "passed": true,
+    "detail": "actual independent-pad coefficient transcript; stated individual pad observations"
+  },
+  {
+    "name": "CHARE-service-tree/old_key_native_recovery",
+    "passed": true,
+    "detail": "old ciphertext, original KDF context, actual prefix and permitted diagnostic openings"
+  },
+  {
+    "name": "CHARE-service-cycle/aggregate_native_identity",
+    "passed": true,
+    "detail": "actual independent PBC sum equals the intended weighted output"
+  },
+  {
+    "name": "CHARE-service-cycle/prefix_capability",
+    "passed": true,
+    "detail": "actual independent-pad coefficient transcript; stated individual pad observations"
+  },
+  {
+    "name": "CHARE-service-cycle/old_key_native_recovery",
+    "passed": true,
+    "detail": "old ciphertext, original KDF context, actual prefix and permitted diagnostic openings"
+  },
+  {
+    "name": "A/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "A/DH/slot1",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot3",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot5",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot7",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot9",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot11",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot13",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A/DH/slot15",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "A/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  },
+  {
+    "name": "not_A/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "not_A/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/not_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/not_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "not_A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "not_A/DH/slot0",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot2",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot4",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot6",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot8",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot10",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot12",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "not_A/DH/slot14",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/not_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/not_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "not_A/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  },
+  {
+    "name": "B/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "B/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "B/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "B/DH/slot2",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot3",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot6",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot7",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot10",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot11",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot14",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "B/DH/slot15",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "B/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  },
+  {
+    "name": "A_and_B/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "A_and_B/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/A_and_B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/A_and_B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "A_and_B/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "A_and_B/DH/slot3",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A_and_B/DH/slot7",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A_and_B/DH/slot11",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "A_and_B/DH/slot15",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/A_and_B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/A_and_B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "A_and_B/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  },
+  {
+    "name": "effective_revocation_1",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=1; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_2",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=2; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_3",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=3; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_4",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=3; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_5",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=5; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_6",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=6; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_7",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=7; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_8",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=7; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_9",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=9; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_10",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=10; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_11",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=11; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_12",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=11; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_13",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=13; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_14",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=14; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_15",
+    "passed": true,
+    "detail": "synthetic input attribute=0 slot=15; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "effective_revocation_16",
+    "passed": true,
+    "detail": "synthetic input attribute=1 slot=15; actual 1-to-0 transition installed in CHARE and published by independent DH"
+  },
+  {
+    "name": "main_workload_completed",
+    "passed": true,
+    "detail": "requested number of distinct 1-to-0 qualifications and paired acquisitions completed; later stress branches are separate"
+  },
+  {
+    "name": "after_updates_A/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/after_updates_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/after_updates_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "after_updates_A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "after_updates_A/DH-empty-list",
+    "passed": true,
+    "detail": "empty authorization authenticated and charged; anchored KEM has no recipient and is not run"
+  },
+  {
+    "name": "after_updates_not_A/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_not_A/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/after_updates_not_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/after_updates_not_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "after_updates_not_A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot0",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot1",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot2",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot3",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot4",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot5",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot6",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot7",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot8",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot9",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot10",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot11",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot12",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot13",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot14",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "after_updates_not_A/DH/slot15",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/after_updates_not_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/after_updates_not_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "after_updates_not_A/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  },
+  {
+    "name": "after_updates_B/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_B/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/after_updates_B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/after_updates_B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "after_updates_B/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "after_updates_B/DH-empty-list",
+    "passed": true,
+    "detail": "empty authorization authenticated and charged; anchored KEM has no recipient and is not run"
+  },
+  {
+    "name": "after_updates_A_and_B/slot0",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot1",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot2",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot3",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot4",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot5",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot6",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot7",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot8",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot9",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot10",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot11",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot12",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot13",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot14",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "after_updates_A_and_B/slot15",
+    "passed": true,
+    "detail": "synthetic qualification oracle; equality is a functional observation, not a security proof"
+  },
+  {
+    "name": "CHARE/after_updates_A_and_B/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/after_updates_A_and_B/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "after_updates_A_and_B/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "after_updates_A_and_B/DH-empty-list",
+    "passed": true,
+    "detail": "empty authorization authenticated and charged; anchored KEM has no recipient and is not run"
+  },
+  {
+    "name": "DH_retained_old_state",
+    "passed": true,
+    "detail": "all retained old ciphertexts recovered using own old reception secrets; no retroactive revocation"
+  },
+  {
+    "name": "retained_old_state_0",
+    "passed": true,
+    "detail": "old authorized keys remain recoverable; no retroactive revocation claim"
+  },
+  {
+    "name": "retained_old_state_1",
+    "passed": true,
+    "detail": "old authorized keys remain recoverable; no retroactive revocation claim"
+  },
+  {
+    "name": "retained_old_state_2",
+    "passed": true,
+    "detail": "old authorized keys remain recoverable; no retroactive revocation claim"
+  },
+  {
+    "name": "retained_old_state_3",
+    "passed": true,
+    "detail": "old authorized keys remain recoverable; no retroactive revocation claim"
+  },
+  {
+    "name": "independent_cold_audit_completed",
+    "passed": true,
+    "detail": "1 actual clients per scheme; CHARE independently replayed every public generation; no multiplied timing"
+  },
+  {
+    "name": "removed_slot_not_in_new_cohort",
+    "passed": true,
+    "detail": "public inactive slot cannot request new-cohort help; old records and ciphertexts remain retained"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot1",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot3",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot5",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot7",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot9",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot11",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot13",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "stress_changed_cohort_A/slot15",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "CHARE/stress_changed_cohort_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/stress_changed_cohort_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "stress_changed_cohort_A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "DH_changed_cohort_namespace",
+    "passed": true,
+    "detail": "stress history cannot be installed as a main-history epoch"
+  },
+  {
+    "name": "stress_changed_cohort_A/DH-empty-list",
+    "passed": true,
+    "detail": "empty authorization authenticated and charged; anchored KEM has no recipient and is not run"
+  },
+  {
+    "name": "stress_regrant_A/slot0",
+    "passed": true,
+    "detail": "authenticated public-only stress sender; actual retained receiver state; functional observation only"
+  },
+  {
+    "name": "CHARE/stress_regrant_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "CHARE/stress_regrant_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "stress_regrant_A/fresh_repeat/CHARE",
+    "passed": true,
+    "detail": "fresh full-domain encapsulation; same frozen target, original KDF and contexts"
+  },
+  {
+    "name": "stress_regrant_A/DH/slot0",
+    "passed": true,
+    "detail": "independent reception secret and authenticated explicit list; no hidden-selection equivalence"
+  },
+  {
+    "name": "DH-explicit-list/stress_regrant_A/first/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "DH-explicit-list/stress_regrant_A/fresh_repeat/exact_transport",
+    "passed": true,
+    "detail": "original serialized bytes restored exactly; generated typed objects used for PBC, no untrusted point decoder claimed"
+  },
+  {
+    "name": "stress_regrant_A/fresh_repeat/DH",
+    "passed": true,
+    "detail": "same transport option with independent DH keys, authority and authenticated explicit-list context"
+  }
+]
