@@ -1,0 +1,25 @@
+{
+  "schema": "chare-run-config-v1",
+  "label": "sanity",
+  "curve": {
+    "type": "a",
+    "r_bits": 160,
+    "q_bits": 512
+  },
+  "capacities": [
+    4,
+    8
+  ],
+  "attributes": [
+    2
+  ],
+  "replicates": 1,
+  "workload": {
+    "revocations": 2,
+    "acquisitions": 2,
+    "revocations_equal_capacity": false,
+    "acquisitions_equal_capacity": false,
+    "cold_audit_all_users": true
+  },
+  "continue_on_error": true
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "chare-run-config-v1",
+  "label": "paper-native-paired-three-trials-10m",
+  "curve": {
+    "type": "a",
+    "r_bits": 256,
+    "q_bits": 1536
+  },
+  "capacities": [
+    4,
+    8,
+    16
+  ],
+  "attributes": [
+    2
+  ],
+  "replicates": 3,
+  "workload": {
+    "revocations": 0,
+    "acquisitions": 0,
+    "revocations_equal_capacity": true,
+    "acquisitions_equal_capacity": true,
+    "cold_audit_all_users": false
+  },
+  "continue_on_error": false,
+  "paper_study": true
+}

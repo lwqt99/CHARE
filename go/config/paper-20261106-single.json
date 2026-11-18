@@ -1,0 +1,26 @@
+{
+  "schema": "chare-run-config-v1",
+  "label": "paper-quick-single-cold-10m",
+  "curve": {
+    "type": "a",
+    "r_bits": 256,
+    "q_bits": 1536
+  },
+  "capacities": [
+    8,
+    16,
+    32
+  ],
+  "attributes": [
+    2
+  ],
+  "replicates": 1,
+  "workload": {
+    "revocations": 0,
+    "acquisitions": 0,
+    "revocations_equal_capacity": true,
+    "acquisitions_equal_capacity": true,
+    "cold_audit_all_users": false
+  },
+  "continue_on_error": true
+}
