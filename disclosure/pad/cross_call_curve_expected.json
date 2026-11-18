@@ -1,0 +1,7 @@
+{
+  "expected_gt_sha256": "08494a795acf9b07af536e39e4173913aee00dfb66fb0465ae594b2c0df0de07",
+  "expected_reference_kdf_digest": "6f3611210ba9f3019d9fde0c3ed356ef39199a251468b88ae3111aba10c5799d",
+  "fixture_sha256": "0b84b66a23b5e51f8d131949208881402a46094c3fa0c492204f1e5ebacc1b5a",
+  "method": "Computed in the separate producer process as Z^s from the original encapsulation; only hashes are exported. No truth value is passed to recover_public().",
+  "schema": "CHARE-A2-cross-call-coordinate-expected-v1"
+}

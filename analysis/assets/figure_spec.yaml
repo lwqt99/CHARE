@@ -1,0 +1,32 @@
+venue: ACM CCS 2027, acmart sigconf
+width_mm: 177.95
+height_mm: 60
+layout: two aligned panels, final double-column width
+font: Times New Roman with STIX math for standalone files, ACM document fonts for inline TikZ
+minimum_final_size_pt: 7.5
+authoritative_data:
+  source: native Go/PBC run 20261107T084253.220314242Z_paper-native-paired-three-trials-10m_6bdeeab0
+  filters: all nine successful native cases, N=4/8/16 and m=2
+  sample_unit: independent protocol state with shared public pairing parameters
+  aggregation: sum disjoint intervals or serialized bytes within each trial, then median at each capacity
+  uncertainty: observed minimum and maximum of three trials, with zero range where exact byte counts agree
+  exclusions_and_missingness: no network measurements, reference replays and earlier batches outside native timing data
+figures:
+  lifecycle:
+    question: What does authenticated initialization and the update workload cost?
+    message: The explicit-list DH delivery reference is faster on both measured phases.
+    encoding: two log-duration line panels on a common scale, CHARE versus DH with an authorized list
+  helper:
+    question: How much does cached maintenance save for the directory and receiver?
+    message: The directory saves most computation, while receivers still verify each new projection.
+    encoding: two log-duration line panels on a common scale, cached update versus rebuild
+  transport:
+    question: Which bytes can reference reuse save, and who pays for initial installation?
+    message: The full output and aggregate initial installations are substantial even when the repeat packet is small.
+    encoding: logarithmic bytes in MiB, whole ciphertext versus entry installs and whole ciphertext versus repeat packet
+  service:
+    question: What are the measured computation and serialized object sizes for two pad graphs?
+    message: Both graphs incur substantial serialization and the cycle sends two extra capsules at each capacity.
+    encoding: time in seconds and serialized messages in MiB, zero-based linear scales
+accessibility: muted blue circle and solid line, dark square and dashed line, open triangle and dotted line
+validation: source points, observed ranges, PDF dimensions and fonts, grayscale rendering, final inline size and legends
